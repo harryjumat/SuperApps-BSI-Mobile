@@ -1,10 +1,13 @@
 ﻿Function Login()
+	Call CaptureImageUFTV2(Device("Device").App("Login"), "Login", "Berhasil masuk ke menu login", ReportStatus.Passed)
 	Device("Device").App("Login").MobileLabel("Btn_Masuk").Tap
-	wait 1
+	wait 3
+	Call CaptureImageUFTV2(Device("Device").App("Login"), "Input Password", "Berhasil masuk untuk memasukkan password", ReportStatus.Passed)
 	Device("Device").App("Login").MobileEdit("Input_Password").SetSecure "p@ssw0rd"
-	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Login"), "Password Valid", "Mengisikan password dengan benar", ReportStatus.Passed)
+	wait 3
 	Device("Device").App("Login").MobileLabel("Btn_Masuk2").Tap
-wait 5
+	wait 5
 End Function
 
 Function Navigate (byval MenuNavigate)

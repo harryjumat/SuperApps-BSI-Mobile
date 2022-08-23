@@ -10,8 +10,9 @@ Call RepositoriesCollection.Add("D:\BSI\Repository\Repository_Profile.tsr")
 
 Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Change Profile Pic")
 
-'Call Login()
 Call react.Addtitle("BSI SuperApps - Change Profile Pic")
+
+Call Login()
 Call ChangeProfilePic("ChangePic")
 Call react.Addtitle("BSI SuperApps - Delete Profile Pic")
 Call ChangeProfilePic("DeletePic")

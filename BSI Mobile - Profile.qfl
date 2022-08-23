@@ -1,28 +1,37 @@
 ﻿Function ChangeEmail(byval x)
 If x = "Positive" Then
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("HA").Tap
 		wait 2
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Berhasil masuk ke menu navigasi untuk mengubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileList("profileAccountSettings").Select 0
 		wait 2
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Informasi Akun", "Berhasil masuk ke menu informasi akun untuk mengubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("Ubah").Tap
 		wait 2
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil masuk ke menu ubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminos123@gmail.com"
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil mengubah email", ReportStatus.Passed)
 		wait 2
 		Device("Device").App("Profile").MobileLabel("Simpan").Tap
-		wait 15
+		wait 10
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Memasukkan 6 digit kode OTP", ReportStatus.Passed)
 		'INPUT OTP
+		wait 10	
 		Device("Device").Enterkeys Number, 1
-		wait 5
+		wait 10
 		Device("Device").Enterkeys Number, 2
-		wait 5
+		wait 10
 		Device("Device").Enterkeys Number, 3
-		wait 5
+		wait 10
 		Device("Device").Enterkeys Number, 4
-		wait 5
+		wait 10
 		Device("Device").Enterkeys Number, 5
-		wait 5
+		wait 10
 		Device("Device").Enterkeys Number, 6
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Berhasil melakukan verifikasi email", ReportStatus.Passed)
 		wait 5
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi PIN", "Memasukkan konfirmasi PIN", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("1").Tap
 		wait 1
 		Device("Device").App("Profile").MobileLabel("2").Tap
@@ -34,7 +43,9 @@ If x = "Positive" Then
 		Device("Device").App("Profile").MobileLabel("5").Tap
 		wait 1
 		Device("Device").App("Profile").MobileLabel("6").Tap
-		wait 3		
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi PIN", "Berhasil melakukan konfirmasi PIN", ReportStatus.Passed)
+		wait 5
+		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Berhasil diubah", "Berhasil melakukan perubahan email", ReportStatus.Passed)
 		
 ElseIf x = "Negative" Then
 
