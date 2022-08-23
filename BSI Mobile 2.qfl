@@ -1,0 +1,47 @@
+﻿Function Login()
+	Device("Device").App("App").MobileLabel("Masuk").Tap
+	Device("Device").App("App").MobileEdit("input").SetSecure "p@ssw0rd"
+	Device("Device").App("App").MobileLabel("Masuk_2").Tap
+wait 5
+End Function
+
+Function Navigate(byval MenuNavigate)
+	
+	Device("Device").App("App").MobileLabel("Navigate").Tap
+	wait 1
+	
+	'Fungsi-fungsi untuk masuk ke sub menu dari list pada navigasi
+	Function InformasiAkun()
+		Device("Device").App("App").MobileLabel("Informasi akun").Tap
+	End Function
+
+	
+	'Parameter untuk Function Navigate
+	If MenuNavigate = "Profile" Then
+		
+	End If
+
+	If MenuNavigate = "UbahEmail" Then
+		wait 1
+		Call InformasiAkun()
+		Device("Device").App("App").MobileLabel("Ubah_Email").Tap
+		Device("Device").App("App").MobileEdit("Input_AlamatEmail").Set "harryminos@gmail.com"
+		wait 3
+		Device("Device").App("App").MobileLabel("BTN_Simpan_AlamatEmail").Tap
+		wait 50
+		
+		'Verifikasi Email OTP
+		
+		'Konfirmasi PIN
+		Device("Device").App("App").MobileObject("btnPin1").Tap
+		Device("Device").App("App").MobileObject("btnPin2").Tap
+		Device("Device").App("App").MobileObject("btnPin3").Tap
+		Device("Device").App("App").MobileObject("btnPin4").Tap
+		Device("Device").App("App").MobileObject("btnPin5").Tap
+		Device("Device").App("App").MobileObject("btnPin6").Tap
+		'Selesai		
+	End If
+End Function
+
+
+

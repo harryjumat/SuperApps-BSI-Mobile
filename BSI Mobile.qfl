@@ -1,0 +1,31 @@
+﻿Function Login()
+	Device("Device").App("Login").MobileLabel("Btn_Masuk").Tap
+	wait 1
+	Device("Device").App("Login").MobileEdit("Input_Password").SetSecure "p@ssw0rd"
+	wait 1
+	Device("Device").App("Login").MobileLabel("Btn_Masuk2").Tap
+wait 5
+End Function
+
+Function Navigate (byval MenuNavigate)
+	
+	If MenuNavigate = "Profile" Then
+		Device("Device").App("App").MobileLabel("Navigate").Tap
+	End If
+	
+End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

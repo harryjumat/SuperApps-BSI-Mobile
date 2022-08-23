@@ -1,0 +1,111 @@
+﻿Function ChangeEmail(byval x)
+If x = "Positive" Then
+		Device("Device").App("Profile").MobileLabel("HA").Tap
+		wait 2
+		Device("Device").App("Profile").MobileList("profileAccountSettings").Select 0
+		wait 2
+		Device("Device").App("Profile").MobileLabel("Ubah").Tap
+		wait 2
+		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminos@gmail.com"
+		wait 2
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		wait 5
+		'Desktop.RunAnalog "Track5"
+		Device("Device").InsightObject("InsightObject_1").Click
+		Device("Device").InsightObject("InsightObject_2").Click
+		Device("Device").InsightObject("InsightObject_3").Click
+		Device("Device").InsightObject("InsightObject_4").Click
+		Device("Device").InsightObject("InsightObject_5").Click
+		Device("Device").InsightObject("InsightObject_6").Click
+		wait 3
+		Device("Device").App("Profile").MobileLabel("1").Tap
+		Device("Device").App("Profile").MobileLabel("2").Tap
+		Device("Device").App("Profile").MobileLabel("3").Tap
+		Device("Device").App("Profile").MobileLabel("4").Tap
+		Device("Device").App("Profile").MobileLabel("5").Tap
+		Device("Device").App("Profile").MobileLabel("6").Tap	
+		
+ElseIf x = "Negative" Then
+
+		Device("Device").App("Profile").MobileLabel("HA").Tap
+		wait 2
+		Device("Device").App("Profile").MobileList("profileAccountSettings").Select 0
+		wait 2
+		Device("Device").App("Profile").MobileLabel("Ubah").Tap
+		wait 2
+		'EMAIL TIDAK SESUAI
+		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminosgmail.com"
+		wait 4
+		'EMAIL TELAH DIGUNAKAN
+		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminos@gmail.com"
+		wait 4
+		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminos96@gmail.com"
+		wait 5
+		'KODE OTP EMAIL SALAH
+		'========MANUAL========
+		'OTP NOMOR HP SUDAH EXPIRED
+		'========MANUAL========
+		'GAGAL MEMASUKKAN OTP BERTURUT2 3X
+		'========MANUAL========		
+End If
+End Function
+
+Function ChangeProfilePic(byval x)
+If x = "ChangePic" Then
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileLabel("HA").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Berhasil masuk ke menu navigasi untuk mengganti foto profil", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileLabel("Btn_Profile").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Foto Profil", "Berhasil masuk ke foto profil untuk mengganti foto profil", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileLabel("Btn_Ambil_foto").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Camera", "Berhasil membuka kamera untuk mengambil foto", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileObject("Btn_Foto_Camera").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Edit Foto", "Berhasil Melakukan edit foto", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileLabel("Btn_Foto_Camera_Simpan").Tap
+	wait 5
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Foto berhasil ditambahkan", ReportStatus.Passed)
+	wait 3
+	Device("Device").App("Profile").MobileObject("Gambar").Tap
+	wait 2
+	Device("Device").App("Profile").MobileLabel("Hapus Foto").Tap
+	wait 2
+	Device("Device").App("Profile").MobileLabel("Hapus").Tap
+	wait 2
+	Device("Device").App("Profile").MobileLabel("Btn_Profile").Tap
+	wait 2
+	Device("Device").App("Profile").MobileLabel("Pilih dari galeri").Tap
+	wait 2
+	Device("Device").App("Camera").MobileObject("Icon Galeri").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Galeri", "Memilih foto dari galeri", ReportStatus.Passed)
+	Device("Device").InsightObject("InsightObject_Gambar Terpilih").Click
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Edit Foto", "Berhasil Melakukan edit foto", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileLabel("Simpan").Tap
+	wait 8
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Foto berhasil ditambahkan", ReportStatus.Passed)
+	wait 2
+	Device("Device").App("Profile").MobileObject("profileBack").Tap
+	wait 3
+	
+ElseIf x = "DeletePic" Then
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileObject("Btn_Navigasi").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Berhasil masuk ke menu navigasi untuk mengganti foto profil", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileObject("profileAvatar").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Foto Profil", "Berhasil masuk ke foto profil untuk menghapus foto profil", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileLabel("Hapus Foto").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Hapus Foto", "Menampilkan button konfirmasi", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileLabel("Hapus").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Foto berhasil dihapus", ReportStatus.Passed)
+	Device("Device").App("Profile").MobileObject("profileBack").Tap
+End If
+End Function
