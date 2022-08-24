@@ -1,37 +1,31 @@
 ﻿Function ChangeEmail(byval x)
 If x = "Positive" Then
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
+
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("HA").Tap
 		wait 2
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Berhasil masuk ke menu navigasi untuk mengubah email", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Berhasil masuk ke menu navigasi untuk mengubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileList("profileAccountSettings").Select 0
 		wait 2
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Informasi Akun", "Berhasil masuk ke menu informasi akun untuk mengubah email", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Informasi Akun", "Berhasil masuk ke menu informasi akun untuk mengubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("Ubah").Tap
 		wait 2
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil masuk ke menu ubah email", ReportStatus.Passed)
-		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminos123@gmail.com"
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil mengubah email", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil masuk ke menu ubah email", ReportStatus.Passed)
+		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harrysetiawan@gmail.com"
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Memasukkan email yang baru", ReportStatus.Passed)
 		wait 2
 		Device("Device").App("Profile").MobileLabel("Simpan").Tap
-		wait 10
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Memasukkan 6 digit kode OTP", ReportStatus.Passed)
-		'INPUT OTP
-		wait 10	
-		Device("Device").Enterkeys Number, 1
-		wait 10
-		Device("Device").Enterkeys Number, 2
-		wait 10
-		Device("Device").Enterkeys Number, 3
-		wait 10
-		Device("Device").Enterkeys Number, 4
-		wait 10
-		Device("Device").Enterkeys Number, 5
-		wait 10
-		Device("Device").Enterkeys Number, 6
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Berhasil melakukan verifikasi email", ReportStatus.Passed)
 		wait 5
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi PIN", "Memasukkan konfirmasi PIN", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Memasukkan 6 digit kode OTP", ReportStatus.Passed)
+		For i = 1 To 6 Step 1
+			'Device("Device").Enterkeys Number, i
+			Device("Device").Enterkeys typeValue, i
+			wait 3
+		Next
+		'Device("Device").Enterkeys typeValue, "1"
+		'Device("Device").Enterkeys Number, 123456
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi PIN", "Memasukkan konfirmasi PIN", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("1").Tap
 		wait 1
 		Device("Device").App("Profile").MobileLabel("2").Tap
@@ -43,33 +37,67 @@ If x = "Positive" Then
 		Device("Device").App("Profile").MobileLabel("5").Tap
 		wait 1
 		Device("Device").App("Profile").MobileLabel("6").Tap
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi PIN", "Berhasil melakukan konfirmasi PIN", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Loading Konfirmasi Pin", "Loading konfirmasi PIN", ReportStatus.Passed)
 		wait 5
-		'Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Berhasil diubah", "Berhasil melakukan perubahan email", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Berhasil diubah", "Berhasil melakukan perubahan email", ReportStatus.Passed)
 		
 ElseIf x = "Negative" Then
 
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("HA").Tap
 		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Navigasi", "Berhasil masuk ke menu navigasi untuk mengubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileList("profileAccountSettings").Select 0
 		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Informasi Akun", "Berhasil masuk ke menu informasi akun untuk mengubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileLabel("Ubah").Tap
 		wait 2
+		
 		'EMAIL TIDAK SESUAI
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil masuk ke menu ubah email", ReportStatus.Passed)
 		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminosgmail.com"
-		wait 4
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Format Email Tidak Sesuai", "Gagal mengubah email dikarenakan format yang tidak sesuai", ReportStatus.Passed)
+		
 		'EMAIL TELAH DIGUNAKAN
-		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminos@gmail.com"
-		wait 4
-		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harryminos96@gmail.com"
+		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harrysetiawan1005@gmail.com"
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		wait 3
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Gagal mengubah email dikarenakan email yang dimasukkan telah digunakan", ReportStatus.Passed)
+		wait 2
+		Device("Device").App("Profile").MobileLabel("Btn_Coba Lagi").Tap
+		wait 1
+		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harrysetiawan@gmail.com"
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		wait 6
+		Device("Device").Enterkeys Number, 654321
+		wait 6
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Kode OTP yang dimasukkan tidak sesuai", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Profile").MobileObject("Btn_Back di verifikasi email").Tap
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		wait 60
+		
+		'OTP KADALUARSA
+		For k = 1 To 6 Step 1
+			Device("Device").Enterkeys typeValue, k
+			wait 60
+		Next
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "OTP sudah expired", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Profile").MobileObject("Btn_Back di verifikasi email").Tap
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		wait 6
+		
+		'MASIH BELUM BISA
+		'GAGAL BERTURUT-TURUT
+		Device("Device").Enterkeys typeValue, "654321"
 		wait 5
-		'KODE OTP EMAIL SALAH
-		'========MANUAL========
-		'OTP NOMOR HP SUDAH EXPIRED
-		'========MANUAL========
-		'GAGAL MEMASUKKAN OTP BERTURUT2 3X
-		'========MANUAL========		
-End If
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Passed)	
+		
 End Function
 
 Function ChangeProfilePic(byval x)
@@ -102,7 +130,7 @@ If x = "ChangePic" Then
 	Device("Device").App("Profile").MobileLabel("Pilih dari galeri").Tap
 	wait 2
 	Device("Device").App("Camera").MobileObject("Icon Galeri").Tap
-	wait 2
+	wait 5
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Galeri", "Memilih foto dari galeri", ReportStatus.Passed)
 	Device("Device").InsightObject("InsightObject_Gambar Terpilih").Click
 	wait 2
