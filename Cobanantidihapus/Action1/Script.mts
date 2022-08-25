@@ -8,11 +8,10 @@ Call Path_Folder()
 Call RepositoriesCollection.Add("D:\BSI\Repository\Repository_Login.tsr")
 Call RepositoriesCollection.Add("D:\BSI\Repository\Repository_Profile.tsr")
 
-Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Change Email")
-Call react.Addtitle("BSI SuperApps - Change Email - Positive")
+Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Coba")
 
-'===================Yang Atas Jangan Diubah-ubah==================='
-
+'MENGUBAH EMAIL -  NEGATIVE
+Call react.Addtitle("BSI SuperApps - Coba - Negative")
 Call Login()
 Call ChangeEmail("Positive")
 Call SaveReact_Merge()

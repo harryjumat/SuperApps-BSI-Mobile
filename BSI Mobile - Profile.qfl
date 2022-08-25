@@ -97,6 +97,7 @@ ElseIf x = "Negative" Then
 		Device("Device").Enterkeys typeValue, "654321"
 		wait 5
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Passed)	
+End If
 		
 End Function
 
