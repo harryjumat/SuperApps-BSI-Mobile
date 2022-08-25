@@ -12,7 +12,7 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 'MENGUBAH FOTO PROFIL
 Call react.Addtitle("BSI SuperApps - Change Profile Pic")
-Call Login()
+'Call Login()
 Call ChangeProfilePic("ChangePic")
 'MENGHAPUS FOTO PROFIL
 'Call react.Addtitle("BSI SuperApps - Delete Profile Pic")

@@ -100,8 +100,8 @@ ElseIf x = "Negative" Then
 		
 End Function
 
-Function ChangeProfilePic(byval x)
-If x = "ChangePic" Then
+Function ChangeProfilePic(byval y)
+If y = "ChangePic" Then
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
 	Device("Device").App("Profile").MobileLabel("HA").Tap
 	wait 2
@@ -142,7 +142,7 @@ If x = "ChangePic" Then
 	Device("Device").App("Profile").MobileObject("profileBack").Tap
 	wait 3
 	
-ElseIf x = "DeletePic" Then
+ElseIf y = "DeletePic" Then
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
 	Device("Device").App("Profile").MobileObject("Btn_Navigasi").Tap
 	wait 2
