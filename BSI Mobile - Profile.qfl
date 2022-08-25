@@ -15,12 +15,14 @@ If x = "Positive" Then
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Memasukkan email yang baru", ReportStatus.Passed)
 		wait 2
 		Device("Device").App("Profile").MobileLabel("Simpan").Tap
-		wait 5
+		wait 7
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Memasukkan 6 digit kode OTP", ReportStatus.Passed)
+		wait 5
 		For i = 1 To 6 Step 1
 			'Device("Device").Enterkeys Number, i
 			Device("Device").Enterkeys typeValue, i
-			wait 3
+			'2
+			wait 1
 		Next
 		'Device("Device").Enterkeys typeValue, "1"
 		'Device("Device").Enterkeys Number, 123456
@@ -38,7 +40,7 @@ If x = "Positive" Then
 		wait 1
 		Device("Device").App("Profile").MobileLabel("6").Tap
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Loading Konfirmasi Pin", "Loading konfirmasi PIN", ReportStatus.Passed)
-		wait 5
+		wait 2
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Berhasil diubah", "Berhasil melakukan perubahan email", ReportStatus.Passed)
 		
 ElseIf x = "Negative" Then
