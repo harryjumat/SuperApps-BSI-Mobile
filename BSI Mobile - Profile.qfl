@@ -109,7 +109,7 @@ ElseIf x = "Negative" Then
 		'OTP SALAH
 		Device("Device").Enterkeys Number, 111111
 		wait 3
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Kode OTP yang dimasukkan tidak sesuai", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Tidak Sesuai", "Kode OTP yang dimasukkan tidak sesuai", ReportStatus.Passed)
 		wait 1
 		Call HapusOTP()
 		wait 2
@@ -120,7 +120,8 @@ ElseIf x = "Negative" Then
 			Device("Device").Enterkeys typeValue, "1"
 			'wait 1
 		Next
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "OTP sudah expired", ReportStatus.Passed)
+		wait 3
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Kadaluwarsa ", "OTP sudah kadaluwarsa", ReportStatus.Passed)
 		wait 3		
 		Device("Device").App("Profile").MobileObject("Btn_Back di verifikasi email").Tap
 		wait 1
@@ -140,7 +141,7 @@ ElseIf x = "Negative" Then
 		Device("Device").Enterkeys typeValue, "1"
 		wait 7
 		
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Passed)	
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Gagal 3 Kali", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Passed)	
 		wait 2
 End If
 		
