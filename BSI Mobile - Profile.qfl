@@ -1,4 +1,33 @@
-﻿Function ChangeEmail(byval x)
+﻿'Fungsi untuk menghapus kode OTP yang telah berisi 6 digit angka
+Function HapusOTP()
+	Device("Device").Enterkeys typeKey, 67
+		For i = 1 To 4 Step 1
+			Device("Device").Enterkeys typeKey, 61
+			wait 1
+		Next
+		wait 1
+		Device("Device").Enterkeys typeKey, 67
+		For i = 1 To 2 Step 1
+			Device("Device").Enterkeys typeKey, 61
+			wait 1
+		Next
+		wait 1
+		For i = 1 To 3 Step 1
+			Device("Device").Enterkeys typeKey, 67
+			wait 1
+			Device("Device").Enterkeys typeKey, 61
+			wait 1
+		Next
+		wait 1
+		Device("Device").Enterkeys typeKey, 67
+		For i = 1 To 5 Step 1
+			Device("Device").Enterkeys typeKey, 61
+			wait 1
+		Next
+		wait 3
+End Function
+
+Function ChangeEmail(byval x)
 If x = "Positive" Then
 
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses navigasi", ReportStatus.Passed)
@@ -21,7 +50,6 @@ If x = "Positive" Then
 		For i = 1 To 6 Step 1
 			'Device("Device").Enterkeys Number, i
 			Device("Device").Enterkeys typeValue, i
-			'2
 			wait 1
 		Next
 		'Device("Device").Enterkeys typeValue, "1"
@@ -72,33 +100,43 @@ ElseIf x = "Negative" Then
 		Device("Device").App("Profile").MobileEdit("Input_Email").Set "harrysetiawan@gmail.com"
 		wait 1
 		Device("Device").App("Profile").MobileLabel("Simpan").Tap
-		wait 6
-		Device("Device").Enterkeys Number, 654321
-		wait 6
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Kode OTP yang dimasukkan tidak sesuai", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Profile").MobileObject("Btn_Back di verifikasi email").Tap
-		wait 1
-		Device("Device").App("Profile").MobileLabel("Simpan").Tap
-		wait 60
+		wait 10
 		
-		'OTP KADALUARSA
-		For k = 1 To 6 Step 1
-			Device("Device").Enterkeys typeValue, k
-			wait 60
+		'OTP SALAH
+		Device("Device").Enterkeys Number, 654321
+		wait 3
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Kode OTP yang dimasukkan tidak sesuai", ReportStatus.Passed)
+		Call HapusOTP()
+		wait 2
+		
+		'OTP KADALUARSA  (HARUS BENAR)
+		wait 300
+		For i = 1 To 6 Step 1
+			Device("Device").Enterkeys typeValue, i
+			wait 1
 		Next
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "OTP sudah expired", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Profile").MobileObject("Btn_Back di verifikasi email").Tap
-		wait 1
-		Device("Device").App("Profile").MobileLabel("Simpan").Tap
-		wait 6
+		wait 3
+		Call HapusOTP()
+		wait 2
+		
+		For i = 1 To 3
+			Device("Device").Enterkeys typeValue, "654321"
+			Call HapusOTP()
+			wait 2
+		Next
 		
 		'MASIH BELUM BISA
 		'GAGAL BERTURUT-TURUT
-		Device("Device").Enterkeys typeValue, "654321"
-		wait 5
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Passed)	
+'		Device("Device").Enterkeys typeValue, "654321"
+'		wait 3
+'		Device("Device").App("Profile").MobileObject("Btn_Back di verifikasi email").Tap
+'		wait 1
+'		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+'		wait 10
+'		Device("Device").Enterkeys typeValue, "654321"
+'		wait 2
+'		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Passed)	
 End If
 		
 End Function
