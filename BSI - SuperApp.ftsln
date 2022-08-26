@@ -16,6 +16,14 @@ Project("") = "Profile - Change Profile Pic", "Profile - Change Profile Pic\Test
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
+Project("") = "Bayar Beli - CAR Tagihan Lainnya", "Bayar Beli - CAR Tagihan Lainnya\Test.tsp", "A12806A3-F2F6-476D-85B2-05B9455871FA"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\Bayar Beli - CAR Tagihan Lainnya\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,9 +38,14 @@ Global
 		BCC87B08-37B1-469C-969D-50C686AB1EDD.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		BCC87B08-37B1-469C-969D-50C686AB1EDD.Release|Any CPU.Build.0 = Release|Any CPU
 		BCC87B08-37B1-469C-969D-50C686AB1EDD.Release|Any CPU.ActiveCfg = Release|Any CPU
+		A12806A3-F2F6-476D-85B2-05B9455871FA.Debug|Any CPU.Build.0 = Debug|Any CPU
+		A12806A3-F2F6-476D-85B2-05B9455871FA.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		A12806A3-F2F6-476D-85B2-05B9455871FA.Release|Any CPU.Build.0 = Release|Any CPU
+		A12806A3-F2F6-476D-85B2-05B9455871FA.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(Function Libraries) = postProject
 		BSI Mobile = D:\BSI\BSI Mobile.qfl
 		BSI Mobile - Profile = D:\BSI\BSI Mobile - Profile.qfl
+		BSI Mobile - Bayar Beli = D:\BSI\BSI Mobile - Bayar Beli.qfl
 	EndGlobalSection
 EndGlobal
