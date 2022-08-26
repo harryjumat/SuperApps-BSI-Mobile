@@ -1,0 +1,57 @@
+﻿Function THRYatim(byval x)
+	If x = "Positive" Then
+	
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses menu ziswaf", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject icon ziswaf").Click
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke menu ziswaf untuk mengakses menu donasi", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("Lainnya").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Donasi", "Berhasil masuk ke menu donasi untuk mengakses menu thr anak yatim", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("THR Anak Yatim").Tap
+		wait 12
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "THR Anak Yatim", "Berhasil masuk ke menu thr anak yatim untuk memasukkan nominal donasi", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileEdit("input masukkan nominal").Set "200000"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Masukkan Nominal", "Masukkan nominal donasi", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("Lanjutkan").Tap
+		wait 10
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Lakukan konfirmasi transaksi", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi PIN", "Masukkan Konfirmasi PIN", ReportStatus.Passed)
+		Device("Device").App("Berbagi").MobileLabel("1").Tap
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("2").Tap
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("3").Tap
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("4").Tap
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("5").Tap
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("6").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Loading Konfirmasi Pin", "Loading konfirmasi PIN", ReportStatus.Passed)
+		wait 6
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Donasi Telah Diterima", "Berhasil melakukan transaksi", ReportStatus.Passed)
+		Device("Device").App("Berbagi").MobileLabel("Detail Transaksi").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Detail Transaksi", "Detail transaksi", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileObject("Download").Tap
+		wait 1
+		Device("Device").App("Camera").MobileButton("Batal").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Download Resi", "Melakukan download resi", ReportStatus.Passed)
+		wait 1
+	
+	ElseIf x = "Negative" Then
+	
+	End If
+End Function

@@ -58,3 +58,53 @@
 		
 	End If
 End Function
+
+Function KorlantasSignal(byval x)
+	If x = "Positive" Then
+	
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses menu bayar beli", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileObject("Icon Bayar Beli").Tap
+		wait 4
+		Device("Device").App("Bayar_Beli").MobileObject("Arrow tampilkan lebih banyak").Tap
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Menu Bayar Beli", "Berhasil masuk ke menu bayar beli untuk mengakses menu korlantas signal", ReportStatus.Passed)
+		wait 2
+		Device("Device").App("Bayar_Beli").MobileObject("Icon korlantas signal").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Menu Korlantas SIGNAL", "Berhasil masuk ke menu korlantas signal untuk memasukkan nomor pembayaran", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileEdit("Input nomor pembayaran korlantas signal").Set "777001224555"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor Pembayaran Korlantas SIGNAL", "Masukkan nomor pembayaran", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("Lanjutkan").Tap
+		wait 25
+		
+		'==============REST 
+		
+		Device("Device").App("Bayar_Beli").MobileLabel("Detail Transaksi").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("Lanjutkan detail korlantas signal").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("Lanjutkan detail korlantas signal").Tap
+		wait 2
+		Device("Device").App("Bayar_Beli").MobileObject("btnPin1").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileObject("btnPin2").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileObject("btnPin3").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileObject("btnPin4").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileObject("btnPin5").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileObject("btnPin6").Tap
+		wait 1
+	
+	ElseIf x = "Negative" Then
+		
+		'===============SCRIPT NEGATIVE==============='
+		
+	End If
+End Function

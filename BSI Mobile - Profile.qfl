@@ -141,7 +141,7 @@ ElseIf x = "Negative" Then
 		Device("Device").Enterkeys typeValue, "1"
 		wait 7
 		
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Gagal 3 Kali", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Passed)	
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Gagal 3 Kali", "Gagal memasukkan OTP berturut-turut sebanyak 3x", ReportStatus.Failed)	
 		wait 2
 End If
 		

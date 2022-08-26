@@ -1,0 +1,11 @@
+﻿Function jualEmas(byval x)
+	If x = "Positive" Then
+		
+		'===============SCRIPT POSITIVE==============='
+		
+		ElseIf x = "Negative" Then
+		
+		'===============SCRIPT NEGATIVE==============='
+		
+	End If
+End Function
