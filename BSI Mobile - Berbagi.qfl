@@ -12,7 +12,7 @@
 		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Donasi", "Berhasil masuk ke menu donasi untuk mengakses menu thr anak yatim", ReportStatus.Passed)
 		wait 1
 		Device("Device").App("Berbagi").MobileLabel("THR Anak Yatim").Tap
-		wait 12
+		wait 15
 		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "THR Anak Yatim", "Berhasil masuk ke menu thr anak yatim untuk memasukkan nominal donasi", ReportStatus.Passed)
 		wait 1
 		Device("Device").App("Berbagi").MobileEdit("input masukkan nominal").Set "200000"
@@ -47,11 +47,43 @@
 		wait 1
 		Device("Device").App("Berbagi").MobileObject("Download").Tap
 		wait 1
-		Device("Device").App("Camera").MobileButton("Batal").Tap
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Download Resi", "Melakukan download resi", ReportStatus.Passed)
+		'Device("Device").App("Camera").MobileButton("Batal").Tap
+		'wait 1
+		'Device("Device").App("Berbagi").MobileObject("Download").Tap
+		'wait 1
+		Device("Device").App("Camera").MobileLabel("Adobe Acrobat").Tap
+		wait 7
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Download Resi", "Menampilkan hasil download resi", ReportStatus.Passed)
 		wait 1
 	
 	ElseIf x = "Negative" Then
+	
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke dashboard untuk mengakses menu ziswaf", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject icon ziswaf").Click
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke menu ziswaf untuk mengakses menu donasi", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("Lainnya").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Donasi", "Berhasil masuk ke menu donasi untuk mengakses menu thr anak yatim", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("THR Anak Yatim").Tap
+		wait 15
+		Device("Device").App("Berbagi").MobileLabel("Ubah").Tap
+		wait 1
+		Device("Device").App("Berbagi").MobileLabel("Rp 150.000,00").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "THR Anak Yatim", "Berhasil masuk ke menu thr anak yatim untuk memasukkan nominal donasi", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Berbagi").MobileEdit("input masukkan nominal").Set "2000000"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Saldo Tidak Mencukupi", "Saldo yang dimiliki tidak mencukupi", ReportStatus.Passed)
+		wait 1 
+		Device("Device").App("Berbagi").MobileEdit("input masukkan nominal").Set "15000"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Minimal Transaksi", "Nominal yang dimasukkan tidak memenuhi minimal transaksi", ReportStatus.Passed)
+		wait 1
 	
 	End If
 End Function
