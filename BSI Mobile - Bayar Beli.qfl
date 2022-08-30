@@ -59,6 +59,95 @@
 	End If
 End Function
 
+Function CARPremiReguler(byval x)
+	
+	If x = "Positive" Then
+		
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+	wait 1
+	Device("Device").InsightObject("InsightObject bayarbeli").Click
+	wait 3
+	Device("Device").App("Bayar_Beli94").MobileObject("Arrow tampilkan lebih banyak").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Menu Bayar Beli", "Berhasil masuk ke halaman bayar & beli", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileObject("Swipe").Swipe "up",787,1535
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileObject("Icon asuransi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Pilih Asuransi", "Berhasil masuk ke halaman list asuransi", ReportStatus.Warning)
+	wait 1
+	'Device("Device").App("Bayar_Beli94").MobileLabel("CAR Tagihan Lainnya").Tap
+	Device("Device").App("Bayar_Beli94").MobileLabel("CAR Premi Reguler").Tap
+	wait 10
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Asuransi", "Berhasil masuk ke halaman input dan tidak terdapat kolom memasukan nominal", ReportStatus.Failed)
+	wait 1
+	'Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Nomor Polis", "Masukkan nomor polis", ReportStatus.Passed)
+	'wait 1
+	Device("Device").App("Bayar_Beli94").MobileEdit("Input nomor polis").Set "6467437784543"
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Nomor Polis", "Berhasil menambahkan nomor polis", ReportStatus.Passed)
+	wait 1
+	'Device("Device").App("Bayar_Beli94").MobileEdit("Input nominal").Set "144000"
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileLabel("Lanjutkan").Tap
+	wait 8
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Konfirmasi Transaksi", "Berhasil masuk ke halaman konfirmasi", ReportStatus.Warning)
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileLabel("Konfirmasi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Konfirmasi PIN", "Berhasil masuk ke halaman konfirmasi pin", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileLabel("1").Tap
+	Device("Device").App("Bayar_Beli94").MobileLabel("2").Tap
+	Device("Device").App("Bayar_Beli94").MobileLabel("3").Tap
+	Device("Device").App("Bayar_Beli94").MobileLabel("4").Tap
+	Device("Device").App("Bayar_Beli94").MobileLabel("5").Tap
+	Device("Device").App("Bayar_Beli94").MobileLabel("6").Tap
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Loading Konfirmasi PIN", "Loading konfirmasi PIN", ReportStatus.Passed)
+	wait 15
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Transaksi Berhasil", "Berhasil menampilkan data transaksi di UBP", ReportStatus.Warning)
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileLabel("Detail Transaksi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Detail Transaksi", "Berhasil menampilkan data pendebetan dan jurnal transaksi", ReportStatus.Warning)
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileObject("Icon download").Tap
+	wait 1
+	Device("Device").App("Camera").MobileLabel("Adobe Acrobat").Tap
+	wait 5 
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Download Resi", "Berhasil download resi dalam bentuk jpg", ReportStatus.Warning)
+		
+ElseIf x = "Negative" Then
+
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+	wait 1
+	Device("Device").InsightObject("InsightObject bayarbeli").Click
+	wait 3
+	Device("Device").App("Bayar_Beli94").MobileObject("Arrow tampilkan lebih banyak").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Menu Bayar Beli", "Berhasil masuk ke halaman bayar & beli", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileObject("Swipe").Swipe "up",787,1535
+	wait 1
+	Device("Device").App("Bayar_Beli94").MobileObject("Icon asuransi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Pilih Asuransi", "Berhasil masuk ke halaman list asuransi", ReportStatus.Warning)
+	wait 1
+	'Device("Device").App("Bayar_Beli94").MobileLabel("CAR Tagihan Lainnya").Tap
+	Device("Device").App("Bayar_Beli94").MobileLabel("CAR Premi Reguler").Tap
+	wait 10
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Asuransi", "Berhasil masuk ke halaman input dan tidak terdapat kolom memasukan nominal", ReportStatus.Failed)
+	wait 1
+	'Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Nomor Polis", "Masukkan nomor polis", ReportStatus.Passed)
+	'wait 1
+	Device("Device").App("Bayar_Beli94").MobileEdit("Input nomor polis").Set "1234"
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli94"), "Nomor Polis", "Berhasil menampilkan halaman error 'nomor polis kayanya salah'", ReportStatus.Passed)
+
+End If	
+End Function
+
 Function KorlantasSignal(byval x)
 	If x = "Positive" Then
 	

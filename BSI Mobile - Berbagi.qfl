@@ -53,7 +53,8 @@
 		'wait 1
 		Device("Device").App("Camera").MobileLabel("Adobe Acrobat").Tap
 		wait 7
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Download Resi", "Menampilkan hasil download resi", ReportStatus.Passed)
+		'Tidak ada button bagikan resi
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Download Resi", "Menampilkan hasil download resi", ReportStatus.Warning)
 		wait 1
 	
 	ElseIf x = "Negative" Then
@@ -82,7 +83,8 @@
 		wait 1 
 		Device("Device").App("Berbagi").MobileEdit("input masukkan nominal").Set "15000"
 		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Minimal Transaksi", "Nominal yang dimasukkan tidak memenuhi minimal transaksi", ReportStatus.Passed)
+		'Tidak highlight merah pada input text
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Minimal Transaksi", "Nominal yang dimasukkan tidak memenuhi minimal transaksi", ReportStatus.Warning)
 		wait 1
 	
 	End If
