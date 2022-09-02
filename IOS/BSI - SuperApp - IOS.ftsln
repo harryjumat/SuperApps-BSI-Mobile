@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.1.3.0
+Project("") = "tumbal", "tumbal\Test.tsp", "C3B1EDE7-D67D-4931-B40B-FAE644F59509"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\tumbal\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Bayar Beli - BPJS Kesehatan", "Bayar Beli - BPJS Kesehatan\Test.tsp", "470F8BED-C1CF-4B24-81F2-1381640BFDD3"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS Kesehatan\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Bayar Beli - BPJS Kesehatan Advice", "Bayar Beli - BPJS Kesehatan Advice\Test.tsp", "D12DBD5A-8855-4BC5-B88A-B20CC5C3187D"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS Kesehatan Advice\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Profile - Change Profile Pic", "Profile - Change Profile Pic\Test.tsp", "A2DA29BF-7D50-4467-91CF-3D0D8CD29C36"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Profile - Change Profile Pic\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Profile - Change Email", "Profile - Change Email\Test.tsp", "18C72C19-2D18-4FCF-8B56-9E4F561DE8E8"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Profile - Change Email\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Debug|Any CPU.Build.0 = Debug|Any CPU
+		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.Build.0 = Release|Any CPU
+		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.ActiveCfg = Release|Any CPU
+		470F8BED-C1CF-4B24-81F2-1381640BFDD3.Debug|Any CPU.Build.0 = Debug|Any CPU
+		470F8BED-C1CF-4B24-81F2-1381640BFDD3.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		470F8BED-C1CF-4B24-81F2-1381640BFDD3.Release|Any CPU.Build.0 = Release|Any CPU
+		470F8BED-C1CF-4B24-81F2-1381640BFDD3.Release|Any CPU.ActiveCfg = Release|Any CPU
+		D12DBD5A-8855-4BC5-B88A-B20CC5C3187D.Debug|Any CPU.Build.0 = Debug|Any CPU
+		D12DBD5A-8855-4BC5-B88A-B20CC5C3187D.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		D12DBD5A-8855-4BC5-B88A-B20CC5C3187D.Release|Any CPU.Build.0 = Release|Any CPU
+		D12DBD5A-8855-4BC5-B88A-B20CC5C3187D.Release|Any CPU.ActiveCfg = Release|Any CPU
+		A2DA29BF-7D50-4467-91CF-3D0D8CD29C36.Debug|Any CPU.Build.0 = Debug|Any CPU
+		A2DA29BF-7D50-4467-91CF-3D0D8CD29C36.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		A2DA29BF-7D50-4467-91CF-3D0D8CD29C36.Release|Any CPU.Build.0 = Release|Any CPU
+		A2DA29BF-7D50-4467-91CF-3D0D8CD29C36.Release|Any CPU.ActiveCfg = Release|Any CPU
+		18C72C19-2D18-4FCF-8B56-9E4F561DE8E8.Debug|Any CPU.Build.0 = Debug|Any CPU
+		18C72C19-2D18-4FCF-8B56-9E4F561DE8E8.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		18C72C19-2D18-4FCF-8B56-9E4F561DE8E8.Release|Any CPU.Build.0 = Release|Any CPU
+		18C72C19-2D18-4FCF-8B56-9E4F561DE8E8.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(Function Libraries) = postProject
+		BSI Mobile = D:\BSI\IOS\BSI Mobile.qfl
+		BSI Mobile - Bayar Beli = D:\BSI\IOS\BSI Mobile - Bayar Beli.qfl
+		BSI Mobile - Profile = D:\BSI\IOS\BSI Mobile - Profile.qfl
+	EndGlobalSection
+EndGlobal

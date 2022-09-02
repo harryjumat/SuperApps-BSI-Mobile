@@ -1,0 +1,189 @@
+﻿Function BPJSKesehatan(byval x)
+	If x = "positive" Then
+	
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		'Device("Device").App("Bayar_Beli").MobileButton("btn_bpjs").Tap
+		Device("Device").InsightObject("InsightObject btn bpjs").Click
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS", "Berhasil masuk ke halaman BPJS", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("Kesehatan").Tap
+		wait 10
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan", "Berhasil masuk ke halaman BPJS Kesehatan", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set "888802118748492"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor VA", "Berhasil memasukkan nomor va", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("btn_selanjutnya").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pembayaran BPJS Kesehatan", "Berhasil masuk ke halaman pembayaran BPJS Kesehatan", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("datepicker_jumlahbulan").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Jumlah Bulan", "Berhasil menampilkan pilihan jumlah bulan", ReportStatus.Passed)
+		wait 1
+		'Device("Device").App("Bayar_Beli").MobileDropDown("MobileDropDown").Select "12",0
+		'Device("Device").App("Dev").MobileDropDown("MobileDropDown").Swipe "up",205,481
+		Device("Device").App("Bayar_Beli").MobileDropDown("MobileDropDown").Swipe "up",217,150
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Jumlah Bulan", "Pilih jumlah bulan", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_pilih").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Berhasil Pilih Jumlah Bulan", "Berhasil memilih jumlah bulan", ReportStatus.Warning)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_lanjutkan").Tap
+		wait 50
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi Transaksi", "Berhasil masuk ke halaman konfirmasi transaksi", ReportStatus.Warning)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_pilih").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi PIN", "Berhasil masuk ke halaman konfirmasi pin", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("1").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("2").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("3").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("4").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("5").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("6").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Loading Konfirmasi PIN", "Loading konfirmasi pin", ReportStatus.Passed)
+		wait 60
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Transaksi Berhasil", "Transaksi berhasil", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileButton("Detailtransaksi").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Detail Transaksi", "Resi berhasil sudah sesuai format", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileLabel("download").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Download Resi", "Resi berhasil didownload", ReportStatus.Passed)
+	
+	ElseIf x = "negative"	Then
+		
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		'Device("Device").App("Bayar_Beli").MobileButton("btn_bpjs").Tap
+		Device("Device").InsightObject("InsightObject btn bpjs").Click
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS", "Berhasil masuk ke halaman BPJS", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("Kesehatan").Tap
+		wait 10
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan", "Berhasil masuk ke halaman BPJS Kesehatan", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set "123456789"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor VA", "Berhasil memasukkan nomor va", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("btn_selanjutnya").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Salah Nomor Pelanggan", "Gagal menampilkan error 'nomor pelanggan yang dimasukan salah'", ReportStatus.Failed)
+		wait 1
+		Device("Device").InsightObject("InsightObject back").Click
+		wait 1
+		Device("Device").InsightObject("InsightObject silang").Click
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set "888802118748492"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor VA", "Berhasil memasukkan nomor va", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("btn_selanjutnya").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Tagihan Sudah Lunas", "Gagal menampilkan error 'tagihan sudah lunas''", ReportStatus.Failed)
+		wait 1
+		Device("Device").InsightObject("InsightObject back").Click
+		wait 1
+		Device("Device").InsightObject("InsightObject silang").Click
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set "999902118748492"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor VA", "Berhasil memasukkan nomor va", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("btn_selanjutnya").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pembayaran BPJS Kesehatan", "Berhasil masuk ke halaman pembayaran BPJS Kesehatan'", ReportStatus.Failed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("datepicker_jumlahbulan").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Jumlah Bulan", "Berhasil menampilkan pilihan jumlah bulan", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileDropDown("MobileDropDown").Swipe "up",217,150
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Jumlah Bulan", "Pilih jumlah bulan", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_pilih").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
+		wait 3
+		Device("Device").InsightObject("InsightObject cari nama").Click
+		wait 1
+		Device("Device").Enterkeys typeValue, "612"
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("Rp0,00").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_lanjutkan").Tap
+		wait 60
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Passed)
+		wait 1
+		
+	End If
+End Function
+
+Function BPJSKesehatanAdvice(byval x)
+	If x = "positive" Then
+	
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		'Device("Device").App("Bayar_Beli").MobileButton("btn_bpjs").Tap
+		Device("Device").InsightObject("InsightObject btn bpjs").Click
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS", "Berhasil masuk ke halaman BPJS", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileLabel("Kesehatan - Advice").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan Advice", "Berhasil masuk ke halaman BPJS Kesehatan Advice", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set "888802118748492"
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor VA", "Berhasil memasukkan nomor va", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileLabel("btn_selanjutnya").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pembayaran BPJS Kesehatan Advice", "Berhasil masuk ke halaman pembayaran BPJS Kesehatan Advice", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileButton("datepicker_jumlahbulan").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Jumlah Bulan", "Berhasil menampilkan pilihan jumlah bulan", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileDropDown("MobileDropDown").Select "12",0
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Jumlah Bulan", "Pilih jumlah bulan", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileButton("btn_pilih").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Berhasil Pilih Jumlah Bulan", "Berhasil memilih jumlah bulan", ReportStatus.Warning)
+		Device("Device").App("Bayar_Beli").MobileButton("btn_lanjutkan").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi Transaksi", "Berhasil masuk ke halaman konfirmasi transaksi", ReportStatus.Warning)
+		Device("Device").App("Bayar_Beli").MobileButton("btn_pilih").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi PIN", "Berhasil masuk ke halaman konfirmasi pin", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileLabel("1").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("2").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("3").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("4").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("5").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("6").Tap
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Loading Konfirmasi PIN", "Loading konfirmasi pin", ReportStatus.Passed)
+		
+		''Belum selesai, stuck di konfirmasi pin (sedang gangguan)
+	
+	ElseIf x = "negative"	Then
+		
+		'===========SCIPRT NEGATIVE===========
+		
+	End If
+End Function

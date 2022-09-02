@@ -1,0 +1,9 @@
+pada halaman bpjs, button konfirmasi turun kebawah
+
+konfirmasi transaksi:
+jumlah anggota keluarga tidak ada
+tagihan pembayaran (figma), jumlah tagihan (app)
+button "konfirmasi" (figma), confirmation (app)
+pada aplikasi tidak terdapat nomor va
+
+loading konfirmasi pin sangat lama
