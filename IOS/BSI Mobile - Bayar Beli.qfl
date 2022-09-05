@@ -1,4 +1,5 @@
-﻿Function BPJSKesehatan(byval x)
+﻿'okeh
+Function BPJSKesehatan(byval x)
 	If x = "positive" Then
 	
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
