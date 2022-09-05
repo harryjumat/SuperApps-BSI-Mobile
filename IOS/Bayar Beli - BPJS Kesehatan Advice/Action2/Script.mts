@@ -11,8 +11,8 @@ Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Bayar_Beli.tsr
 
 Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps BPJS Kesehatan Advice")
 
-'BPJS Kesehatan Advice - Positive
-Call react.Addtitle("BSI SuperApps - BPJS Kesehatan Advice - Positive")
+'BPJS Kesehatan Advice - Negative
+Call react.Addtitle("BSI SuperApps - BPJS Kesehatan Advice - Negative")
 Call Login()
-Call BPJSKesehatanAdvice("positive")
+Call BPJSKesehatanAdvice("negative")
 Call SaveReact_Merge()

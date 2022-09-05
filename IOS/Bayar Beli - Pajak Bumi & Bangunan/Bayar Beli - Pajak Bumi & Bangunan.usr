@@ -12,8 +12,7 @@ DevelopTool=AQT
 
 [Actions]
 Action0=Action0\Script.mts
-Kesehatan Advice - Positive=Action1\Script.mts
-Kesehatan Advice - Negative=Action2\Script.mts
+Pajak Bumi & Bangunan- Positive=Action1\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -56,6 +55,3 @@ Action0\ObjectRepository.bdb=
 Action1\Script.mts=
 Action1\Resource.mtr=
 Action1\ObjectRepository.bdb=
-Action2\Script.mts=
-Action2\Resource.mtr=
-Action2\ObjectRepository.bdb=

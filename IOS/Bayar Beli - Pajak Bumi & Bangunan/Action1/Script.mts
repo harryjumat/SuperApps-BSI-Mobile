@@ -9,10 +9,10 @@ Call Path_Folder()
 Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Login.tsr")
 Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Bayar_Beli.tsr")
 
-Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps BPJS Kesehatan Advice")
+Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Pajak Bumi & Bangunan")
 
-'BPJS Kesehatan Advice - Positive
-Call react.Addtitle("BSI SuperApps - BPJS Kesehatan Advice - Positive")
+'PBB - Positive
+Call react.Addtitle("BSI SuperApps - Pajak Bumi & Bangunan - Positive")
 Call Login()
-Call BPJSKesehatanAdvice("positive")
+Call PBB("positive")
 Call SaveReact_Merge()
