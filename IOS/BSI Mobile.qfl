@@ -1,28 +1,57 @@
 ﻿Function Login()
-	'wait 3
+	Device("Device").App("Login").MobileLabel("Sholat").Check CheckPoint("Sholat")
 	Call CaptureImageUFTV2(Device("Device").App("Login"), "Login", "Berhasil masuk ke menu login", ReportStatus.Passed)
 	Device("Device").App("Login").MobileLabel("Login").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Login"), "Input Password", "Berhasil masuk untuk memasukkan password", ReportStatus.Passed)
-	wait 1
 	Device("Device").App("Login").MobileEdit("Password").Set "p@ssw0rd"
-	wait 2
+	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Login"), "Password Valid", "Mengisikan password dengan benar", ReportStatus.Passed)
-	wait 2
 	Device("Device").App("Login").MobileButton("Masuk").Tap
-	wait 13
+	Device("Device").App("Login").MobileLabel("Harry").Check CheckPoint("Harry")
 End Function
 
 Function Navigate (byval MenuNavigate)
 	
 	If MenuNavigate = "Profile" Then
-		'Device("Device").App("App").MobileLabel("Navigate").Tap
+		Device("Device").App("App").MobileLabel("Navigate").Tap
+	'ElseIf MenuNavigate = "" Then
+		
 	End If
 	
 End Function
 
+'fungsi konfirmasi pin
+'x adalah nama object pada object repository
+Function KonfirmasiPIN(x)
+	
+	Call CaptureImageUFTV2(Device("Device").App(x), "Input PIN", "Berhasil menampilkan halaman input PIN", ReportStatus.Passed)
+	wait 1
+	Device("Device").App(x).MobileLabel("1").Tap
+	Device("Device").App(x).MobileLabel("2").Tap
+	Device("Device").App(x).MobileLabel("3").Tap
+	Device("Device").App(x).MobileLabel("4").Tap
+	Device("Device").App(x).MobileLabel("5").Tap
+	Device("Device").App(x).MobileLabel("6").Tap
+	Call CaptureImageUFTV2(Device("Device").App(x), "Loading Konfirmasi PIN", "Berhasil menampilkan loading konfirmasi PIN", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi").Check CheckPoint("Detail Transaksi")
+End Function
 
-
+'fungsi transaksi berhasil, detail transaksi
+Function TransaksiNonSwipe(x)
+	
+	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Transaksi berhasil", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Transaksi Berhasil").MobileButton("Arrow").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Berhasil menampilkan halaman notifikasi transaksi berhasil", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Transaksi Berhasil").MobileLabel("Download").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
+	
+End Function
 
 
 

@@ -1,0 +1,2 @@
+IOS: konfirmasi transaksi = 
+tidak sesuai dengan figma, transaksi berhasil = tidak sesuai figma, detail transaksi berhasil = tidak sesuai dengan figma
