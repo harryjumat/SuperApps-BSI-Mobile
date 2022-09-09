@@ -12,14 +12,21 @@ Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Bayar_Beli.tsr
 Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Pulsa & Paket Data Telkomsel")
 
 'Pulsa & Paket Data Telkomsel - Positive
-Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Positive")
+Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Negative")
 'Call Login()
 'Call PulsaPaketDataTelkomsel("pulsapositive")
 'Call Login()
-'Call PulsaPaketDataTelkomsel("paketdatapositive")
-'Call SaveReact_Merge()		
+'Call PulsaPaketDataTelkomsel("paketdatanegative")
+'Call SaveReact_Merge()	
+
+
+
+
+
+
+
+
 		
-	
-		Call TransaksiNonSwipe("Bayar_Beli")
+		
 
 

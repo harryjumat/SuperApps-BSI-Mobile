@@ -3,4 +3,5 @@
 3-4 weekend
 5 bayar beli bpjs kesehatan negative, bpjs kesehatan advice positive dan negative
 6 BPJS Kesehatan PU positive dan negative
-7 pulsa dan paket data: telkomsel positive (onprogress)
+7 pulsa dan paket data: telkomsel positive (PAKET DATA) (onprogress)
+8. pulsa dan paket data: telkomsel positive (PAKET DATA),  negative on progress

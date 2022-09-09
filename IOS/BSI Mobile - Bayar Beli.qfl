@@ -489,37 +489,13 @@ End If
 End Function
 
 Function PulsaPaketDataTelkomsel(byval x)
-	
-	'pulsa masih belum selesai develop
-'	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-'	wait 1
-'	Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
-'	wait 1
-'	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
-'	wait 1
-'	Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
-'	wait 1
-'	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
-'	wait 1
-'	Device("Device").InsightObject("InsightObject pulsa paket data").Click
-'	'checkpoint
-'	Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
-'	wait 1
-'	Device("Device").App("Dev").MobileEdit("nomor hp").Set "082214619096"
-'	wait 1
-'	Device("Device").App("Dev").MobileButton("Done").Tap
-'	Device("Device").App("Dev").MobileLabel("100.000").Check CheckPoint("100.000")
-'	wait 1
-'	Device("Device").App("Dev").MobileLabel("15.000").Tap
-'	wait 1
-'	Device("Device").App("Dev").MobileLabel("Lanjutkan").Tap
 
 	'paket data (fungsi berjalan)
 	If x = "paketdatapositive" Then
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
 		wait 1
 		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
-		wait 1
+		wait 5
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
 		wait 3
 		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
@@ -541,13 +517,13 @@ Function PulsaPaketDataTelkomsel(byval x)
 		Device("Device").App("Dev").MobileButton("Done").Tap
 		wait 1
 		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
-		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pembelian Pulsa & Paket Data", "Masuk ke screen pembelian pulsa dan Paket data", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Passed)
 		Device("Device").InsightObject("InsightObject pilih paket data").Click
 		wait 1
 		Device("Device").App("Bayar_Beli").MobileButton("pilihan paket").Tap
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Memilih paket data", ReportStatus.Passed)
-		Device("Device").App("Dev").MobileButton("btn pilih paket").Tap
+		Device("Device").InsightObject("InsightObject pilih paket").Click
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pembelian Pulsa & Paket Data", "Berhasil memilih paket data", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileButton("btn lanjutkan").Tap
@@ -559,6 +535,189 @@ Function PulsaPaketDataTelkomsel(byval x)
 		Call KonfirmasiPIN("Bayar_Beli")
 		Call TransaksiNonSwipe("Bayar_Beli")
 		
+		ElseIf x = "paketdatanegative" Then
+		
+		'salah nomor hp
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject pulsa paket data").Click
+		wait 1
+		
+		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
+		
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Paket Data").Tap
+		wait 1
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "1"
+		wait 1
+		Device("Device").InsightObject("InsightObject hapus no hp").Click
+		wait 1
+		'Device("Device").App("Dev").MobileEdit("nomor hp").Set "085283581826"
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "082214619096"
+		wait 1
+		Device("Device").App("Dev").MobileButton("Done").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Failed)
+		
+		'Script nya bisa, tapi tiba2 defect lagi fiturnya
+		
+'		Device("Device").App("Bayar_Beli").MobileLabel("7420605239").Check CheckPoint("7420605239")
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Passed)
+'		Device("Device").InsightObject("InsightObject pilih paket data").Click
+'		wait 1
+'		Device("Device").App("Bayar_Beli").MobileButton("pilihan paket").Tap
+'		wait 1
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Memilih paket data", ReportStatus.Passed)
+'		Device("Device").InsightObject("InsightObject pilih paket").Click
+'		wait 1
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pembelian Pulsa & Paket Data", "Berhasil memilih paket data", ReportStatus.Passed)
+'		Device("Device").App("Login").MobileButton("btn lanjutkan").Tap
+'		wait 1
+'		Call ErrorHandler()
+'		'format nomor handphone tidak sesuai
+'		Device("Device").App("Bayar_Beli").MobileEdit("nomor hp").Set "123"
+'		wait 1
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Format Tidak Sesuai", "Berhasil menampilkan helper text 'format nomor handphone tidak sesuai'", ReportStatus.Passed)
+'		wait 1
+'		''menghilangkan tab pulsa dan paket data
+'		Device("Device").InsightObject("InsightObject silang").Click
+'		wait 1
+'		Device("Device").App("Dev").MobileButton("Done").Tap
+'		wait 1
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Tab Pulsa & Paket Data", "Berhasil menghilangkan tab pulsa dan paket data", ReportStatus.Failed)
+'		wait 1
+'		Device("Device").App("Error Handling").MobileLabel("Kembali").Tap
+'		wait 1
+'		'notifikasi saldo tidak mencukupi
+'		Device("Device").App("Bayar_Beli").MobileEdit("nomor hp").Set "1"
+'		wait 1
+'		Device("Device").InsightObject("InsightObject hapus no hp").Click
+'		wait 1
+'		Device("Device").App("Dev").MobileEdit("nomor hp").Set "082214619096"
+'		wait 1
+'		Device("Device").App("Dev").MobileButton("Done").Tap
+'		Device("Device").App("Bayar_Beli").MobileLabel("7420605239").Check CheckPoint("7420605239")
+'		Device("Device").App("Dev").MobileLabel("Change").Tap
+'		wait 1
+'		Device("Device").App("Bayar_Beli").MobileLabel("Rp0,00").Tap
+'		Device("Device").InsightObject("InsightObject pilih paket data").Click
+'		wait 1
+'		'Device("Device").App("Bayar_Beli").MobileButton("pilihan paket").Exist
+'		
+'		If Device("Device").App("Dev").MobileButton("btn pilih paket").Exist Then
+'			Device("Device").App("Bayar_Beli").MobileButton("pilihan paket").Tap
+'		Else 
+'			wait 3
+'		End If
+'		Device("Device").App("Dev").MobileButton("btn pilih paket").Tap
+'		wait 1
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Notifikasi Saldo Tidak Mencukupi", "Berhasil menampilkan notifikasi error 'saldo tidak mencukupi'", ReportStatus.Failed)
+'		'saldo kurang (pop up)
+'		wait 1
+'		Device("Device").App("Bayar_Beli").MobileButton("btn lanjutkan").Tap
+'		Call ErrorHandler()
+'		'izinkan bsi akses kontak
+'		Device("Device").InsightObject("InsightObject contact").Click
+'		wait 1
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Notifikasi Izin Akses Kontak ", "Berhasil menampilkan notifikasi error 'izinkan BSI untuk akses kontak di perangkat kamu'", ReportStatus.Failed)
+		
 		
 		End If	
 End Function
+
+Function PulsaPaketDataXL(byval x)
+		
+		If x = "paketdatapositive" Then
+		
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject pulsa paket data").Click
+		wait 1
+		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Paket Data").Tap
+		wait 1
+'		
+'		Device("Device").App("Dev").MobileEdit("nomor hp").Set "1"
+'		wait 1
+'		Device("Device").InsightObject("InsightObject hapus no hp").Click
+'		wait 1
+'		Device("Device").App("Dev").MobileEdit("nomor hp").Set "08771727616"
+'		wait 1
+'		Device("Device").App("Dev").MobileButton("Done").Tap
+'		wait 1
+		Device("Device").InsightObject("InsightObject contact").Click
+		wait 1
+		Device("Device").InsightObject("InsightObject Contact XL").Click
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Contact 0877 1727616").Tap
+		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Passed)
+		Device("Device").InsightObject("InsightObject pilih paket data").Click
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("XTRA COMBO 5GB+5GB").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Memilih paket data", ReportStatus.Passed)
+		Device("Device").InsightObject("InsightObject pilih paket").Click
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pembelian Pulsa & Paket Data", "Berhasil memilih paket data", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileButton("btn lanjutkan").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("08771727616").Check CheckPoint("08771727616")
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi Transaksi", "Berhasil masuk ke halaman konfirmasi transaksi", ReportStatus.Passed)
+		Device("Device").App("Bayar_Beli").MobileLabel("Confirmation").Tap
+		wait 1
+		Call KonfirmasiPIN("Bayar_Beli")
+		Call TransaksiNonSwipe("Bayar_Beli")
+		
+	elseIf x = "paketdatanegative" Then
+			
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject pulsa paket data").Click
+		wait 1
+		
+		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
+		
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Paket Data").Tap
+		wait 1
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "1"
+		wait 1
+		Device("Device").InsightObject("InsightObject hapus no hp").Click
+		wait 1
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "08771727616"
+		wait 1
+		Device("Device").App("Dev").MobileButton("Done").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Failed)
+
+		'Script nya bisa, tapi tiba2 defect lagi fiturnya
+		
+	End If
+
+End Function 
