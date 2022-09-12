@@ -5,3 +5,6 @@
 6 BPJS Kesehatan PU positive dan negative
 7 pulsa dan paket data: telkomsel positive (PAKET DATA) (onprogress)
 8. pulsa dan paket data: telkomsel positive (PAKET DATA),  negative on progress
+9. paket  data xl positive dan negative (onprogress)
+
+12. [regresi] change profile pic, delete profile pic, change email positive dan negative, pulsa telkomsel positive(onprogress)

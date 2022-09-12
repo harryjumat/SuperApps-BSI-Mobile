@@ -21,49 +21,76 @@ If y = "ChangePic" Then
 	Device("Device").App("Profile").MobileLabel("Use Photo").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Penggunaan Foto", "Konfirmasi penggunaan foto ", ReportStatus.Passed)
-	wait 1
+	wait 3
 	'tidak bisa tab button save foto
 	Device("Device").App("Profile").MobileLabel("Save").Tap
 	wait 1
-	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Gagal Menyimpan Foto", "Gagal menyimpan foto ", ReportStatus.Failed)
-	wait 1
+	'Device("Device").App("Profile").MobileLabel("Informasi akun").Check CheckPoint("Informasi akun")
+	Do 
+		wait 1
+	Loop until Device("Device").App("Profile").MobileLabel("Informasi akun").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Menyimpan Foto", "Berhasil menyimpan foto ", ReportStatus.Passed)
+	
+ElseIf y = "ChangePicGallery" Then
 	
 	'=========AMBIL FOTO DARI GALERI=========
-	Device("Device").App("Profile").MobileLabel("Cancel").Tap
+'	Device("Device").App("Profile").MobileLabel("Cancel").Tap
+'	wait 1
+'	Device("Device").App("Profile").MobileButton("Cancel").Tap
+'	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil menampilkan halaman Dashboard/Home Screen BSI Mobile", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileButton("Cancel").Tap
+	'Device("Device").App("Profile").MobileLabel("HA").Tap
+	Device("Device").InsightObject("InsightObject Profile").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
 	wait 1
 	Device("Device").App("Profile").MobileButton("ic camera").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer Foto Profile", ReportStatus.Passed)
 	wait 1
 	Device("Device").App("Profile").MobileLabel("Choose from gallery").Tap
-	wait 1
+	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Gallery", "Mengambil foto dari galeri", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileObject("Photo, 01 September, 13.").Tap
+	'Device("Device").App("Profile").MobileObject("Photo, 01 September, 13.").Tap
+	Device("Device").App("Profile").MobileObject("saitama").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil mengambil foto dan melakukan edit foto", ReportStatus.Passed)
 	wait 1
 	Device("Device").InsightObject("InsightObject choose").Click
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Penggunaan Foto", "Konfirmasi penggunaan foto ", ReportStatus.Passed)
-	wait 1
+	wait 3
 	Device("Device").App("Profile").MobileLabel("Save").Tap
-	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Gagal Menyimpan Foto", "Gagal menyimpan foto ", ReportStatus.Failed)
+	wait 1
+'	Device("Device").App("Profile").MobileLabel("Informasi akun").Check CheckPoint("Informasi akun")
+	Do 
+		wait 1
+	Loop until Device("Device").App("Profile").MobileLabel("Informasi akun").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Menyimpan Foto", "Berhasil menyimpan foto ", ReportStatus.Passed)
 	
 	
 ElseIf y = "DeletePic" Then
 	
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil menampilkan halaman Dashboard/Home Screen BSI Mobile", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileLabel("HA").Tap
+	Device("Device").InsightObject("InsightObject Profile").Click
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
 	wait 1
 	Device("Device").App("Profile").MobileButton("ic camera").Tap
 	wait 1
-	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer", ReportStatus.Failed)
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Profile").MobileLabel("Delete Photo").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Hapus Foto", "Menampilkan popup drawer konfirmasi hapus foto", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Profile").MobileButton("Delete").Tap
+	wait 3
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Hapus Foto Profile", "Menampilkan popup drawer", ReportStatus.Passed)
+		
 
 	
 End If
@@ -84,11 +111,11 @@ If x = "positive" Then
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil masuk ke menu ubah email", ReportStatus.Passed)
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set " "
-		For i = 1 To 30 Step 1
-			Device("Device").App("Profile").MobileObject("delete").Tap
+		For i = 1 To 24 Step 1
+			Device("Device").App("Profile").MobileObject("Hapus").Tap
 		Next
 		wait 1
-		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos@gmail.com"
+		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos96@gmail.com"
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Memasukkan email yang baru", ReportStatus.Passed)
 		wait 2
@@ -131,30 +158,30 @@ ElseIf x = "negative" Then
 		'EMAIL TIDAK SESUAI
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil masuk ke menu ubah email", ReportStatus.Passed)
 		wait 1
-		For i = 1 To 30 Step 1
+		For i = 1 To 25 Step 1
 			Device("Device").App("Profile").MobileObject("Hapus").Tap
 		Next
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminosgmailcom"
 		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Format Email Tidak Sesuai", "Gagal mengubah email dikarenakan format yang tidak sesuai", ReportStatus.Warning)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Format Email Tidak Sesuai", "Format yang tidak sesuai", ReportStatus.Warning)
 		wait 1
 		'EMAIL TELAH DIGUNAKAN
-		For i = 1 To 30 Step 1
-			Device("Device").App("Profile").MobileObject("Hapus").Tap
-		Next
-		wait 1
-		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos@gmail.com"
-		wait 1
-		Device("Device").App("Profile").MobileLabel("Save").Tap
-		wait 3
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Gagal mengubah email dikarenakan email yang dimasukkan telah digunakan", ReportStatus.Failed)
-		wait 1
-		For i = 1 To 30 Step 1
+		For i = 1 To 25 Step 1
 			Device("Device").App("Profile").MobileObject("Hapus").Tap
 		Next
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos96@gmail.com"
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Save").Tap
+		wait 3
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Email yang dimasukkan telah digunakan", ReportStatus.Failed)
+		wait 1
+		For i = 1 To 25 Step 1
+			Device("Device").App("Profile").MobileObject("Hapus").Tap
+		Next
+		wait 1
+		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos@gmail.com"
 		wait 1
 		Device("Device").App("Profile").MobileLabel("Save").Tap
 		wait 2

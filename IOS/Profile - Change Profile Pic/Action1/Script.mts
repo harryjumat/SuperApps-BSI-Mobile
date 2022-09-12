@@ -15,8 +15,9 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 Call react.Addtitle("BSI SuperApps - Change Profile Pic")
 Call Login()
 Call ChangeProfilePic("ChangePic")
+Call Login()
+Call ChangeProfilePic("ChangePicGallery")
 Call SaveReact_Merge()
-
 
 
 

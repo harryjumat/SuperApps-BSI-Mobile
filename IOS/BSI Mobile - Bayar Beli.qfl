@@ -490,6 +490,63 @@ End Function
 
 Function PulsaPaketDataTelkomsel(byval x)
 
+	If x = "pulsapositive" Then
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject pulsa paket data").Click
+		wait 1
+		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
+		wait 1
+		Device("Device").InsightObject("InsightObject contact").Click
+		wait 1
+		Device("Device").App("Dev").MobileObject("Contact Telkomsel").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("0822 14619096").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileLabel("Rp. 15.000").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Nominal Pulsa", "Berhasil memilih nominal pulsa", ReportStatus.Warning) 'logo no telp masih XL
+ 		wait 1
+		Device("Device").App("Dev").MobileButton("btn confirmation").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi Transaksi", "Berhasil menampilkan halaman konfirmasi transaksi", ReportStatus.Warning) 'logo pulsa nya masih XL
+		Device("Device").App("Bayar_Beli").MobileLabel("Confirmation").Tap
+		wait 1
+		Call KonfirmasiPIN("Bayar_Beli")
+		Call TransaksiNonSwipe("Bayar_Beli")
+		wait 1
+		Device("Device").App("Login").MobileButton("Close").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Back Detail Resi").Tap
+		wait 1
+		Device("Device").App("Dev").MobileList("MobileList_3").Swipe "up",214,300
+		wait 2
+		Device("Device").App("Dev").MobileLabel("Ke Dashboard").Tap
+		Do
+			wait 1
+		Loop until Device("Device").App("Login").MobileLabel("Harry").Exist		
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_bayarbeli").Tap
+		wait 5	
+		Device("Device").InsightObject("InsightObject Bintang Fav").Click
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Cek detail pembelian pada riwayat dan klik logo bintang", ReportStatus.Passed)	
+		Device("Device").App("Dev").MobileLabel("Favorit").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Riwayat Transaksi", "Riwayat transaksi terdapat pada tab favorit", ReportStatus.Passed)	
+	End If
+
 	'paket data (fungsi berjalan)
 	If x = "paketdatapositive" Then
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
