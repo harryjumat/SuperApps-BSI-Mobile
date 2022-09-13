@@ -1,6 +1,9 @@
 ﻿Function Login()
 	Device("Device").App("Login").Launch
-	If Device("Device").App("Login").MobileLabel("Sholat Zuhur").Exist or Device("Device").App("Login").MobileLabel("Sholat Ashar").Exist or Device("Device").App("Login").MobileLabel("Sholat Magrib").Exist Then
+	'If Device("Device").App("Login").MobileLabel("Sholat Zuhur").Exist or Device("Device").App("Login").MobileLabel("Sholat Ashar").Exist or Device("Device").App("Login").MobileLabel("Sholat Magrib").Exist Then
+	do 
+	wait 1
+	Loop until Device("Device").App("Login").MobileLabel("Sholat Zuhur").Exist or Device("Device").App("Login").MobileLabel("Sholat Ashar").Exist or Device("Device").App("Login").MobileLabel("Sholat Magrib").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Login"), "Login", "Berhasil masuk ke menu login", ReportStatus.Passed)
 		Device("Device").App("Login").MobileLabel("Login").Tap
 		wait 1
@@ -13,7 +16,7 @@
 		Do
 			wait 1
 		Loop until Device("Device").App("Login").MobileLabel("Harry").Exist
-	End If
+	'End If
 
 End Function
 

@@ -19,17 +19,6 @@ Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Negative")
 'Call PulsaPaketDataTelkomsel("paketdatanegative")
 'Call SaveReact_Merge()	
 
-
-		
-
-
-
-
-
-
-
-
-		
 		
 
 

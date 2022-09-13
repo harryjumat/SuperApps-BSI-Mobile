@@ -1,0 +1,2979 @@
+<?xml version="1.0"?>
+<Results version="1.0">
+<ReportNode type="testrun">
+<ReportNode type="Iteration">
+<ReportNode type="Action">
+<ReportNode type="Step">
+<Data>
+    <Name>SystemUtil.Run "chrome.exe",3</Name>
+    <StartTime>2022-08-22 14:10:30</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <IconKey>3afbb4b4a05542cebfb24cdc6f985584</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>Sign in.Exist</Name>
+    <Description>"Object exists"</Description>
+    <StartTime>2022-08-22 14:10:32</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>WebButton</Type>
+            <Name><![CDATA[Sign in]]></Name>
+          </Object>
+        </Path>
+        <Operation>Exist</Operation>
+        <OperationData><![CDATA["Object exists"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[type]]></Name>
+            <Value><![CDATA[submit]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[Sign in]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[INPUT]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>4603bc464a7544a9ae969647e099cfcb</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>signOnName.Set</Name>
+    <Description>"ADHIS01"</Description>
+    <StartTime>2022-08-22 14:10:32</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>WebEdit</Type>
+            <Name><![CDATA[signOnName]]></Name>
+          </Object>
+        </Path>
+        <Operation>Set</Operation>
+        <OperationData><![CDATA["ADHIS01"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[type]]></Name>
+            <Value><![CDATA[password]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[signOnName]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[INPUT]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>d7599eda4a8e41d09ca0d0d31e907687</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>password.Set</Name>
+    <Description>"Bsi1234"</Description>
+    <StartTime>2022-08-22 14:10:32</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>WebEdit</Type>
+            <Name><![CDATA[password]]></Name>
+          </Object>
+        </Path>
+        <Operation>Set</Operation>
+        <OperationData><![CDATA["Bsi1234"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[type]]></Name>
+            <Value><![CDATA[password]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[password]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[INPUT]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>d7599eda4a8e41d09ca0d0d31e907687</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Sign in.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:33</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>WebButton</Type>
+            <Name><![CDATA[Sign in]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[type]]></Name>
+            <Value><![CDATA[submit]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[Sign in]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[INPUT]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>4603bc464a7544a9ae969647e099cfcb</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 Sign in</Name>
+    <Description>Page</Description>
+    <StartTime>2022-08-22 14:10:32</StartTime>
+    <Duration>1</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[Page]]></OperationData>
+      </TestObject>
+      <IconKey>852dd3bb4fe44f0189769ec71a7870e8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 Sign in</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2022-08-22 14:10:32</StartTime>
+    <Duration>1</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Login_T24Mutasi</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:29</StartTime>
+    <Duration>4</Duration>
+    <Result>Done</Result>
+    <InputParameters />
+    <Extension>
+      <IconKey>86b96c28a4984b1bb788c037b637c8a8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Action">
+<ReportNode type="Context">
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>Sign Off.Exist</Name>
+    <Description>"Object exists"</Description>
+    <StartTime>2022-08-22 14:10:37</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[Sign Off]]></Name>
+          </Object>
+        </Path>
+        <Operation>Exist</Operation>
+        <OperationData><![CDATA["Object exists"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[Sign Off]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[A]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>commandValue.Set</Name>
+    <Description>"?111"</Description>
+    <StartTime>2022-08-22 14:10:37</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>WebEdit</Type>
+            <Name><![CDATA[commandValue]]></Name>
+          </Object>
+        </Path>
+        <Operation>Set</Operation>
+        <OperationData><![CDATA["?111"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[type]]></Name>
+            <Value><![CDATA[text]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[commandValue]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[INPUT]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>d7599eda4a8e41d09ca0d0d31e907687</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 Sign in</Name>
+    <Description>Page</Description>
+    <StartTime>2022-08-22 14:10:37</StartTime>
+    <Duration>3</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[Page]]></OperationData>
+      </TestObject>
+      <IconKey>852dd3bb4fe44f0189769ec71a7870e8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>CommandButton.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:40</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+          <Object>
+            <Type>InsightObject</Type>
+            <Name><![CDATA[CommandButton]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+      </TestObject>
+      <IconKey>a3714ddb5df747acb3fd60e77fe783ef</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 Sign in</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2022-08-22 14:10:37</StartTime>
+    <Duration>6</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 Sign in]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>"Temenos T24"- Smart Identification</Name>
+    <Description>&lt;P&gt;&lt;span class="text"&gt;The smart identification mechanism was invoked.&lt;/span&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN class=text&gt;Reason: object not unique (2 objects found)&lt;/SPAN&gt;&lt;/P&gt;           &lt;SPAN class=text&gt;&lt;b&gt;Original description:&lt;/b&gt;&lt;/SPAN&gt;&lt;br&gt;micclass=Browser&lt;br&gt;&lt;P&gt;&lt;FONT face=Verdana size=2&gt;&lt;SPAN class=text&gt;&lt;B&gt;Smart Identification Alternative Description: &lt;/B&gt;&lt;/SPAN&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;FONT face=Verdana size=2&gt;&lt;u&gt;Base filter properties (2 objects found)&amp;nbsp;&lt;/FONT&gt;&lt;/u&gt;&lt;br&gt;
+micclass=Browser&lt;br&gt;&lt;br&gt;&lt;FONT face=Verdana size=2&gt;&lt;u&gt;Optional filter properties&lt;/FONT&gt;&lt;/u&gt;&lt;br&gt;
+name=Temenos T24&lt;SPAN class=passed&gt; (Used&lt;/SPAN&gt;, 1 matches)&lt;/SPAN&gt;&lt;br&gt;title=Temenos T24&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;openurl=http://10.0.17.13:8080/ibsmrempoa/servlet/BrowserServlet&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;opentitle=Temenos T24&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;openedbytestingtool=0&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;number of tabs=1&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;</Description>
+    <StartTime>2022-08-22 14:10:43</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <SmartIdentificationInfo>
+        <SIDBasicProperties>
+          <Property>
+            <Name><![CDATA[micclass]]></Name>
+            <Value><![CDATA[Browser]]></Value>
+          </Property>
+          <BasicMatch>2</BasicMatch>
+        </SIDBasicProperties>
+        <SIDOptionalProperties>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[Temenos T24]]></Value>
+            <Info><![CDATA[Used]]></Info>
+            <Matches>1</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[title]]></Name>
+            <Value><![CDATA[Temenos T24]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[openurl]]></Name>
+            <Value><![CDATA[http://10.0.17.13:8080/ibsmrempoa/servlet/BrowserServlet]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[opentitle]]></Name>
+            <Value><![CDATA[Temenos T24]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[openedbytestingtool]]></Name>
+            <Value><![CDATA[False]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[number of tabs]]></Name>
+            <Value><![CDATA[1]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+        </SIDOptionalProperties>
+      </SmartIdentificationInfo>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not unique (2 objects found)</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>micclass=Browser<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (2 objects found)&nbsp;</FONT></u><br>
+micclass=Browser<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+name=Temenos T24<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>title=Temenos T24<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>openurl=http://10.0.17.13:8080/ibsmrempoa/servlet/BrowserServlet<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>opentitle=Temenos T24<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>openedbytestingtool=0<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>number of tabs=1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></OperationData>
+      </TestObject>
+      <IconKey>178aabfce0a041c7ac94e356cc993080</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Temenos T24.Maximize</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:43</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+        </Path>
+        <Operation>Maximize</Operation>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>INFORMASI LAYAR.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:45</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[INFORMASI LAYAR]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[title]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[INFORMASI LAYAR]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[SPAN]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Inquiry Rekening.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:47</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[Inquiry Rekening]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[Inquiry Rekening]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[SPAN]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Inquiry Rekening Koran.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:48</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+          <Object>
+            <Type>Link</Type>
+            <Name><![CDATA[Inquiry Rekening Koran]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[xpath]]></Name>
+            <Value><![CDATA[//DIV[@id="pane_"]/UL[2]/LI[1]/UL[1]/LI[3]/UL[1]/LI[7]/A[1]]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[text]]></Name>
+            <Value><![CDATA[Inquiry Rekening Koran Giro/Tabungan]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[A]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>35a57aa2cf784d1aa18a11c0ec46d659</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Temenos T24</Name>
+    <Description>Page</Description>
+    <StartTime>2022-08-22 14:10:45</StartTime>
+    <Duration>4</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[Page]]></OperationData>
+      </TestObject>
+      <IconKey>852dd3bb4fe44f0189769ec71a7870e8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Temenos T24</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2022-08-22 14:10:43</StartTime>
+    <Duration>6</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>Find.Exist</Name>
+    <Description>"Object exists"</Description>
+    <StartTime>2022-08-22 14:10:49</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[Find]]></Name>
+          </Object>
+        </Path>
+        <Operation>Exist</Operation>
+        <OperationData><![CDATA["Object exists"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[Find]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[A]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Rekening Koran</Name>
+    <Description>Page</Description>
+    <StartTime>2022-08-22 14:10:49</StartTime>
+    <Duration>0</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[Page]]></OperationData>
+      </TestObject>
+      <IconKey>852dd3bb4fe44f0189769ec71a7870e8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Rekening Koran.Maximize</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:49</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+        </Path>
+        <Operation>Maximize</Operation>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>NO REKENING.Set</Name>
+    <Description>"7001443776"</Description>
+    <StartTime>2022-08-22 14:10:49</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebEdit</Type>
+            <Name><![CDATA[NO REKENING]]></Name>
+          </Object>
+        </Path>
+        <Operation>Set</Operation>
+        <OperationData><![CDATA["7001443776"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[type]]></Name>
+            <Value><![CDATA[text]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[value:2:1:1]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[INPUT]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>d7599eda4a8e41d09ca0d0d31e907687</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>TANGGAL MUTASI.Set</Name>
+    <Description>"!TODAY"</Description>
+    <StartTime>2022-08-22 14:10:49</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebEdit</Type>
+            <Name><![CDATA[TANGGAL MUTASI]]></Name>
+          </Object>
+        </Path>
+        <Operation>Set</Operation>
+        <OperationData><![CDATA["!TODAY"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[type]]></Name>
+            <Value><![CDATA[text]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[name]]></Name>
+            <Value><![CDATA[value:1:1:1]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[INPUT]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>d7599eda4a8e41d09ca0d0d31e907687</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Find.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:50</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[Find]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[Find]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[A]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>"enquiryDataScroller"- Description mismatch</Name>
+    <Description>The object was not found using the test object description. Check the object's properties.</Description>
+    <StartTime>2022-08-22 14:10:54</StartTime>
+    <Result>Warning</Result>
+    <Extension>
+      <SmartIdentificationInfo>
+        <SIDBasicProperties>
+          <Property>
+            <Name><![CDATA[micclass]]></Name>
+            <Value><![CDATA[WebElement]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[DIV]]></Value>
+          </Property>
+          <BasicMatch>12</BasicMatch>
+        </SIDBasicProperties>
+        <SIDOptionalProperties>
+          <Property>
+            <Name><![CDATA[html id]]></Name>
+            <Value><![CDATA[enquiryDataScroller]]></Value>
+            <Info><![CDATA[Used]]></Info>
+            <Matches>1</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[class]]></Name>
+            <Value><![CDATA[enquiryDataScroller]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[visible]]></Name>
+            <Value><![CDATA[True]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+        </SIDOptionalProperties>
+      </SmartIdentificationInfo>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[enquiryDataScroller]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[The object was not found using the test object description. Check the object's properties.]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[DIV]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[class]]></Name>
+            <Value><![CDATA[enquiryDataScroller]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>"enquiryDataScroller"- Smart Identification</Name>
+    <Description>&lt;P&gt;&lt;span class="text"&gt;The smart identification mechanism was invoked.&lt;/span&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN class=text&gt;Reason: object not found.&lt;/SPAN&gt;&lt;/P&gt;           &lt;SPAN class=text&gt;&lt;b&gt;Original description:&lt;/b&gt;&lt;/SPAN&gt;&lt;br&gt;micclass=WebElement&lt;br&gt;innertext=21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5&lt;br&gt;html tag=DIV&lt;br&gt;class=enquiryDataScroller&lt;br&gt;&lt;P&gt;&lt;FONT face=Verdana size=2&gt;&lt;SPAN class=text&gt;&lt;B&gt;Smart Identification Alternative Description: &lt;/B&gt;&lt;/SPAN&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;FONT face=Verdana size=2&gt;&lt;u&gt;Base filter properties (12 objects found)&amp;nbsp;&lt;/FONT&gt;&lt;/u&gt;&lt;br&gt;
+micclass=WebElement&lt;br&gt;html tag=DIV&lt;br&gt;&lt;br&gt;&lt;FONT face=Verdana size=2&gt;&lt;u&gt;Optional filter properties&lt;/FONT&gt;&lt;/u&gt;&lt;br&gt;
+html id=enquiryDataScroller&lt;SPAN class=passed&gt; (Used&lt;/SPAN&gt;, 1 matches)&lt;/SPAN&gt;&lt;br&gt;class=enquiryDataScroller&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;innertext=21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;visible=-1&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;acc_name=&lt;SPAN class=warning&gt; (Ignored)&lt;FONT color=#000000&gt;&lt;/FONT&gt;&lt;/SPAN&gt;&lt;br&gt;</Description>
+    <StartTime>2022-08-22 14:10:54</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <SmartIdentificationInfo>
+        <SIDBasicProperties>
+          <Property>
+            <Name><![CDATA[micclass]]></Name>
+            <Value><![CDATA[WebElement]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[DIV]]></Value>
+          </Property>
+          <BasicMatch>12</BasicMatch>
+        </SIDBasicProperties>
+        <SIDOptionalProperties>
+          <Property>
+            <Name><![CDATA[html id]]></Name>
+            <Value><![CDATA[enquiryDataScroller]]></Value>
+            <Info><![CDATA[Used]]></Info>
+            <Matches>1</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[class]]></Name>
+            <Value><![CDATA[enquiryDataScroller]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[visible]]></Name>
+            <Value><![CDATA[True]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+            <Info><![CDATA[Ignored]]></Info>
+            <Matches>0</Matches>
+          </Property>
+        </SIDOptionalProperties>
+      </SmartIdentificationInfo>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[enquiryDataScroller]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<P><span class="text">The smart identification mechanism was invoked.</span></P><P><SPAN class=text>Reason: object not found.</SPAN></P>           <SPAN class=text><b>Original description:</b></SPAN><br>micclass=WebElement<br>innertext=21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5<br>html tag=DIV<br>class=enquiryDataScroller<br><P><FONT face=Verdana size=2><SPAN class=text><B>Smart Identification Alternative Description: </B></SPAN></FONT></P><FONT face=Verdana size=2><u>Base filter properties (12 objects found)&nbsp;</FONT></u><br>
+micclass=WebElement<br>html tag=DIV<br><br><FONT face=Verdana size=2><u>Optional filter properties</FONT></u><br>
+html id=enquiryDataScroller<SPAN class=passed> (Used</SPAN>, 1 matches)</SPAN><br>class=enquiryDataScroller<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>innertext=21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>visible=-1<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>acc_name=<SPAN class=warning> (Ignored)<FONT color=#000000></FONT></SPAN><br>]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[DIV]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[class]]></Name>
+            <Value><![CDATA[enquiryDataScroller]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>178aabfce0a041c7ac94e356cc993080</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>enquiryDataScroller.Exist</Name>
+    <Description>"Object exists"</Description>
+    <StartTime>2022-08-22 14:10:54</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[enquiryDataScroller]]></Name>
+          </Object>
+        </Path>
+        <Operation>Exist</Operation>
+        <OperationData><![CDATA["Object exists"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[21 JAN 1621 JAN 16TT16021797KG\BNKSETORK500,000,000.00500,000,000.00 21 JAN 1621 JAN 16FT16021JYPCZAutomation Test\181013055984\473635D10,000.00-499,990,000.00 21 JAN 1621 JAN 16FT16021R9GLCAutomation Test\181019335371\473741D10,000.00-499,980,000.00 21 JAN 1621 JAN 16FT160212FXWTInfaq - BSMobile\234473744\473744D5,000.00-499,975,000.00 21 JAN 1621 JAN 16FT16021K81XLAutomation Test\181042494085\474146D10,000.00-499,965,000.00 21 JAN 1621 JAN 16FT16021LTHSBInfaq - BSMobile\234474149\474149D5,000.00-499,960,000.00 21 JAN 1621 JAN 16FT160214BQFDAutomation Test\181421314577\478172D10,000.00-499,950,000.00 21 JAN 1621 JAN 16FT160214GS1GInfaq - BSMobile\234478176\478176D5,000.00-499,945,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D10,000.00-499,935,000.00 21 JAN 1621 JAN 16FT16021ND9QFInfaq - BSMobile\234497799\497799D5,000.00-499,930,000.00 21 JAN 1621 JAN 16FT16021M67DYaa\190857534631\497795D6,500.00-499,923,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D10,000.00-499,913,500.00 21 JAN 1621 JAN 16FT16021J3XY3Infaq - BSMobile\234497929\497929D5,000.00-499,908,500.00 21 JAN 1621 JAN 16FT160212ZRM6aa\190904489911\497920D6,500.00-499,902,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D10,000.00-499,892,000.00 21 JAN 1621 JAN 16FT16021VH8GTInfaq - BSMobile\234497986\497986D5,000.00-499,887,000.00 21 JAN 1621 JAN 16FT16021TM418Automation Test\190908311371\497982D6,500.00-499,880,500.00 21 JAN 1621 JAN 16FT16021M2M1LMB - TSEL HALO 081213144701\221004407479\575796D10,000.00-499,870,500.00 21 JAN 1621 JAN 16FT16021JYSHQInfaq - BSMobile\234605050\605050D5,000.00-499,865,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D50,000.00-499,815,500.00 21 JAN 1621 JAN 16FT16021JJDBZAutomation Test\230906030960\605032D6,500.00-499,809,000.00 21 JAN 1621 JAN 16FT16021WJM9RInfaq - BSMobile\234605203\605203D5,000.00-499,804,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D50,000.00-499,754,000.00 21 JAN 1621 JAN 16FT16021P6ZJ3Automation Test\230913177050\605194D6,500.00-499,747,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D50,000.00-499,697,500.00 21 JAN 1621 JAN 16FT160215DFH7Automation Test\230919375112\605345D6,500.00-499,691,000.00 21 JAN 1621 JAN 16FT160216T56PInfaq - BSMobile\234605350\605350D5,000.00-499,686,000.00 21 JAN 1621 JAN 16FT16021WYWVFInfaq - BSMobile\234605442\605442D5,000.00-499,681,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D50,000.00-499,631,000.00 21 JAN 1621 JAN 16FT16021Z9C8WAutomation Test\230923279723\605430D6,500.00-499,624,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D50,000.00-499,574,500.00 21 JAN 1621 JAN 16FT160218822BAutomation Test\230929369862\605576D6,500.00-499,568,000.00 21 JAN 1621 JAN 16FT160219JZYKInfaq - BSMobile\234605582\605582D5,000.00-499,563,000.00 21 JAN 1621 JAN 16FT16021W399NInfaq - BSMobile\234605644\605644D5,000.00-499,558,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D50,000.00-499,508,000.00 21 JAN 1621 JAN 16FT16021TP0HTAutomation Test\230932177172\605637D6,500.00-499,501,500.00 21 JAN 1621 JAN 16FT16021FDWSVInfaq - BSMobile\234605710\605710D5,000.00-499,496,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D50,000.00-499,446,500.00 21 JAN 1621 JAN 16FT16021D40NTAutomation Test\230934593148\605706D6,500.00-499,440,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D50,000.00-499,390,000.00 21 JAN 1621 JAN 16FT16021YB9T6Automation Test\230937387176\605771D6,500.00-499,383,500.00 21 JAN 1621 JAN 16FT16021ZMYJ3Infaq - BSMobile\234605775\605775D5,000.00-499,378,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021STDW3Trf BSM to PRIMA - BSMobile\190723111702\110208D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K50,000.00499,428,500.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280K6,500.00499,435,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D50,000.00-499,385,000.00 21 JAN 1621 JAN 16FT16021WXF51Trf BSM to PRIMA - BSMobile\190723112217\110280D6,500.00-499,378,500.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD4,400.00-499,374,100.00 21 JAN 1621 JAN 16FT16021NBG85104228197775-123456-7095588168-CAR- MB-UBPD445,600.00-498,928,500.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD4,400.00-498,924,100.00 21 JAN 1621 JAN 16FT16021Z6T23111216331546-123456-7095588168-CAR- MB-UBPD445,600.00-498,478,500.00 21 JAN 1621 JAN 16FT16021J9MS6Automation Test\190725112517\672797D50,000.00-498,428,500.00 21 JAN 1621 JAN 16FT16021J9J08Trf - BSM To Prima via ATM BSM\190725112517\D6,500.00-498,422,000.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD4,400.00-498,417,600.00 21 JAN 1621 JAN 16FT16021M2B34112546232172-123456-7095588168-CAR- MB-UBPD445,600.00-497,972,000.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD4,400.00-497,967,600.00 21 JAN 1621 JAN 16FT160216LF67112837305100-123456-7095588168-CAR- MB-UBPD445,600.00-497,522,000.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD4,400.00-497,517,600.00 21 JAN 1621 JAN 16FT16021SSPDW113125482066-123456-7095588168-CAR- MB-UBPD445,600.00-497,072,000.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD4,400.00-497,067,600.00 21 JAN 1621 JAN 16FT16021MYWV1113429385630-123456-7095588168-CAR- MB-UBPD445,600.00-496,622,000.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD4,400.00-496,617,600.00 21 JAN 1621 JAN 16FT16021D8RVT140657258537-123456-7095588168-CAR- MB-UBPD445,600.00-496,172,000.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD344,500.00-495,827,500.00 21 JAN 1621 JAN 16FT16021C534V143147504445-123456-7095588168-NET- MB-UBPD5,500.00-495,822,000.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD344,500.00-495,477,500.00 21 JAN 1621 JAN 16FT1602145W4K150846138535-123456-7095588168-NET- MB-UBPD5,500.00-495,472,000.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD3,300.00-495,468,700.00 21 JAN 1621 JAN 16FT160210VYTQ153103425704-123456-7095588168-LIO- MB-UBPD446,700.00-495,022,000.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD3,300.00-495,018,700.00 21 JAN 1621 JAN 16FT16021T9J1K154113129304-123456-7095588168-LIO- MB-UBPD446,700.00-494,572,000.00 21 JAN 1621 JAN 16FT16021MCCY9Trf BSM to BSM - BSM ATM\000234679715\679715K51,000.00494,623,000.00 21 JAN 1621 JAN 16FT16021P519HZakat - BSM ATM\234700894\700894D10,000.00-494,613,000.00 21 JAN 1621 JAN 16FT160219M9SGZakat - BSM ATM\234702341\702341D10,000.00-494,603,000.00 21 JAN 1621 JAN 16FT1602126SKPZakat - BSM ATM\234702550\702550D10,000.00-494,593,000.00 21 JAN 1621 JAN 16FT160218NY1LZakat - BSM ATM\234702690\702690D123,456.00-494,469,544.00 21 JAN 1621 JAN 16FT16021H436MInfaq - BSM ATM\234702763\702763D10,000.00-494,459,544.00 21 JAN 1621 JAN 16FT16021SDVZZInfaq - BSM ATM\234702985\702985D10,000.00-494,449,544.00 21 JAN 1621 JAN 16FT16021KWLDMInfaq - BSM ATM\234703064\703064D10,000.00-494,439,544.00 21 JAN 1621 JAN 16FT16021B84M9\BNKWakaf Uang SelamanyaD50,000.00-494,389,544.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047K50,000.00494,439,544.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\K6,500.00494,446,044.00 21 JAN 1621 JAN 16FT160214LB8RAutomation Test\190726114234\704047D50,000.00-494,396,044.00 21 JAN 1621 JAN 16FT160214PGYQTrf - BSM To Prima via ATM BSM\190726114234\D6,500.00-494,389,544.00 21 JAN 1621 JAN 16FT16021MGNH8\BNKWakaf Uang SelamanyaD50,000.00-494,339,544.00 21 JAN 1621 JAN 16FT160214C0ST\BNKWakaf Uang SelamanyaD50,000.00-494,289,544.00 21 JAN 1621 JAN 16FT160215T215Infaq - BSM ATM\234708543\708543D5,000.00-494,284,544.00 21 JAN 1621 JAN 16FT16021V1M28\BNKWakaf Uang SelamanyaD50,000.00-494,234,544.00 21 JAN 1621 JAN 16FT160213F4FS\BNKWakaf Uang SelamanyaD50,000.00-494,184,544.00 21 JAN 1621 JAN 16FT16021SBB9X\BNKWakaf Uang SelamanyaD50,000.00-494,134,544.00 21 JAN 1621 JAN 16FT16021NGHQS\BNKWakaf Uang SelamanyaD50,000.00-494,084,544.00 21 JAN 1621 JAN 16FT16021TJPBN\BNKWakaf Uang SelamanyaD50,000.00-494,034,544.00 21 JAN 1621 JAN 16FT16021TLVPN\BNKWakaf Uang SelamanyaD100,000.00-493,934,544.00 21 JAN 1621 JAN 16FT16021XTLSZ\BNKWakaf Uang SelamanyaD200,000.00-493,734,544.00 21 JAN 1621 JAN 16FT160211K2TP\BNKWakaf Uang SelamanyaD500,000.00-493,234,544.00 21 JAN 1621 JAN 16FT16021632XV\BNKWakaf Uang SelamanyaD50,000.00-493,184,544.00 1 2 3 4 5]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[DIV]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[class]]></Name>
+            <Value><![CDATA[enquiryDataScroller]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Last Page.Exist</Name>
+    <Description>"Object exists"</Description>
+    <StartTime>2022-08-22 14:10:54</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Image</Type>
+            <Name><![CDATA[Last Page]]></Name>
+          </Object>
+        </Path>
+        <Operation>Exist</Operation>
+        <OperationData><![CDATA["Object exists"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[image type]]></Name>
+            <Value><![CDATA[Image Link]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[IMG]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[alt]]></Name>
+            <Value><![CDATA[Last Page]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>9cd30ed3859749cfa0ba512f005ef5be</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Last Page.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:54</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Image</Type>
+            <Name><![CDATA[Last Page]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[image type]]></Name>
+            <Value><![CDATA[Image Link]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[IMG]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[alt]]></Name>
+            <Value><![CDATA[Last Page]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>9cd30ed3859749cfa0ba512f005ef5be</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>SALDO AKHIR.Exist</Name>
+    <Description>"Object exists"</Description>
+    <StartTime>2022-08-22 14:10:55</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[SALDO AKHIR]]></Name>
+          </Object>
+        </Path>
+        <Operation>Exist</Operation>
+        <OperationData><![CDATA["Object exists"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[SALDO AKHIR]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TD]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>1, 3</Description>
+    <StartTime>2022-08-22 14:10:55</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[1, 3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.RowCount</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:56</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>RowCount</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:56</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:56</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:56</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:56</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:56</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:56</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:57</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:57</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:57</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:57</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:57</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:58</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:58</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:58</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:58</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:58</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:58</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:59</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:59</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:59</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:59</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:59</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:10:59</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:11:00</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>list_transaksi.GetCellData</Name>
+    <Description>3</Description>
+    <StartTime>2022-08-22 14:11:00</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>WebTable</Type>
+            <Name><![CDATA[list_transaksi]]></Name>
+          </Object>
+        </Path>
+        <Operation>GetCellData</Operation>
+        <OperationData><![CDATA[3]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[role]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[TABLE]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[acc_name]]></Name>
+            <Value><![CDATA[]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>74cb2b6347904950a7f96722328ea22e</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Rekening Koran</Name>
+    <Description>Page</Description>
+    <StartTime>2022-08-22 14:10:49</StartTime>
+    <Duration>11</Duration>
+    <Result>Warning</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[Page]]></OperationData>
+      </TestObject>
+      <IconKey>852dd3bb4fe44f0189769ec71a7870e8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Rekening Koran.Close</Name>
+    <Description />
+    <StartTime>2022-08-22 14:11:00</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+        </Path>
+        <Operation>Close</Operation>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Rekening Koran</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2022-08-22 14:10:49</StartTime>
+    <Duration>12</Duration>
+    <Result>Warning</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Rekening Koran]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>Temenos T24.Close</Name>
+    <Description />
+    <StartTime>2022-08-22 14:11:01</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+        </Path>
+        <Operation>Close</Operation>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Temenos T24</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2022-08-22 14:11:01</StartTime>
+    <Duration>0</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[Temenos T24]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24_Mutasi</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:33</StartTime>
+    <Duration>28</Duration>
+    <Result>Warning</Result>
+    <InputParameters />
+    <Extension>
+      <IconKey>86b96c28a4984b1bb788c037b637c8a8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Action">
+<ReportNode type="Context">
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>Sign Off.Exist</Name>
+    <Description>"Object exists"</Description>
+    <StartTime>2022-08-22 14:11:02</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[Sign Off]]></Name>
+          </Object>
+        </Path>
+        <Operation>Exist</Operation>
+        <OperationData><![CDATA["Object exists"]]></OperationData>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[Sign Off]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[A]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Sign Off.Click</Name>
+    <Description />
+    <StartTime>2022-08-22 14:11:02</StartTime>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+          <Object>
+            <Type>WebElement</Type>
+            <Name><![CDATA[Sign Off]]></Name>
+          </Object>
+        </Path>
+        <Operation>Click</Operation>
+        <Properties>
+          <Property>
+            <Name><![CDATA[innertext]]></Name>
+            <Value><![CDATA[Sign Off]]></Value>
+          </Property>
+          <Property>
+            <Name><![CDATA[html tag]]></Name>
+            <Value><![CDATA[A]]></Value>
+          </Property>
+        </Properties>
+      </TestObject>
+      <IconKey>470d0b0ac2d24b1c90d3c8593335be95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 - KPNO (T24iBSM)</Name>
+    <Description>Page</Description>
+    <StartTime>2022-08-22 14:11:02</StartTime>
+    <Duration>1</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[Page]]></OperationData>
+      </TestObject>
+      <IconKey>852dd3bb4fe44f0189769ec71a7870e8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 - KPNO (T24iBSM)</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2022-08-22 14:11:02</StartTime>
+    <Duration>1</Duration>
+    <Result>Done</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<ReportNode type="Context">
+<ReportNode type="Context">
+<ReportNode type="Step">
+<Data>
+    <Name>Value cannot be null.</Name>
+    <ErrorText>Value cannot be null.
+Parameter name: text</ErrorText>
+    <Description>&lt;BR/&gt;Parameter name: text&lt;BR/&gt;Function file: C:\Users\admin\Downloads\installer\Napalm\Napalm\libray\GlobalFunction.qfl&lt;BR/&gt;Line (643): &amp;quot;	Call react.AddImage (imageTitle, imageDesc, fullPath, varStatus)&amp;quot;.</Description>
+    <StartTime>2022-08-22 14:11:03</StartTime>
+    <Result>Failed</Result>
+    <Extension>
+      <StackTrace>
+        <StackFrame>
+          <ModuleName><![CDATA[FuncLibExecutableUnitName]]></ModuleName>
+          <FileName><![CDATA[C:\Users\admin\Downloads\installer\Napalm\Napalm\libray\GlobalFunction.qfl]]></FileName>
+          <Language><![CDATA[VBScript - script block]]></Language>
+          <FunctionName><![CDATA[CaptureImageUFTV2]]></FunctionName>
+          <Scripts><![CDATA[Call react.AddImage (imageTitle, imageDesc, fullPath, varStatus)]]></Scripts>
+          <LineNo><![CDATA[643]]></LineNo>
+        </StackFrame>
+        <StackFrame>
+          <ModuleName><![CDATA[Logout_T24Mutasi]]></ModuleName>
+          <FileName><![CDATA[Logout_T24Mutasi]]></FileName>
+          <Language><![CDATA[VBScript global code]]></Language>
+          <FunctionName><![CDATA[VBScript global code]]></FunctionName>
+          <Scripts><![CDATA[CaptureImageUFTV2]]></Scripts>
+          <LineNo><![CDATA[24]]></LineNo>
+        </StackFrame>
+      </StackTrace>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<BR/>Parameter name: text<BR/>Function file: C:\Users\admin\Downloads\installer\Napalm\Napalm\libray\GlobalFunction.qfl<BR/>Line (643): &quot;	Call react.AddImage (imageTitle, imageDesc, fullPath, varStatus)&quot;.]]></OperationData>
+      </TestObject>
+      <IconKey>71b5f17fbed4421c8736d38714de011a</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+      <MergeIsErrorIcon>True</MergeIsErrorIcon>
+    </Extension>
+    <Snapshot reference="Resources\Snapshots\113a01c8-d79b-4efe-bf89-e73e49f1abed.jpeg" highlight="8,128,1600,740" />
+    <DeviceInfo />
+  </Data>
+</ReportNode>
+<ReportNode type="Step">
+<Data>
+    <Name>Stop Run</Name>
+    <Description>Run stopped by user.</Description>
+    <StartTime>2022-08-22 14:11:14</StartTime>
+    <Result>Information</Result>
+    <Extension>
+      <IconKey>44c6678a65f540b6a33675749dc95c95</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 - KPNO (T24iBSM)</Name>
+    <Description>Page</Description>
+    <StartTime>2022-08-22 14:11:03</StartTime>
+    <Duration>11</Duration>
+    <Result>Failed</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+          <Object>
+            <Type>Page</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[Page]]></OperationData>
+      </TestObject>
+      <IconKey>852dd3bb4fe44f0189769ec71a7870e8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 - KPNO (T24iBSM)</Name>
+    <Description>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;span style="text-align : left; font-size : 12px; "&gt;Local Browser&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</Description>
+    <StartTime>2022-08-22 14:11:03</StartTime>
+    <Duration>11</Duration>
+    <Result>Failed</Result>
+    <Extension>
+      <TestObject>
+        <Repository>Local</Repository>
+        <Path>
+          <Object>
+            <Type>Browser</Type>
+            <Name><![CDATA[T24 - KPNO (T24iBSM)]]></Name>
+          </Object>
+        </Path>
+        <OperationData><![CDATA[<table><tr><td><span style="text-align : left; font-size : 12px; ">Local Browser</span></td></tr></table>]]></OperationData>
+      </TestObject>
+      <IconKey>c5467935d99a41fca3bc406f0a485af9</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Logout_T24Mutasi</Name>
+    <Description />
+    <StartTime>2022-08-22 14:11:01</StartTime>
+    <Duration>13</Duration>
+    <Result>Failed</Result>
+    <InputParameters />
+    <Extension>
+      <IconKey>86b96c28a4984b1bb788c037b637c8a8</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+  </Data>
+</ReportNode>
+<Data>
+    <Name>Action0</Name>
+    <Description />
+    <StartTime>2022-08-22 14:10:29</StartTime>
+    <Duration>45</Duration>
+    <Result>Failed</Result>
+    <Extension>
+      <IconKey>846311c1faf54da698476916ca726c57</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <Index>1</Index>
+    <TestedApplications />
+  </Data>
+</ReportNode>
+<Data>
+    <Name>T24 - Mutasi dan Jurnal</Name>
+    <ToolName>Micro Focus UFT One</ToolName>
+    <ToolVersion>2021</ToolVersion>
+    <ToolVersionStringLiteral>2021</ToolVersionStringLiteral>
+    <Description />
+    <StartTime>2022-08-22 14:10:26</StartTime>
+    <Duration>48</Duration>
+    <Result>Failed</Result>
+    <InputParameters />
+    <Extension>
+      <IconKey>6a1f11d04b254b43903f31498bb66659</IconKey>
+      <IsPlainTextNodeName>True</IsPlainTextNodeName>
+    </Extension>
+    <Environment>
+      <Timezone>+07:00:00</Timezone>
+      <Locale>English (United States)</Locale>
+      <User>admin</User>
+      <CpuInfo>Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz</CpuInfo>
+      <NumberOfCores>4</NumberOfCores>
+      <TotalMemory>8100</TotalMemory>
+      <HostName>ISGS-KIRA</HostName>
+      <OSInfo>Windows 10 21H2 (x64)</OSInfo>
+    </Environment>
+    <TestedApplications />
+    <Links>
+      <Link type="DataTable" reference="Default.xlsx" displayname="Default Data Table" />
+    </Links>
+  </Data>
+</ReportNode>
+<GeneralInfo>
+    <ResultName>Res3</ResultName>
+    <RunStartTime>2022-08-22 14:10:26</RunStartTime>
+    <Timezone>+07:00:00</Timezone>
+    <OrchestrationToolName>Micro Focus UFT One</OrchestrationToolName>
+    <OrchestrationToolVersion>2021</OrchestrationToolVersion>
+    <OrchestrationToolVersionStringLiteral>2021</OrchestrationToolVersionStringLiteral>
+  </GeneralInfo>
+</Results>

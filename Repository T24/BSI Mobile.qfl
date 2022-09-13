@@ -1,0 +1,418 @@
+﻿
+Function Login(txtPassword)
+	Device("Device").App("Page Login").MobileLabel("btnLogin").Tap
+	wait 1
+	Device("Device").App("Page Login").MobileEdit("txtPassword").Set txtPassword
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Login Page", "Ini adalah halaman login" , ReportStatus.Passed)
+	Device("Device").App("Page Login").MobileLabel("btnMasuk").Tap
+
+	wait 10
+End Function
+Function Logout()
+	
+'	Device("Device").InsightObject("btnProfile").Highlight
+'	Device("Device").InsightObject("btnProfile").Click
+	AIUtil.FindTextBlock("AA").Click
+	wait 2
+	
+	Device("Device").App("Page Login").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+	wait 2
+	Device("Device").App("Page Login").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+	wait 2
+	Device("Device").App("Page Login").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+	wait 2
+	
+	Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Logout Aplikasi", "Klik Button Keluar" , ReportStatus.Passed)
+	Device("Device").App("Page Login").MobileLabel("btnKeluar").Tap
+	wait 3
+	Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Konfirmasi Logout Aplikasi", "Masuk ke Halaman Konfirmasi Logout dari Aplikasi, Klik Keluar" , ReportStatus.Passed)
+	Device("Device").App("Page Login").MobileLabel("btnKonfirmasi Keluar").Tap
+
+End Function
+
+Function Navigate(byval Menu)
+'	AIUtil("button", "TS").Click
+	
+	If Menu = "Profile" Then
+		Call CaptureImageUFTV2(Device("Device").App("Page Profile"), "Membuka Menu Profile", "Klik logo profile di pojok kiri atas" , ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Page Login").MobileLabel("ProfileLogo").Tap
+		wait 1
+	ElseIf Menu = "Lihat Rekening" Then
+		Call CaptureImageUFTV2(Device("Device").App("Page Account Rekening"), "Membuka Menu Lihat Rekening", "Klik tombol lihat rekening" , ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Page Account Rekening").MobileLabel("LihatRekening").Tap
+	End If
+	
+End Function
+
+Function Informasi_Limit()
+	
+	AIUtil.FindTextBlock("AA").Click
+	wait 2
+	
+	Device("Device").App("Page Login").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+	wait 2
+	Device("Device").App("Page Login").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+	wait 2
+	Device("Device").App("Page Login").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+	wait 2
+	
+	Device("Device").App("Page Informasi Limit").MobileLabel("Informasi Limit").Tap
+	wait 2
+	
+End Function
+Function Choose_Limit_Harian(Fitur_Harian)
+	
+	If Fitur_Harian = "Pemindahbukuan" Then
+		Device("Device").InsightObject("btnEdit Pemindahbukuan_Harian").Highlight
+		Device("Device").InsightObject("btnEdit Pemindahbukuan_Harian").Click
+		wait 2
+	ElseIf Fitur_Harian = "Transfer Online" Then
+		Device("Device").InsightObject("btnEdit Transfer Online_Harian").Highlight
+		Device("Device").InsightObject("btnEdit Transfer Online_Harian").Click
+		wait 2
+	ElseIf Fitur_Harian = "Transfer SKN" Then
+		Device("Device").InsightObject("btnEdit Transfer SKN_Harian").Highlight
+		Device("Device").InsightObject("btnEdit Transfer SKN_Harian").Click
+		wait 2
+	ElseIf Fitur_Harian = "Pembayaran" Then
+		Device("Device").InsightObject("btnEdit Pembayaran_Harian").Highlight
+		Device("Device").InsightObject("btnEdit Pembayaran_Harian").Click
+		wait 2
+	ElseIf Fitur_Harian = "Pembelian" Then
+		Device("Device").InsightObject("btnEdit Pembelian_Harian").Highlight
+		Device("Device").InsightObject("btnEdit Pembelian_Harian").Click
+		wait 2
+	ElseIf Fitur_Harian = "Transfer BIFAST" Then
+		Device("Device").App("Page Informasi Limit").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+		wait 2
+		Device("Device").App("Page Informasi Limit").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+		wait 2
+		Device("Device").App("Page Informasi Limit").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+		wait 2
+		
+		Device("Device").InsightObject("btnEdit BIFAST_Harian").Highlight
+		Device("Device").InsightObject("btnEdit BIFAST_Harian").Click
+		wait 2
+	End If
+	
+End Function
+Function Choose_Limit_Transaksi(Fitur_Transaksi)
+	
+	Device("Device").App("Page Informasi Limit").MobileLabel("Per Transaksi").Tap
+	wait 2
+	
+	If Fitur_Transaksi = "Pemindahbukuan" Then
+		Device("Device").InsightObject("btnEdit Pemindahbukuan_Transaksi").Highlight
+		Device("Device").InsightObject("btnEdit Pemindahbukuan_Transaksi").Click
+		wait 2
+	ElseIf Fitur_Transaksi = "Transfer Online" Then
+		Device("Device").InsightObject("btnEdit Transfer Online_Transaksi").Highlight
+		Device("Device").InsightObject("btnEdit Transfer Online_Transaksi").Click
+		wait 2
+	ElseIf Fitur_Transaksi = "Transfer SKN" Then
+		Device("Device").InsightObject("btnEdit Transfer SKN_Transaksi").Highlight
+		Device("Device").InsightObject("btnEdit Transfer SKN_Transaksi").Click
+		wait 2
+	ElseIf Fitur_Transaksi = "Pembayaran" Then
+		Device("Device").InsightObject("btnEdit Pembayaran_Transaksi").Highlight
+		Device("Device").InsightObject("btnEdit Pembayaran_Transaksi").Click
+		wait 2
+	ElseIf Fitur_Transaksi = "Pembelian" Then
+		Device("Device").InsightObject("btnEdit Pembelian_Transaksi").Highlight
+		Device("Device").InsightObject("btnEdit Pembelian_Transaksi").Click
+		wait 2
+	ElseIf Fitur_Transaksi = "Transfer BIFAST" Then
+		Device("Device").App("Page Informasi Limit").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+		wait 2
+		Device("Device").App("Page Informasi Limit").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+		wait 2
+		Device("Device").App("Page Informasi Limit").MobileObject("co.id.bankbsi.superapp.d").Swipe "up",702,1341
+		wait 2
+		
+		Device("Device").InsightObject("btnEdit BIFAST_Transaksi").Highlight
+		Device("Device").InsightObject("btnEdit BIFAST_Transaksi").Click
+		wait 2
+	End If
+	
+End Function
+Function Edit_Limit(Nominal_Edit)
+	
+	Device("Device").App("Page Informasi Limit").MobileEdit("txtInput").Set Nominal_Edit
+	wait 2
+	
+	Device("Device").App("Page Informasi Limit").MobileLabel("btnSimpan").Tap
+	wait 5
+	
+End Function
+Function Input_PIN_Profile()
+	
+	Device("Device").App("Page Informasi Limit").MobileLabel("1").Tap
+	Device("Device").App("Page Informasi Limit").MobileLabel("2").Tap
+	Device("Device").App("Page Informasi Limit").MobileLabel("3").Tap
+	Device("Device").App("Page Informasi Limit").MobileLabel("4").Tap
+	Device("Device").App("Page Informasi Limit").MobileLabel("5").Tap
+	Device("Device").App("Page Informasi Limit").MobileLabel("6").Tap
+	
+End Function
+Function Back_Informasi_Limit()
+	
+	wait 10
+	Device("Device").InsightObject("btnBack Informasi Limit").Click
+	wait 3
+	
+	Device("Device").InsightObject("btnBack Profile").Click
+	wait 3
+	
+End Function
+
+Function Info_Saldo_Before()
+	
+	Dim infosaldobefore, infosaldo_before
+	
+	Device("Device").InsightObject("btnMata").Highlight
+	wait 1
+	Device("Device").InsightObject("btnMata").Highlight
+	Device("Device").InsightObject("btnMata").Click
+	wait 1
+	
+	infosaldobefore = Device("Device").InsightObject("btnInfo Rekening").GetVisibleText
+		infosaldo_before = Replace(infosaldobefore, ".", "")
+	print infosaldo_before
+	wait 2
+	
+	'saved saldo awal di excell uft
+	DataTable.Value("SALDO_AWAL", "Global") = infosaldo_before
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Informasi Saldo Before", "Menampilkan informasi saldo sebelum transaksi", ReportStatus.Passed)
+		
+End Function
+Function Info_Saldo_Before()
+	
+	Device("Device").InsightObject("btnMata").Highlight
+	wait 1
+	Device("Device").InsightObject("btnMata").Highlight
+	Device("Device").InsightObject("btnMata").Click
+	wait 1
+	
+	infosaldoafter = Device("Device").InsightObject("btnInfo Rekening").GetVisibleText
+		infosaldo_after = Replace(infosaldoafter, ".", "")
+	print infosaldo_after
+	wait 2
+	
+	'saved saldo akhir di excel uft
+	DataTable.Value("SALDO_AKHIR", "Global") = infosaldo_after
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Informasi Saldo After", "Menampilkan informasi saldo sesudah transaksi", ReportStatus.Passed)
+		
+End Function
+Function Transaksi_Notifikasi()
+	
+	AIUtil("bell").Click
+	wait 5
+	Call CaptureImageUFTV2(Device("Device").App("Notifikasi"), "Transaksi Notifikasi", "Masuk ke Halaman Transaksi Notifikasi melalui Button Lonceng, menampilkan list transaksi notifikasi", ReportStatus.Passed)
+	
+	Device("Device").App("Notifikasi").MobileLabel("Info").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Notifikasi"), "Info Notifikasi", "Klik button Info, menampilkan list info notifikasi", ReportStatus.Passed)
+	
+'	Device("Device").App("Mandiri Syariah Mobile").MobileLabel("resourceid:=co.id.bankbsi.superapp.dev:id/textView","mcindex:=4").Highlight
+'	wait 1
+'	Device("Device").App("Mandiri Syariah Mobile").MobileLabel("resourceid:=co.id.bankbsi.superapp.dev:id/textView","mcindex:=4").Highlight
+'	Device("Device").App("Mandiri Syariah Mobile").MobileLabel("resourceid:=co.id.bankbsi.superapp.dev:id/textView","mcindex:=4").Tap
+'	
+'	wait 5
+'	Device("Device").App("Notifikasi").MobileLabel("btnDetail Transaksi").Tap
+'
+'	wait 3
+'	If Device("Device").App("Notifikasi").MobileLabel("Alhamdulilah, Transaksi").Exist(0) Then
+'		Call CaptureImageUFTV2(Device("Device").App("Notifikasi"), "Detil Transaksi Berhasil", "Menampilkan Halaman Detail Transaksi", ReportStatus.Passed)
+'		wait 2
+'
+'		Total = Device("Device").App("Notifikasi").MobileLabel("btnTotal").GetROProperty("text")
+'		Total_Transaksi = Replace(Replace(Total, "Rp", ""), ".", "")
+'		print Total_Transaksi
+'		wait 2
+'		
+'		DataTable.Value("TOTAL_TRANSAKSI", "Global") = Total_Transaksi
+'		Call Saldo_Berkurang()
+'		Call Download_Resi()
+'	Else
+'		Call CaptureImageUFTV2(Device("Device").App("Notifikasi"), "Detil Transaksi Gagal", "Menampilkan Halaman Detail Transaksi", ReportStatus.Failed)
+'	End If
+
+	AIUtil("left_arrow").Click
+	
+End Function
+Function Saldo_Berkurang()
+	
+	dtSaldoAfter = DataTable.Value("SALDO_AKHIR", "Global")
+	dtSaldoBefore = DataTable.Value("SALDO_AWAL", "Global")
+	dtJumlah = DataTable.Value("TOTAL_TRANSAKSI", "Global")
+		
+	'cek saldo berkurang
+	saldo_berkurang = dtSaldoBefore - dtJumlah
+	If saldo_berkurang = int(dtSaldoAfter) Then
+		D_Cek_Saldo = "Saldo Awal : "&dtSaldoBefore & vbcrlf & "Nominal Bayar : "&dtJumlah & vbcrlf & "Saldo Akhir : "&dtSaldoAfter & "(Saldo berkurang sejumlah nominal yang diinput.)" & vbcrlf
+		Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Cek Saldo", D_Cek_Saldo, ReportStatus.Passed)
+	Else
+		Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Cek Saldo", "Saldo tidak berkurang", ReportStatus.Failed)
+	End If
+	
+End Function
+
+Function Download_Resi()
+		
+	AIUtil("button", "", micFromRight, 1).Click
+	wait 3
+	
+	Do
+	Loop until Device("Device").App("Page Login").MobileLabel("btnBagikan Resi").Exist(0)
+
+	Call CaptureImageUFTV2(Device("Device").App("Page Login"), "Resi", "Menampilkan Resi yang sudah di download", ReportStatus.Passed)
+	wait 1
+	
+End Function
+
+'================ T24 =================='
+Function Login_T24(U_nama, Password)
+	Do
+	Loop Until Browser("T24 Sign in").Page("T24 Sign in").WebButton("Sign in").Exist(0)
+	Browser("T24 Sign in").Page("T24 Sign in").WebEdit("signOnName").Set U_nama
+	Browser("T24 Sign in").Page("T24 Sign in").WebEdit("password").Set Password
+	Call CaptureImageUFTV2(Browser("T24 Sign in").Page("T24 Sign in"), "Login Screen", "Input Username dan Password T24", ReportStatus.Passed)
+	Browser("T24 Sign in").Page("T24 Sign in").WebButton("Sign in").Click
+End Function
+Function Logout_T24()
+	Do Until Browser("T24 - KPNO (T24iBSM)").Page("T24 - KPNO (T24iBSM)").WebElement("Sign Off").Exist(0)
+	Loop 
+	Browser("T24 - KPNO (T24iBSM)").Page("T24 - KPNO (T24iBSM)").WebElement("Sign Off").Click
+	Call CaptureImageUFTV2(Browser("T24 - KPNO (T24iBSM)").Page("T24 - KPNO (T24iBSM)"), "Login Screen", "Logout, Back to Login Screen", ReportStatus.Passed)
+	wait(1)
+	Browser("T24 - KPNO (T24iBSM)").Close
+End Function
+
+Function Mutasi_Rekening(Rekening, Nomor_Transaksi)
+
+	Do
+	Loop Until Browser("T24 Sign in").Page("T24 Sign in").WebElement("Sign Off").Exist(0)
+	Browser("T24 Sign in").Page("T24 Sign in").WebEdit("commandValue").Set "?111"
+	Call CaptureImageUFTV2(Browser("T24 Sign in").Page("T24 Sign in"), "Main Screen", "Input Command Value", ReportStatus.Passed)
+	Browser("T24 Sign in").InsightObject("CommandButton").Highlight
+	Browser("T24 Sign in").InsightObject("CommandButton").Click
+
+	wait 3
+	
+	Browser("Temenos T24").Maximize 'maximize browser
+	wait(1)
+	
+	Call CaptureImageUFTV2(Browser("Temenos T24").Page("Temenos T24"), "Menu Informasi Layar", "Pilih menu Informasi Layar", ReportStatus.Passed)
+	Browser("Temenos T24").Page("Temenos T24").WebElement("INFORMASI LAYAR").Click
+	wait(1)
+	
+	Call CaptureImageUFTV2(Browser("Temenos T24").Page("Temenos T24"), "Menu Inquiry Rekening", "Pilih menu Inquiry Rekening", ReportStatus.Passed)
+	Browser("Temenos T24").Page("Temenos T24").WebElement("Inquiry Rekening").Click
+	wait(1)
+	
+	Call CaptureImageUFTV2(Browser("Temenos T24").Page("Temenos T24"), "Menu Inquiry Rekening Koran Giro/Tabungan", "Pilih menu Inquiry Rekening Koran Giro/Tabungan", ReportStatus.Passed)
+	Browser("Temenos T24").Page("Temenos T24").Link("Inquiry Rekening Koran").Click
+
+	Do
+	Loop Until Browser("Rekening Koran").Page("Rekening Koran").WebElement("Find").Exist(0)
+	Browser("Rekening Koran").Maximize 'maximize browser
+	
+	Browser("Rekening Koran").Page("Rekening Koran").WebEdit("NO REKENING").Set Rekening
+	Browser("Rekening Koran").Page("Rekening Koran").WebEdit("TANGGAL MUTASI").Set "!TODAY"
+	Call CaptureImageUFTV2(Browser("Rekening Koran").Page("Rekening Koran"), "Mutasi Rekening - Input", "Input Nomor Rekening dan Tanggal Transaksi", ReportStatus.Passed)
+	Browser("Rekening Koran").Page("Rekening Koran").WebElement("Find").Click
+	
+	Do
+	Loop Until Browser("Rekening Koran").Page("Rekening Koran").WebElement("enquiryDataScroller").Exist(0)
+	Browser("Rekening Koran").Page("Rekening Koran").WebElement("Saldo Maksimum").Highlight
+	wait 3
+'	cek kondisi lastpage - done
+	If Browser("Rekening Koran").Page("Rekening Koran").Image("Last Page").Exist Then
+		Browser("Rekening Koran").Page("Rekening Koran").Image("Last Page").Click
+	End If
+	
+	Do
+	Loop Until Browser("Rekening Koran").Page("Rekening Koran").WebElement("SALDO AKHIR").Exist(0)
+	checknext = Browser("Rekening Koran").Page("Rekening Koran").WebTable("list_transaksi").GetCellData(1,3)
+	If checknext = "" Then
+		Browser("Rekening Koran").Page("Rekening Koran").Image("Previous Page").Click
+	End If
+	
+	listRow = Browser("Rekening Koran").Page("Rekening Koran").WebTable("list_transaksi").RowCount
+	For iCheck = 1 To listRow Step 1
+		check_FT = Browser("Rekening Koran").Page("Rekening Koran").WebTable("list_transaksi").GetCellData(iCheck,3)
+		If Nomor_Transaksi = check_FT Then
+			Call CaptureImageUFTV2(Browser("Rekening Koran").Page("Rekening Koran"), "Inquiry Mutasi Rekening", "Mutasi Rekening", ReportStatus.Passed)
+			Browser("Rekening Koran").Page("Rekening Koran").WebTable("list_transaksi").ChildItem(iCheck, 8, "Image", 0).Click
+			Call OpenMutasi(Browser("Rekening Koran").Page("Rekening Koran"), "Inquiry Mutasi Rekening - Detail", ReportStatus.Passed)
+			Browser("Rekening Koran").Page("Rekening Koran").Link("Rekening Koran").Highlight
+			Browser("Rekening Koran").Page("Rekening Koran").Link("Rekening Koran").Click
+			Do
+			Loop Until Browser("Rekening Koran").Page("Rekening Koran").WebElement("enquiryDataScroller").Exist(0)
+			If checknext = "" Then
+				Browser("Rekening Koran").Page("Rekening Koran").Image("Last Page").Click
+				Do
+				Loop Until Browser("Rekening Koran").Page("Rekening Koran").WebElement("SALDO AKHIR").Exist(0)
+				Call CaptureImageUFTV2(Browser("Rekening Koran").Page("Rekening Koran"), "Mutasi Rekening - Detail", D_MutasiRek, ReportStatus.Passed)
+			End If
+			Exit for
+		End If
+	Next
+	
+	Browser("Rekening Koran").Close
+	Browser("Temenos T24").Close
+
+End Function
+Function OpenMutasi(byval page, imageTitle, varStatus)
+	
+	Call Add_ImageUFT(page, "Mutasi Rekening - Detil")
+	Browser("Rekening Koran").Page("Rekening Koran").Link("Dept Code").Highlight
+	wait 3
+	Call Add_ImageUFT(page, "Mutasi Rekening - Detil")
+	wait 1
+	Call Get_All_Images(imageTitle, varStatus)
+	
+End Function
+Function Jurnal(Nomor_Transaksi)
+
+	Do
+	Loop Until Browser("T24 Sign in").Page("T24 Sign in").WebElement("Sign Off").Exist(0)
+	Browser("T24 Sign in").Page("T24 Sign in").WebEdit("commandValue").Set "ENQ IDI.TXN.ENTRY.ALL"
+	Call CaptureImageUFTV2(Browser("T24 Sign in").Page("T24 Sign in"), "Main Screen", "Input Command Value", ReportStatus.Passed)
+	Browser("T24 Sign in").InsightObject("CommandButton").Highlight
+	Browser("T24 Sign in").InsightObject("CommandButton").Click
+
+	wait 3
+	Browser("IDI.TXN.ENTRY").Maximize 'maximize browser
+	
+	Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY").WebEdit("FT").Set Nomor_Transaksi
+	Call CaptureImageUFTV2(Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY"), "Input Nomor Transaksi", "Input Nomor Transaksi", ReportStatus.Passed)
+	Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY").WebElement("Find").Click
+	wait(1)
+	Call CaptureImageUFTV2(Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY"), "Inquiry transaksi berdasarkan Nomor Transaksi", "Inquiry transaksi berdasarkan Nomor Transaksi", ReportStatus.Passed)
+
+	cJurnal = Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY").WebTable("Jurnal").RowCount
+	For iJurnal = 1 To cJurnal Step 1
+		Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY").WebTable("Jurnal").ChildItem(iJurnal, 13, "Image", 0).Click
+		Do
+		Loop until Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY").WebElement("IDI.TXN.ENTRY").Exist(0)
+		Call OpenJurnal(Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY"), "Inquiry Detil - " &iJurnal, ReportStatus.Passed, iJurnal)
+		Browser("IDI.TXN.ENTRY").Page("IDI.TXN.ENTRY").WebElement("IDI.TXN.ENTRY").Click
+	Next
+	
+	Browser("IDI.TXN.ENTRY").Close
+	
+End Function
+Function OpenJurnal(byval page, imageTitle, varStatus, eJurnal)
+	
+	Call Add_ImageUFT(page, "Inquiry transaksi Detil" &" - "& eJurnal)
+	wait 1
+	Call Get_All_Images(imageTitle, varStatus)
+	
+End Function
