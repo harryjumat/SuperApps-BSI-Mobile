@@ -1,1 +1,0 @@
-﻿var __testDataSource={items:[{dataFilePath:'Default.xlsx',dataFileFormat:'excel',dataFileFolder:'C:\\Users\\admin\\Downloads\\T24 - Mutasi dan Jurnal\\T24 - Mutasi dan Jurnal\\Res4',namePairs:[]}]};

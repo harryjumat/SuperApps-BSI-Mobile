@@ -17,8 +17,19 @@ Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Negative")
 'Call PulsaPaketDataTelkomsel("pulsapositive")
 'Call Login()
 'Call PulsaPaketDataTelkomsel("paketdatanegative")
-'Call SaveReact_Merge()	
+'Call SaveReact_Merge()			
 
-		
+'		Dim bulan
+'		bulan = Array(01, 02, 03, 06, 12)
+'		Device("Device").App("Dev").MobileDropDown("MobileDropDown Jumlah Bulan").Select bulan(2),0
 
+		x = 3
+		If x > 1 Then
+			
+			For k = 1 To x Step 1
+				Device("Device").App("Dev").MobileDropDown("MobileDropDown Jumlah Bulan").Select "12",0
+			Next
+		End If
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("btn_pilih").Tap
 

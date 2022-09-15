@@ -13,19 +13,7 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 'BPJS Kesehatan - Positive
 Call react.Addtitle("BSI SuperApps - BPJS Kesehatan - Positive")
-Call Login()
+'Call Login() 
+'loginnya sudah ada di dalam fungsi
 Call BPJSKesehatan("positive")
 Call SaveReact_Merge()
-
-
-'Function KonfirmasiPIN(byval x)
-'	Device("Device").App(x).MobileLabel("1").Tap
-'	Device("Device").App(x).MobileLabel("2").Tap
-'	Device("Device").App(x).MobileLabel("3").Tap
-'	Device("Device").App(x).MobileLabel("4").Tap
-'	Device("Device").App(x).MobileLabel("5").Tap
-'	Device("Device").App(x).MobileLabel("6").Tap
-'End Function
-'
-'Call KonfirmasiPIN("Bayar_Beli")
-

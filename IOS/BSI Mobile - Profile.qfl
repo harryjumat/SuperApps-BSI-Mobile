@@ -10,20 +10,24 @@ If y = "ChangePic" Then
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer Foto Profile", ReportStatus.Passed)
 	wait 2
-	Device("Device").App("Profile").MobileLabel("Take a photo").Tap
+'	Device("Device").App("Profile").MobileLabel("Take a photo").Tap
+	Device("Device").App("Profile").MobileLabel("Ambil foto").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Camera", "Berhasil membuka kamera untuk mengambil foto", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileButton("Take Picture").Tap
+'	Device("Device").App("Profile").MobileButton("Take Picture").Tap
+	Device("Device").App("Profile").MobileButton("Ambil Gambar").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ambil Foto", "Berhasil mengambil foto", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileLabel("Use Photo").Tap
+'	Device("Device").App("Profile").MobileLabel("Use Photo").Tap
+	Device("Device").App("Profile").MobileLabel("Gunakan Foto").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Penggunaan Foto", "Konfirmasi penggunaan foto ", ReportStatus.Passed)
 	wait 3
 	'tidak bisa tab button save foto
-	Device("Device").App("Profile").MobileLabel("Save").Tap
+'	Device("Device").App("Profile").MobileLabel("Save").Tap
+	Device("Device").App("Profile").MobileLabel("Simpan").Tap
 	wait 1
 	'Device("Device").App("Profile").MobileLabel("Informasi akun").Check CheckPoint("Informasi akun")
 	Do 
@@ -49,20 +53,23 @@ ElseIf y = "ChangePicGallery" Then
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer Foto Profile", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileLabel("Choose from gallery").Tap
+'	Device("Device").App("Profile").MobileLabel("Choose from gallery").Tap
+	Device("Device").App("Profile").MobileLabel("Pilih dari galeri").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Gallery", "Mengambil foto dari galeri", ReportStatus.Passed)
 	wait 1
 	'Device("Device").App("Profile").MobileObject("Photo, 01 September, 13.").Tap
-	Device("Device").App("Profile").MobileObject("saitama").Tap
+	Device("Device").App("Profile").MobileObject("Foto, 12 September, 11.4").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil mengambil foto dan melakukan edit foto", ReportStatus.Passed)
 	wait 1
-	Device("Device").InsightObject("InsightObject choose").Click
+'	Device("Device").InsightObject("InsightObject choose").Click
+	Device("Device").App("Profile").MobileLabel("Pilih").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Penggunaan Foto", "Konfirmasi penggunaan foto ", ReportStatus.Passed)
 	wait 3
-	Device("Device").App("Profile").MobileLabel("Save").Tap
+'	Device("Device").App("Profile").MobileLabel("Save").Tap
+	Device("Device").App("Profile").MobileLabel("Simpan").Tap
 	wait 1
 '	Device("Device").App("Profile").MobileLabel("Informasi akun").Check CheckPoint("Informasi akun")
 	Do 
@@ -83,11 +90,13 @@ ElseIf y = "DeletePic" Then
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileLabel("Delete Photo").Tap
+'	Device("Device").App("Profile").MobileLabel("Delete Photo").Tap
+	Device("Device").App("Profile").MobileLabel("Hapus Foto").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Hapus Foto", "Menampilkan popup drawer konfirmasi hapus foto", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Profile").MobileButton("Delete").Tap
+'	Device("Device").App("Profile").MobileButton("Delete").Tap
+	Device("Device").App("Profile").MobileButton("Hapus").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Hapus Foto Profile", "Menampilkan popup drawer", ReportStatus.Passed)
 		
@@ -119,7 +128,7 @@ If x = "positive" Then
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Memasukkan email yang baru", ReportStatus.Passed)
 		wait 2
-		Device("Device").App("Profile").MobileLabel("Save").Tap
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
 		wait 7
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Verifikasi Email", "Memasukkan 6 digit kode OTP", ReportStatus.Passed)
 		wait 2
@@ -173,7 +182,7 @@ ElseIf x = "negative" Then
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos96@gmail.com"
 		wait 1
-		Device("Device").App("Profile").MobileLabel("Save").Tap
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
 		wait 3
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Email yang dimasukkan telah digunakan", ReportStatus.Failed)
 		wait 1
@@ -183,7 +192,7 @@ ElseIf x = "negative" Then
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos@gmail.com"
 		wait 1
-		Device("Device").App("Profile").MobileLabel("Save").Tap
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
 		wait 2
 		'OTP SALAH
 		For i = 1 To 6 Step 1
@@ -197,12 +206,12 @@ ElseIf x = "negative" Then
 		Device("Device").InsightObject("InsightObject otp 1").Click
 		wait 1
 		For i = 1 To 6 Step 1
-			Device("Device").App("Profile").MobileObject("Delete").Tap
+			Device("Device").App("Profile").MobileObject("Hapus_2").Tap
 		Next
 		wait 2
 		Device("Device").App("Profile").MobileButton("btn back").Tap
 		wait 1
-		Device("Device").App("Profile").MobileLabel("Save").Tap
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
 		'OTP KADALUARSA  (HARUS BENAR)
 		wait 250
 		Device("Device").App("Profile").MobileObject("1").Tap

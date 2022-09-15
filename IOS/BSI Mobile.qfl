@@ -1,4 +1,6 @@
-﻿Function Login()
+﻿Dim nomorFT
+
+Function Login()
 	Device("Device").App("Login").Launch
 	'If Device("Device").App("Login").MobileLabel("Sholat Zuhur").Exist or Device("Device").App("Login").MobileLabel("Sholat Ashar").Exist or Device("Device").App("Login").MobileLabel("Sholat Magrib").Exist Then
 	do 
@@ -44,11 +46,14 @@ Function KonfirmasiPIN(x)
 	Device("Device").App(x).MobileLabel("6").Tap
 	Call CaptureImageUFTV2(Device("Device").App(x), "Loading Konfirmasi PIN", "Berhasil menampilkan loading konfirmasi PIN", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi").Check CheckPoint("Detail Transaksi")
+	'Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi").Check CheckPoint("Detail Transaksi")
+	Do 
+	wait 1
+	Loop until Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi").Exist
 End Function
 
 'fungsi transaksi berhasil, detail transaksi, detail resi/share resi
-Function TransaksiNonSwipe(x)
+Function TransaksiNonSwipe(x, nomorFT)
 	
 	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Transaksi berhasil", ReportStatus.Passed)
 	wait 1
@@ -56,17 +61,22 @@ Function TransaksiNonSwipe(x)
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Berhasil menampilkan halaman notifikasi transaksi berhasil", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Transaksi Berhasil").MobileLabel("Download").Tap
+	If not Device("Device").App("Transaksi Berhasil").MobileLabel("Download2").Exist Then
+		Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430
+	End If
+	If Device("Device").App("Transaksi Berhasil").MobileLabel("Download").Exist Then
+		Device("Device").App("Transaksi Berhasil").MobileLabel("Download").Tap
+		else
+		Device("Device").App("Transaksi Berhasil").MobileLabel("Download2").Tap
+	End If
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
 	wait 1
+	
+	'CEK T24 MUTASI DAN JURNAL
+	nomorFT = Device("Device").App("Dev").MobileLabel("resi").GetROProperty("text")
+	
 	Call DetailResi()
-	
-End Function
-
-Function TransaksiSwipe(x)
-	
-	
 	
 End Function
 
@@ -84,24 +94,32 @@ Function ErrorHandler()
 		Call CaptureImageUFTV2(Device("Device").App("Error Handling"), "Nomor Handphone Salah", "Berhasil menampilkan pop up error 'Hmm. nomor handphone yang dimasukkan kayaknya salah deh'", ReportStatus.Passed)
 		Device("Device").App("Error Handler").MobileLabel("Kembali").Tap
 		wait 1
-	ElseIf Device("Device").App("Transaksi Berhasil").MobileLabel("Yah.. saldo kamu tidak m").Exist Then
+		End If
+	If Device("Device").App("Error Handler").MobileLabel("Yah.. saldo kamu tidak m").Exist Then
 		Call CaptureImageUFTV2(Device("Device").App("Error Handling"), "Saldo Tidak Cukup", "Berhasil menampilkan pop up error 'Yah.. saldo kamu tidak mencukupi nih'", ReportStatus.Passed)
 		Device("Device").App("Error Handler").MobileLabel("Kembali").Tap
 		wait 1
-	ElseIf Device("Device").App("Error Handler").MobileLabel("Login Gagal").Exist Then
+		End If
+	If Device("Device").App("Error Handler").MobileLabel("Login Gagal").Exist Then
 		Call CaptureImageUFTV2(Device("Device").App("Error Handling"), "Login Gagal", "Berhasil menampilkan pop up error 'Login Gagal'", ReportStatus.Passed)
 		Device("Device").App("Error Handler").MobileLabel("Cara Pengaduan Akses Ter").Tap
 		wait 1
-	ElseIf Device("Device").App("Error Handler").MobileLabel("BSI Mobile akan segera k").Exist Then
+		End If
+	If Device("Device").App("Error Handler").MobileLabel("BSI Mobile akan segera k").Exist Then
 		Call CaptureImageUFTV2(Device("Device").App("Error Handling"), "Login Gagal", "Berhasil menampilkan pop up error 'BSI Mobile akan segera kembali!'", ReportStatus.Passed)
 		Device("Device").App("Error Handler").MobileLabel("Coba Lagi").Tap
 		wait 1
-	ElseIf Device("Device").App("Error Handler").MobileLabel("Transaksi tidak berhasil").Exist Then
+		End If
+	If Device("Device").App("Error Handler").MobileLabel("Transaksi tidak berhasil").Exist Then
 		Call CaptureImageUFTV2(Device("Device").App("Error Handling"), "Transaksi Tidak Berhasil", "Berhasil menampilkan pop up error 'Transaksi tidak berhasil'", ReportStatus.Passed)
 		Device("Device").App("Error Handler").MobileLabel("Kembali ke Dashboard").Tap
 		wait 1
-
-	End If
+		End If
+	If Device("Device").App("Error Handler").MobileLabel("Hmm.. nomor telepon yang").Exist Then
+		Call CaptureImageUFTV2(Device("Device").App("Error Handling"), "Transaksi Tidak Berhasil", "Berhasil menampilkan pop up error 'Hmm.. nomor telepon yang dimasukkan kayaknya salah deh", ReportStatus.Passed)
+		Device("Device").App("Error Handler").MobileLabel("Kembali ke Dashboard").Tap
+		wait 1
+		End If
 End Function
 
 Function Capture(Obj, Repo, Title, DescPass, DescFail)
