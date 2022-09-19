@@ -10,72 +10,55 @@ If y = "ChangePic" Then
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer Foto Profile", ReportStatus.Passed)
 	wait 2
-'	Device("Device").App("Profile").MobileLabel("Take a photo").Tap
 	Device("Device").App("Profile").MobileLabel("Ambil foto").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Camera", "Berhasil membuka kamera untuk mengambil foto", ReportStatus.Passed)
 	wait 1
-'	Device("Device").App("Profile").MobileButton("Take Picture").Tap
 	Device("Device").App("Profile").MobileButton("Ambil Gambar").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ambil Foto", "Berhasil mengambil foto", ReportStatus.Passed)
 	wait 1
-'	Device("Device").App("Profile").MobileLabel("Use Photo").Tap
 	Device("Device").App("Profile").MobileLabel("Gunakan Foto").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Penggunaan Foto", "Konfirmasi penggunaan foto ", ReportStatus.Passed)
 	wait 3
-	'tidak bisa tab button save foto
-'	Device("Device").App("Profile").MobileLabel("Save").Tap
 	Device("Device").App("Profile").MobileLabel("Simpan").Tap
 	wait 1
-	'Device("Device").App("Profile").MobileLabel("Informasi akun").Check CheckPoint("Informasi akun")
 	Do 
 		wait 1
 	Loop until Device("Device").App("Profile").MobileLabel("Informasi akun").Exist
-	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Menyimpan Foto", "Berhasil menyimpan foto ", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Menyimpan Foto", "Berhasil menyimpan foto ", ReportStatus.Warning) ' foto profil blank
 	
 ElseIf y = "ChangePicGallery" Then
 	
-	'=========AMBIL FOTO DARI GALERI=========
-'	Device("Device").App("Profile").MobileLabel("Cancel").Tap
-'	wait 1
-'	Device("Device").App("Profile").MobileButton("Cancel").Tap
-'	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil menampilkan halaman Dashboard/Home Screen BSI Mobile", ReportStatus.Passed)
 	wait 1
-	'Device("Device").App("Profile").MobileLabel("HA").Tap
 	Device("Device").InsightObject("InsightObject Profile").Click
 	wait 1
-	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Warning)' foto profil blank
 	wait 1
 	Device("Device").App("Profile").MobileButton("ic camera").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer Foto Profile", ReportStatus.Passed)
 	wait 1
-'	Device("Device").App("Profile").MobileLabel("Choose from gallery").Tap
 	Device("Device").App("Profile").MobileLabel("Pilih dari galeri").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Gallery", "Mengambil foto dari galeri", ReportStatus.Passed)
 	wait 1
-	'Device("Device").App("Profile").MobileObject("Photo, 01 September, 13.").Tap
 	Device("Device").App("Profile").MobileObject("Foto, 12 September, 11.4").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil mengambil foto dan melakukan edit foto", ReportStatus.Passed)
 	wait 1
-'	Device("Device").InsightObject("InsightObject choose").Click
 	Device("Device").App("Profile").MobileLabel("Pilih").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Penggunaan Foto", "Konfirmasi penggunaan foto ", ReportStatus.Passed)
 	wait 3
-'	Device("Device").App("Profile").MobileLabel("Save").Tap
 	Device("Device").App("Profile").MobileLabel("Simpan").Tap
 	wait 1
-'	Device("Device").App("Profile").MobileLabel("Informasi akun").Check CheckPoint("Informasi akun")
 	Do 
 		wait 1
 	Loop until Device("Device").App("Profile").MobileLabel("Informasi akun").Exist
-	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Menyimpan Foto", "Berhasil menyimpan foto ", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Menyimpan Foto", "Berhasil menyimpan foto ", ReportStatus.Warning)' foto profil blank
 	
 	
 ElseIf y = "DeletePic" Then
@@ -84,18 +67,16 @@ ElseIf y = "DeletePic" Then
 	wait 1
 	Device("Device").InsightObject("InsightObject Profile").Click
 	wait 1
-	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Warning) 'foto profil blank
 	wait 1
 	Device("Device").App("Profile").MobileButton("ic camera").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Profile Picture", "Menampilkan popup drawer", ReportStatus.Passed)
 	wait 1
-'	Device("Device").App("Profile").MobileLabel("Delete Photo").Tap
 	Device("Device").App("Profile").MobileLabel("Hapus Foto").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Konfirmasi Hapus Foto", "Menampilkan popup drawer konfirmasi hapus foto", ReportStatus.Passed)
 	wait 1
-'	Device("Device").App("Profile").MobileButton("Delete").Tap
 	Device("Device").App("Profile").MobileButton("Hapus").Tap
 	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Hapus Foto Profile", "Menampilkan popup drawer", ReportStatus.Passed)

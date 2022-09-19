@@ -13,8 +13,6 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 'Pulsa & Paket Data Telkomsel - Positive
 Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Positive")
-'Call Login()
-'Call PulsaPaketDataTelkomsel("pulsapositive")
 Call Login()
 Call PulsaPaketDataTelkomsel("paketdatapositive")
 Call SaveReact_Merge()	

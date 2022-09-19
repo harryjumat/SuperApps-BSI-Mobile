@@ -11,3 +11,6 @@
 13. pulsa telkomsel positive dan negative
 14. bpjs kesehatan positif ikut sit
 15. paket data telkomsel negative (sit) on progress
+16. scripting bpjs kesehatan positive (tinggal running)
+
+19.change profile pic,delete profile pic,pulsa telkomsel positive,pulsa telkomsel negative,paket data telkomsel positive,paket data telkomsel negative

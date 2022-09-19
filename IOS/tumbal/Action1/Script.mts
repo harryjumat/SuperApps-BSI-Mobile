@@ -1,5 +1,6 @@
 ﻿LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile.qfl") 
 LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile - Bayar Beli.qfl")
+LoadFunctionLibrary("D:\BSI\T24\BSI-T24.qfl")
 
 LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
 'LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl.lck")
@@ -9,27 +10,22 @@ Call Path_Folder()
 Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Login.tsr")
 Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Bayar_Beli.tsr")
 
-Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Pulsa & Paket Data Telkomsel")
+Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps BPJS Kesehatan")
 
-'Pulsa & Paket Data Telkomsel - Positive
-Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Negative")
-'Call Login()
-'Call PulsaPaketDataTelkomsel("pulsapositive")
-'Call Login()
-'Call PulsaPaketDataTelkomsel("paketdatanegative")
-'Call SaveReact_Merge()			
+'BPJS Kesehatan - Positive
+Call react.Addtitle("BSI SuperApps - BPJS Kesehatan - Positive")
+'Call Login() 
+'loginnya sudah ada di dalam fungsi
+'Call BPJSKesehatan("positive")
+'Call SaveReact_Merge()
 
-'		Dim bulan
-'		bulan = Array(01, 02, 03, 06, 12)
-'		Device("Device").App("Dev").MobileDropDown("MobileDropDown Jumlah Bulan").Select bulan(2),0
+Call cekMutasi("Pulsa Telkomsel" , nomorFT)
+Call cekJurnal("Pulsa Telkomsel", nomorFT)
 
-		x = 3
-		If x > 1 Then
-			
-			For k = 1 To x Step 1
-				Device("Device").App("Dev").MobileDropDown("MobileDropDown Jumlah Bulan").Select "12",0
-			Next
-		End If
-		wait 1
-		Device("Device").App("Bayar_Beli").MobileButton("btn_pilih").Tap
 
+
+'Browser("Rekening Koran").Page("Rekening Koran").Image("Rincian Transaksi").FireEvent "onmouseover" @@ script infofile_;_ZIP::ssf3.xml_;_
+'Window("Window").Click 153,152 @@ hightlight id_;_65920_;_script infofile_;_ZIP::ssf6.xml_;_
+
+
+ @@ hightlight id_;_65920_;_script infofile_;_ZIP::ssf2.xml_;_

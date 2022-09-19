@@ -1,5 +1,6 @@
 ﻿LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile.qfl") 
 LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile - Bayar Beli.qfl")
+LoadFunctionLibrary("D:\BSI\T24\BSI-T24.qfl")
 
 LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
 'LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl.lck")
@@ -13,7 +14,10 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 'BPJS Kesehatan - Positive
 Call react.Addtitle("BSI SuperApps - BPJS Kesehatan - Positive")
-'Call Login() 
 'loginnya sudah ada di dalam fungsi
-Call BPJSKesehatan("positive")
+'Call BPJSKesehatan("positive01")
+'Call BPJSKesehatan("positive02")
+'Call BPJSKesehatan("positive03")
+'Call BPJSKesehatan("positive06")
+Call BPJSKesehatan("positive12")
 Call SaveReact_Merge()

@@ -73,7 +73,6 @@ Function Mutasi_Rekening(Rekening, Nomor_Transaksi)
 	
 	Do
 	Loop Until Browser("Rekening Koran").Page("Rekening Koran").WebElement("enquiryDataScroller").Exist(0)
-	Browser("Rekening Koran").Page("Rekening Koran").WebElement("Saldo Maksimum").Highlight
 	wait 3
 '	cek kondisi lastpage - done
 	If Browser("Rekening Koran").Page("Rekening Koran").Image("Last Page").Exist Then
@@ -90,6 +89,7 @@ Function Mutasi_Rekening(Rekening, Nomor_Transaksi)
 	listRow = Browser("Rekening Koran").Page("Rekening Koran").WebTable("list_transaksi").RowCount
 	For iCheck = 1 To listRow Step 1
 		check_FT = Browser("Rekening Koran").Page("Rekening Koran").WebTable("list_transaksi").GetCellData(iCheck,3)
+		wait 3
 		If Nomor_Transaksi = check_FT Then
 			Browser("Rekening Koran").Page("Rekening Koran").WebTable("list_transaksi").ChildItem(iCheck, 8, "Image", 0).Highlight
 			Call CaptureImageUFTV2(Browser("Rekening Koran").Page("Rekening Koran"), "Inquiry Mutasi Rekening", "Mutasi Rekening", ReportStatus.Passed)

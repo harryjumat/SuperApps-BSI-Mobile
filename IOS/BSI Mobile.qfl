@@ -2,7 +2,6 @@
 
 Function Login()
 	Device("Device").App("Login").Launch
-	'If Device("Device").App("Login").MobileLabel("Sholat Zuhur").Exist or Device("Device").App("Login").MobileLabel("Sholat Ashar").Exist or Device("Device").App("Login").MobileLabel("Sholat Magrib").Exist Then
 	do 
 	wait 1
 	Loop until Device("Device").App("Login").MobileLabel("Sholat Zuhur").Exist or Device("Device").App("Login").MobileLabel("Sholat Ashar").Exist or Device("Device").App("Login").MobileLabel("Sholat Magrib").Exist
@@ -14,11 +13,9 @@ Function Login()
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Login"), "Password Valid", "Mengisikan password dengan benar", ReportStatus.Passed)
 		Device("Device").App("Login").MobileButton("Masuk").Tap
-		'Device("Device").App("Login").MobileLabel("Harry").Check CheckPoint("Harry")
 		Do
 			wait 1
 		Loop until Device("Device").App("Login").MobileLabel("Harry").Exist
-	'End If
 
 End Function
 
@@ -26,7 +23,6 @@ Function Navigate (byval MenuNavigate)
 	
 	If MenuNavigate = "Profile" Then
 		Device("Device").App("App").MobileLabel("Navigate").Tap
-	'ElseIf MenuNavigate = "" Then
 		
 	End If
 	
@@ -46,7 +42,6 @@ Function KonfirmasiPIN(x)
 	Device("Device").App(x).MobileLabel("6").Tap
 	Call CaptureImageUFTV2(Device("Device").App(x), "Loading Konfirmasi PIN", "Berhasil menampilkan loading konfirmasi PIN", ReportStatus.Passed)
 	wait 1
-	'Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi").Check CheckPoint("Detail Transaksi")
 	Do 
 	wait 1
 	Loop until Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi").Exist
@@ -70,7 +65,8 @@ Function TransaksiNonSwipe(x, nomorFT)
 		Device("Device").App("Transaksi Berhasil").MobileLabel("Download2").Tap
 	End If
 	wait 1
-	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
+'	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Warning)
 	wait 1
 	
 	'CEK T24 MUTASI DAN JURNAL

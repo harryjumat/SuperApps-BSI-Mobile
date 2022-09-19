@@ -1,0 +1,12 @@
+[DONE] 	pulsa & paket data telkomsel 
+[DONE] 	change email
+[DONE] 	change profile pic
+[DONE] 	paket data XL positive
+[RED] 	paket data XL negative
+[RED]	Ketenagakerjaan BPU/PMI
+[RED]	Pulsa XL/Axis Pra Bayar
+[RED]	Paket Data Indosat
+[RED]	Paket Data Tri
+[DONE]	BPJS kesehatan
+[DONE..]BPJS kesehatan advice	[revisi dulu]
+[DONE..]BPJS kesehatan PU	[revisi dulu]
