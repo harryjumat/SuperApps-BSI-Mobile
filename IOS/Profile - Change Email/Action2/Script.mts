@@ -2,7 +2,6 @@
 LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile - Profile.qfl")
 
 LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
-'LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl.lck")
 LoadFunctionLibrary("D:\BSI\Napalm\libray\ReactLib.vbs")
 
 Call Path_Folder()

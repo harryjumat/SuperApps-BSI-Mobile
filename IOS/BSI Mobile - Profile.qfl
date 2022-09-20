@@ -165,7 +165,7 @@ ElseIf x = "negative" Then
 		wait 1
 		Device("Device").App("Profile").MobileLabel("Simpan").Tap
 		wait 3
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Email yang dimasukkan telah digunakan", ReportStatus.Failed)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Email yang dimasukkan telah digunakan", ReportStatus.Passed)
 		wait 1
 		For i = 1 To 25 Step 1
 			Device("Device").App("Profile").MobileObject("Hapus").Tap

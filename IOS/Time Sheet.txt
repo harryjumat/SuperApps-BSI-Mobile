@@ -14,3 +14,4 @@
 16. scripting bpjs kesehatan positive (tinggal running)
 
 19.change profile pic,delete profile pic,pulsa telkomsel positive,pulsa telkomsel negative,paket data telkomsel positive,paket data telkomsel negative
+20.regresi change profile pic,delete profile pic,pulsa telkomsel positive, paket data telkomsel positive

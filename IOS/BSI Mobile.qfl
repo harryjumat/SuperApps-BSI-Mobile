@@ -65,8 +65,8 @@ Function TransaksiNonSwipe(x, nomorFT)
 		Device("Device").App("Transaksi Berhasil").MobileLabel("Download2").Tap
 	End If
 	wait 1
-'	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
-	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Warning)
+	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
+'	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Warning)
 	wait 1
 	
 	'CEK T24 MUTASI DAN JURNAL
