@@ -18,4 +18,3 @@ Call PulsaPaketDataTelkomsel("paketdatapositive")
 Call cekMutasi("Paket Data Telkomsel" , nomorFT)
 Call cekJurnal("Paket Data Telkomsel", nomorFT)
 Call SaveReact_Merge()	
-

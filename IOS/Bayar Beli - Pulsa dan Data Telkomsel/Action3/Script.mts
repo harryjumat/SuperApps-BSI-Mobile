@@ -19,4 +19,3 @@ Call PulsaPaketDataTelkomsel("pulsapositive")
 Call cekMutasi("Pulsa Telkomsel" , nomorFT)
 Call cekJurnal("Pulsa Telkomsel", nomorFT)
 Call SaveReact_Merge()	
-

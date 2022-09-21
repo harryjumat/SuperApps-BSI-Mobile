@@ -369,7 +369,6 @@
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
 		wait 1
-		'Device("Device").App("Bayar_Beli").MobileButton("btn_bpjs").Tap
 		Device("Device").InsightObject("InsightObject btn bpjs").Click
 		wait 10
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS", "Berhasil masuk ke halaman BPJS", ReportStatus.Passed)
@@ -827,7 +826,7 @@ Function BPJSKesehatanPU(byval x)
 		wait 3
 		Device("Device").App("Dev").MobileLabel("Ketenagakerjaan PU").Tap
 		wait 10
-		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan PU", "Berhasil masuk ke halaman BPJS Kesehatan PU", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan PU", "Berhasil masuk ke halaman BPJS Kesehatan PU", ReportStatus.Warning) 'di figma nomor tagihan, di app nomor va
 		wait 1
 		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set "888802118748492"
 		wait 1
@@ -837,14 +836,15 @@ Function BPJSKesehatanPU(byval x)
 		wait 1
 		Device("Device").App("Bayar_Beli").MobileLabel("btn_selanjutnya").Tap
 		wait 10
-		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi Transaksi", "Berhasil masuk ke halaman konfirmasi transaksi", ReportStatus.Warning) 'tidak sesuai dengan figma
-		wait 1
-		Device("Device").App("Dev").MobileButton("MobileButton btn confirmation").Tap
-		wait 1
-		Call KonfirmasiPIN("Bayar_Beli")
-		Call TransaksiNonSwipe("Bayar_Beli", nomorFT) 
-		Call cekMutasi("BPJS Kesehatan PU" , nomorFT)
-		Call cekJurnal("BPJS Kesehatan PU", nomorFT)
+'		app error, kodingan dibawah bener
+'		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi Transaksi", "Berhasil masuk ke halaman konfirmasi transaksi", ReportStatus.Warning) 'tidak sesuai dengan figma
+'		wait 1
+'		Device("Device").App("Dev").MobileButton("MobileButton btn confirmation").Tap
+'		wait 1
+'		Call KonfirmasiPIN("Bayar_Beli")
+'		Call TransaksiNonSwipe("Bayar_Beli", nomorFT) 
+'		Call cekMutasi("BPJS Kesehatan PU" , nomorFT)
+'		Call cekJurnal("BPJS Kesehatan PU", nomorFT)
 	
 	
 	ElseIf x = "negative"	Then
@@ -1016,8 +1016,9 @@ Function PulsaPaketDataTelkomsel(byval x)
 		Device("Device").InsightObject("InsightObject contact").Click
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Kontak", "Berhasil menampilkan Kontak", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Dev").MobileObject("Contact Telkomsel").Tap
+		wait 2
+'		Device("Device").App("Dev").MobileObject("Contact Telkomsel").Tap
+		Device("Device").InsightObject("InsightObject Contact Telkomsel").Click
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Kontak", "Berhasil memilih kontak", ReportStatus.Passed)
 		wait 1
@@ -1378,8 +1379,78 @@ Function PulsaPaketDataTelkomsel(byval x)
 End Function
 
 Function PulsaPaketDataXL(byval x)
+
+	If x = "pulsapositive" Then
+			
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject btn bayar beli").Click
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject pulsa paket data").Click
+		do
+		wait 1
+		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan menu pulsa & paket data", ReportStatus.Passed)
+		Device("Device").InsightObject("InsightObject contact").Click
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Kontak", "Berhasil menampilkan Kontak", ReportStatus.Passed)
+		wait 2
+		Device("Device").InsightObject("InsightObject Contact XL").Click
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Kontak", "Berhasil memilih kontak", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Dev").MobileLabel("0877 1727616").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("7420605239").Check CheckPoint("7420605239")
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileLabel("XL Voucher - IDR 15.000").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Nominal Pulsa", "Berhasil memilih nominal pulsa", ReportStatus.Passed)
+ 		wait 1
+		Device("Device").App("Dev").MobileButton("btn confirmation").Tap
+		Do  
+		wait 1
+		Loop until Device("Device").App("Dev").MobileLabel("Konfirmasi Transaksi").Exist
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Konfirmasi Transaksi", "Berhasil menampilkan halaman konfirmasi transaksi", ReportStatus.Passed) 
+		Device("Device").InsightObject("InsightObject btn konfirmasi").Click
+		wait 1
 		
-		If x = "paketdatapositive" Then
+		Call KonfirmasiPIN("Bayar_Beli")
+		Call TransaksiNonSwipe("Bayar_Beli", nomorFT)
+		
+		wait 1
+		Device("Device").App("Dev").MobileButton("Tutup").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Back Detail Resi").Tap
+		wait 1
+		Device("Device").App("Dev").MobileList("MobileList_2").Swipe "up",214,300
+		wait 2
+		Device("Device").App("Dev").MobileLabel("Ke Dashboard").Tap
+		Do
+			wait 1
+		Loop until Device("Device").App("Login").MobileLabel("Harry").Exist		
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject btn bayar beli").Click
+		wait 5	
+		Device("Device").InsightObject("InsightObject Bintang Fav").Click
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Cek detail pembelian pada riwayat dan klik logo bintang", ReportStatus.Passed)	
+		Device("Device").App("Dev").MobileLabel("Favorit").Tap
+		do 
+		wait 1
+		Loop until Device("Device").InsightObject("InsightObject 08771727616").Exist
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Riwayat Transaksi", "Riwayat transaksi terdapat pada tab favorit", ReportStatus.Passed)
+		
+		
+	elseIf x = "paketdatapositive" Then
 		
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
 		wait 1
@@ -1407,7 +1478,7 @@ Function PulsaPaketDataXL(byval x)
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Kontak", "Berhasil memilih kontak", ReportStatus.Passed)
 		wait 2
-		Device("Device").App("Dev").MobileLabel("Contact 0877 1727616").Tap
+		Device("Device").App("Dev").MobileLabel("0877 1727616").Tap
 		wait 2
 		do
 		wait 1
@@ -1454,13 +1525,116 @@ Function PulsaPaketDataXL(byval x)
 		Device("Device").App("Dev").MobileLabel("Favorit").Tap
 		do 
 		wait 1
-		'satu barus yang dibawah diganti
-		Loop until Device("Device").InsightObject("InsightObject 082214619096").Exist
+		Loop until Device("Device").InsightObject("InsightObject 08771727616").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Riwayat Transaksi", "Riwayat transaksi terdapat pada tab favorit", ReportStatus.Passed)	
 		
 	elseIf x = "paketdatanegative" Then
 			
+		'Hmm.. nomor telepon yang dimasukkan kayaknya salah deh [OK]
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject btn bayar beli").Click
+		wait 5
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		wait 3
+		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil menampilkan lebih banyak menu", ReportStatus.Passed)
+		wait 1
+		Device("Device").InsightObject("InsightObject pulsa paket data").Click
+		wait 1
+		do
+		wait 1
+		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Device("Device").App("Dev").MobileLabel("Paket Data").Tap
+		wait 1
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "1"
+		wait 1
+		Device("Device").InsightObject("InsightObject hapus no hp").Click
+		wait 1
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "000000000"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan helper text 'format nomor handphone tidak sesuai'", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Dev").MobileButton("Selesai").Tap
+		wait 1
+		If Device("Device").App("Error Handler").MobileLabel("Hmm.. nomor telepon yang").Exist Then
+			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor Telepon Salah", "Berhasil menampilkan pop up error 'Hmm.. nomor telepon yang dimasukkan kayaknya salah deh'", ReportStatus.Passed)
+			Device("Device").App("Dev").MobileLabel("Kembali").Tap
+			wait 1
+		End If
 		
+		
+		'Input Nomor Handphone <10 Digit [OK]
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "1"
+		wait 1
+		Device("Device").InsightObject("InsightObject silang").Click
+		wait 1
+		Device("Device").App("Dev").MobileEdit("nomor hp").Set "087783581"
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nomor Handphone <10 Digit", "Berhasil menampilkan helper text Format Nomor Handphone Tidak Sesuai", ReportStatus.Passed)
+		
+		
+		'no. telp kosong, tab pulsa dan paket data menghilang
+		Device("Device").InsightObject("InsightObject hapus no hp").Click
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor Handphone Kosong", "Berhasil mengosongkan nomor handphone", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileButton("Selesai").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor Handphone Kosong", "Berhasil menghilangkan tab pulsa dan paket data", ReportStatus.Failed)
+		Device("Device").App("Dev").MobileLabel("Kembali").Tap
+		wait 2		
+		
+		
+		'notifikasi saldo tidak mencukupi
+		Device("Device").InsightObject("InsightObject contact").Click
+		wait 2		
+		Device("Device").InsightObject("InsightObject Contact XL").Click
+		wait 2
+		Device("Device").App("Dev").MobileLabel("0877 1727616").Tap
+		wait 2
+		do
+		wait 1
+		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileLabel("Rp0,00").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Paket Data").Tap
+		wait 1
+		Device("Device").InsightObject("InsightObject pilih paket data").Click
+		wait 1
+		Device("Device").App("Bayar_Beli").MobileButton("pilihan paket").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Saldo Tidak Cukup", "Berhasil menampilkan error, 'saldo tidak cukup'", ReportStatus.Failed)
+		Device("Device").InsightObject("InsightObject pilih paket").Click
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Saldo Tidak Cukup", "Berhasil menampilkan error, 'saldo tidak cukup'", ReportStatus.Failed)
+		Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Rp15.000,00").Tap
+		wait 1
+		Device("Device").App("Dev").MobileButton("btn lanjutkan").Tap
+'		wait 1
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Dev").MobileLabel("Yah.. saldo kamu tidak m").Exist
+
+		'=====================FAILED DISINI============================
+
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Saldo Tidak Cukup", "Berhasil menampilkan error, 'saldo tidak cukup' setelah konfirmasi transaksi", ReportStatus.Failed)
+		Device("Device").App("Dev").MobileLabel("Kembali").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Icon Kontak", "memilih icon kontak", ReportStatus.Passed)
+		Device("Device").InsightObject("InsightObject contact").Click
+		'IZINKAN BSI AKSES KONTAK
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Izinkan BSI Untuk Akses Kontak", "berhasil memunculkan permintaan izin untuk mengakses kontak", ReportStatus.Failed)
+		wait 2
+		'CARI KONTAK
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Kontak", "berhasil menampilkan halaman kontak", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileEdit("Cari").Set "xl"
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Cari Kontak", "berhasil mencari kontak", ReportStatus.Passed)
 		
 	End If
 

@@ -1,9 +1,8 @@
 ﻿LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile.qfl") 
 LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile - Bayar Beli.qfl")
-DataTable.Import("D:\Mentahan\PlugIn UFT\Excel Untuk Report.xlsx")
+LoadFunctionLibrary("D:\BSI\T24\BSI-T24.qfl")
 
 LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
-'LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl.lck")
 LoadFunctionLibrary("D:\BSI\Napalm\libray\ReactLib.vbs")
 
 Call Path_Folder()
@@ -16,6 +15,8 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 Call react.Addtitle("BSI SuperApps - BPJS Kesehatan PU - Positive")
 Call Login()
 Call BPJSKesehatanPU("positive")
+'Call cekMutasi("BPJS Kesehatan PU" , nomorFT)
+'Call cekJurnal("BPJS Kesehatan PU", nomorFT)
 Call SaveReact_Merge()
 
 
