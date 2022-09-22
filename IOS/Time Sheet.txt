@@ -13,9 +13,10 @@
 15. paket data telkomsel negative (sit) on progress
 16. scripting bpjs kesehatan positive (tinggal running)
 
-19.change profile pic,delete profile pic,pulsa telkomsel positive,pulsa telkomsel negative,paket data telkomsel positive,paket data telkomsel negative
-20.regresi change profile pic,delete profile pic,pulsa telkomsel positive, paket data telkomsel positive
-21.regresi bpjs kesehatan positive, kesehatan advice positive, kesehatan pu
+19. change profile pic,delete profile pic,pulsa telkomsel positive,pulsa telkomsel negative,paket data telkomsel positive,paket data telkomsel negative
+20. regresi change profile pic,delete profile pic,pulsa telkomsel positive, paket data telkomsel positive
+21. regresi bpjs kesehatan positive, kesehatan advice positive, kesehatan pu
+22. regresi dan scripting paket data tri positive, paket data indosat positive
 
 
 

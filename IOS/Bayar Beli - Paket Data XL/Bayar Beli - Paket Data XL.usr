@@ -15,6 +15,7 @@ Action0=Action0\Script.mts
 Paket Data XL - Positive=Action1\Script.mts
 Paket Data XL - Negative=Action2\Script.mts
 Pulsa XL - Positive=Action3\Script.mts
+Pulsa XL - Negative=Action4\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -66,3 +67,6 @@ Action2\ObjectRepository.bdb=
 Action3\Script.mts=
 Action3\Resource.mtr=
 Action3\ObjectRepository.bdb=
+Action4\Script.mts=
+Action4\Resource.mtr=
+Action4\ObjectRepository.bdb=
