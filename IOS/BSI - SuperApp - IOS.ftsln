@@ -9,23 +9,48 @@ Project("") = "tumbal", "tumbal\Test.tsp", "C3B1EDE7-D67D-4931-B40B-FAE644F59509
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "Bayar Beli - Paket Data XL", "Bayar Beli - Paket Data XL\Test.tsp", "FBFF1F6B-59D4-4460-A614-E789D433B434"
+Project("") = "tumbalWEB", "tumbalWEB\Test.tsp", "2BA2D1EA-3EE9-433E-944B-D39FF69B8BE7"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - Paket Data XL\Test.tsp
+		PathInformation = D:\BSI\IOS\tumbalWEB\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "Bayar Beli - Paket Data Indosat", "Bayar Beli - Paket Data Indosat\Test.tsp", "30A6146B-113C-4971-8C74-68C81AFD0FEA"
+Project("") = "Bayar Beli - BPJS Kesehatan", "Bayar Beli - BPJS Kesehatan\Test.tsp", "8EDF94D7-F098-41A3-8345-361159B3FA37"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - Paket Data Indosat\Test.tsp
+		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS Kesehatan\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
+		BaselineId = 
 	EndProjectSection
 EndProject
-Project("") = "Bayar Beli - Paket Data Tri", "Bayar Beli - Paket Data Tri\Test.tsp", "8677B691-A6E0-4CAE-94ED-17258EF33D7A"
+Project("") = "Bayar Beli - BPJS Kesehatan Advice", "Bayar Beli - BPJS Kesehatan Advice\Test.tsp", "BA3F9A3B-6977-4106-BAF9-2B0CABEC6884"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - Paket Data Tri\Test.tsp
+		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS Kesehatan Advice\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "Bayar Beli - BPJS Ketenagakerjaan PU", "Bayar Beli - BPJS Ketenagakerjaan PU\Test.tsp", "ED41D5E2-B8D5-4EEA-AAAD-81614201763F"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS Ketenagakerjaan PU\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "Bayar Beli - BPJS BPU", "Bayar Beli - BPJS BPU\Test.tsp", "F73C67F1-4F18-45DF-8F88-62D60A9BC35D"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS BPU\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "Bayar Beli - Aqiqah", "Bayar Beli - Aqiqah\Test.tsp", "2ACC3DA5-DE83-4531-B013-FE7889CD4063"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Bayar Beli - Aqiqah\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 		BaselineId = 
@@ -41,23 +66,38 @@ Global
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.Build.0 = Release|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.ActiveCfg = Release|Any CPU
-		FBFF1F6B-59D4-4460-A614-E789D433B434.Debug|Any CPU.Build.0 = Debug|Any CPU
-		FBFF1F6B-59D4-4460-A614-E789D433B434.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		FBFF1F6B-59D4-4460-A614-E789D433B434.Release|Any CPU.Build.0 = Release|Any CPU
-		FBFF1F6B-59D4-4460-A614-E789D433B434.Release|Any CPU.ActiveCfg = Release|Any CPU
-		30A6146B-113C-4971-8C74-68C81AFD0FEA.Debug|Any CPU.Build.0 = Debug|Any CPU
-		30A6146B-113C-4971-8C74-68C81AFD0FEA.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		30A6146B-113C-4971-8C74-68C81AFD0FEA.Release|Any CPU.Build.0 = Release|Any CPU
-		30A6146B-113C-4971-8C74-68C81AFD0FEA.Release|Any CPU.ActiveCfg = Release|Any CPU
-		8677B691-A6E0-4CAE-94ED-17258EF33D7A.Debug|Any CPU.Build.0 = Debug|Any CPU
-		8677B691-A6E0-4CAE-94ED-17258EF33D7A.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		8677B691-A6E0-4CAE-94ED-17258EF33D7A.Release|Any CPU.Build.0 = Release|Any CPU
-		8677B691-A6E0-4CAE-94ED-17258EF33D7A.Release|Any CPU.ActiveCfg = Release|Any CPU
+		2BA2D1EA-3EE9-433E-944B-D39FF69B8BE7.Debug|Any CPU.Build.0 = Debug|Any CPU
+		2BA2D1EA-3EE9-433E-944B-D39FF69B8BE7.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		2BA2D1EA-3EE9-433E-944B-D39FF69B8BE7.Release|Any CPU.Build.0 = Release|Any CPU
+		2BA2D1EA-3EE9-433E-944B-D39FF69B8BE7.Release|Any CPU.ActiveCfg = Release|Any CPU
+		8EDF94D7-F098-41A3-8345-361159B3FA37.Debug|Any CPU.Build.0 = Debug|Any CPU
+		8EDF94D7-F098-41A3-8345-361159B3FA37.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		8EDF94D7-F098-41A3-8345-361159B3FA37.Release|Any CPU.Build.0 = Release|Any CPU
+		8EDF94D7-F098-41A3-8345-361159B3FA37.Release|Any CPU.ActiveCfg = Release|Any CPU
+		BA3F9A3B-6977-4106-BAF9-2B0CABEC6884.Debug|Any CPU.Build.0 = Debug|Any CPU
+		BA3F9A3B-6977-4106-BAF9-2B0CABEC6884.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		BA3F9A3B-6977-4106-BAF9-2B0CABEC6884.Release|Any CPU.Build.0 = Release|Any CPU
+		BA3F9A3B-6977-4106-BAF9-2B0CABEC6884.Release|Any CPU.ActiveCfg = Release|Any CPU
+		ED41D5E2-B8D5-4EEA-AAAD-81614201763F.Debug|Any CPU.Build.0 = Debug|Any CPU
+		ED41D5E2-B8D5-4EEA-AAAD-81614201763F.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		ED41D5E2-B8D5-4EEA-AAAD-81614201763F.Release|Any CPU.Build.0 = Release|Any CPU
+		ED41D5E2-B8D5-4EEA-AAAD-81614201763F.Release|Any CPU.ActiveCfg = Release|Any CPU
+		F73C67F1-4F18-45DF-8F88-62D60A9BC35D.Debug|Any CPU.Build.0 = Debug|Any CPU
+		F73C67F1-4F18-45DF-8F88-62D60A9BC35D.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		F73C67F1-4F18-45DF-8F88-62D60A9BC35D.Release|Any CPU.Build.0 = Release|Any CPU
+		F73C67F1-4F18-45DF-8F88-62D60A9BC35D.Release|Any CPU.ActiveCfg = Release|Any CPU
+		2ACC3DA5-DE83-4531-B013-FE7889CD4063.Debug|Any CPU.Build.0 = Debug|Any CPU
+		2ACC3DA5-DE83-4531-B013-FE7889CD4063.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		2ACC3DA5-DE83-4531-B013-FE7889CD4063.Release|Any CPU.Build.0 = Release|Any CPU
+		2ACC3DA5-DE83-4531-B013-FE7889CD4063.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(Function Libraries) = postProject
 		BSI Mobile = D:\BSI\IOS\BSI Mobile.qfl
 		BSI Mobile - Bayar Beli = D:\BSI\IOS\BSI Mobile - Bayar Beli.qfl
 		BSI Mobile - Profile = D:\BSI\IOS\BSI Mobile - Profile.qfl
 		BSI-T24 = D:\BSI\T24\BSI-T24.qfl
+		BSI Mobile - Berbagi = D:\BSI\IOS\BSI Mobile - Berbagi.qfl
+		BSI Mobile - Pembiayaan = D:\BSI\IOS\BSI Mobile - Pembiayaan.qfl
+		BSI Mobile - Cardless Withdrawal = D:\BSI\IOS\BSI Mobile - Cardless Withdrawal.qfl
 	EndGlobalSection
 EndGlobal

@@ -17,7 +17,12 @@
 20. regresi change profile pic,delete profile pic,pulsa telkomsel positive, paket data telkomsel positive
 21. regresi bpjs kesehatan positive, kesehatan advice positive, kesehatan pu
 22. regresi dan scripting paket data tri positive, paket data indosat positive
+23. regresi paket data indosat negative
+24. lembur (catatn regresinya ada)
 
+26. scripting bpjs pu dan bpjs bpu
+27. regresi 120 change email positive negative, change profile pic, delete profile pic
+28. regresi pulsa telkomsel positive
 
 
 

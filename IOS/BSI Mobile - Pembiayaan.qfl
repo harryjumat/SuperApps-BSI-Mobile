@@ -1,0 +1,48 @@
+﻿Function DashboardEmas()
+	Call Login()
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Easy Mudharabah", "Berhasil menampilkan tabungan favorit Easy Mudharabah", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileList("MobileList").Swipe "up",97,35
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Easy Wadiah", "Berhasil menampilkan tabungan favorit Easy Wadiah", ReportStatus.Passed)
+	Device("Device").InsightObject("InsightObject Lihat Portfolio Easy Wadiah").Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Pembiayaan").MobileLabel("Tabungan Haji Indonesia").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "List Tabungan", "Berhasil menampilkan List Tabungan", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileLabel("Investasi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "List Investasi", "Berhasil menampilkan List Investasi", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileLabel("Gambar Gear Pengaturan").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Tabungan Favorit", "Berhasil menampilkan Tabungan Favorit", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileLabel("Tambah Baru").Tap
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Pilih Tabungan", "Berhasil menampilkan List Tabungan", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileList("MobileList_2").Swipe "up",214,257
+	wait 1
+	Device("Device").App("Pembiayaan").MobileLabel("E-mas").Tap
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Menyimpan Investasi Favorit", "Berhasil Menyimpan Investasi Favorit", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileLabel("Simpan").Tap
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Notifikasi Berhasil Menyimpan", "Berhasil menampilkan Notifikasi Berhasil Menyimpan", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileLabel("Back").Tap
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Dashboard", "Berhasil kembali ke halaman dashboard", ReportStatus.Passed)
+	Device("Device").App("Pembiayaan").MobileList("MobileList_3").Swipe "up",184,80
+	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "E-Mas", "Berhasil menampilkan halaman dashboard E-Mas", ReportStatus.Passed)
+	
+	'RESTORE
+	Device("Device").InsightObject("InsightObject Lihat Portfolio E-Mas").Click
+	wait 1
+	Device("Device").App("Pembiayaan").MobileLabel("Gambar Gear Pengaturan").Tap
+	wait 1
+	Device("Device").App("Pembiayaan").MobileLabel("Gambar Hapus Tabungan Favorit").Tap
+	wait 1
+	Device("Device").App("Pembiayaan").MobileLabel("Hapus").Tap
+	wait 1
+	Device("Device").App("Pembiayaan").MobileLabel("Simpan").Tap
+
+
+
+
+	
+End Function

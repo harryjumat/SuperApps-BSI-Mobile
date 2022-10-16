@@ -14,8 +14,8 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 'BPJS Kesehatan - Positive
 Call react.Addtitle("BSI SuperApps - BPJS Kesehatan - Positive")
 'loginnya sudah ada di dalam fungsi
-Call BPJSKesehatan("positive01")
-'Call BPJSKesehatan("positive02")
+'Call BPJSKesehatan("positive01")
+Call BPJSKesehatan("positive02")
 'Call BPJSKesehatan("positive03")
 'Call BPJSKesehatan("positive06")
 'Call BPJSKesehatan("positive12")

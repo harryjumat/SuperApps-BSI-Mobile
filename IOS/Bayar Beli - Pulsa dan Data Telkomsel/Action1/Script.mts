@@ -15,6 +15,6 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Positive")
 Call Login()
 Call PulsaPaketDataTelkomsel("paketdatapositive")
-Call cekMutasi("Paket Data Telkomsel" , nomorFT)
-Call cekJurnal("Paket Data Telkomsel", nomorFT)
+'Call cekMutasi("Paket Data Telkomsel" , nomorFT)
+'Call cekJurnal("Paket Data Telkomsel", nomorFT)
 Call SaveReact_Merge()	
