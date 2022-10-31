@@ -3,37 +3,43 @@
 		Call Login()
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
 		wait 1
-		Device("Device").App("Cardless Withdrawal").MobileLabel("Mega Menu").Tap
+		Device("Device").App("Cardless Withdrawal").MobileButton("Mega Menu").Tap
+		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Mega Menu", "Berhasil menampilkan Mega Menu", ReportStatus.Passed)
 		wait 1
 		Device("Device").InsightObject("InsightObject Tarik Tunai").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
+		wait 2
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Berhasil masuk ke halaman Tarik Tunai", ReportStatus.Failed)
 	ElseIf x = "negative" Then
 		Call Login()
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
 		wait 1
-		Device("Device").App("Cardless Withdrawal").MobileLabel("Mega Menu").Tap
+		Device("Device").App("Cardless Withdrawal").MobileButton("Mega Menu").Tap
+		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Mega Menu", "Berhasil menampilkan Mega Menu", ReportStatus.Passed)
 		wait 1
 		Device("Device").InsightObject("InsightObject Tarik Tunai").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
+		wait 2
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Berhasil masuk ke halaman Tarik Tunai", ReportStatus.Failed)
 	ElseIf x = "hapustoken" Then
 		Call Login()
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
 		wait 1
-		Device("Device").App("Cardless Withdrawal").MobileLabel("Mega Menu").Tap
+		Device("Device").App("Cardless Withdrawal").MobileButton("Mega Menu").Tap
+		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Mega Menu", "Berhasil menampilkan Mega Menu", ReportStatus.Passed)
 		wait 1
 		Device("Device").InsightObject("InsightObject Tarik Tunai").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
+		wait 2
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Berhasil masuk ke halaman Tarik Tunai", ReportStatus.Failed)
 	End If
 End Function

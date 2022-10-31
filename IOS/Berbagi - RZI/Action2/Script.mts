@@ -14,8 +14,7 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 'Rumah Zakat Indonesia - Negative
 
 Call react.Addtitle("BSI SuperApps - Rumah Zakat Indonesia - Negative")
-Call Login()
-Call SetLimitHarian("pembayaran")
+'Call SetLimitHarian("pembayaran")
 Call Kitabisa("negative")
-Call UnSetLimitHarian("pembayaran")
+'Call UnSetLimitHarian("pembayaran")
 Call SaveReact_Merge()	

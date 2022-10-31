@@ -27,7 +27,7 @@ If y = "ChangePic" Then
 	Do 
 		wait 1
 	Loop until Device("Device").App("Profile").MobileLabel("Informasi akun").Exist
-	wait 10
+	wait 30
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Berhasil Menyimpan Foto", "Berhasil menyimpan foto ", ReportStatus.Passed)
 	
 ElseIf y = "ChangePicGallery" Then

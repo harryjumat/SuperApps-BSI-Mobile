@@ -18,16 +18,21 @@
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Tabungan Favorit", "Berhasil menampilkan Tabungan Favorit", ReportStatus.Passed)
 	Device("Device").App("Pembiayaan").MobileLabel("Tambah Baru").Tap
+	wait 2
 	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Pilih Tabungan", "Berhasil menampilkan List Tabungan", ReportStatus.Passed)
 	Device("Device").App("Pembiayaan").MobileList("MobileList_2").Swipe "up",214,257
 	wait 1
 	Device("Device").App("Pembiayaan").MobileLabel("E-mas").Tap
+	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Menyimpan Investasi Favorit", "Berhasil Menyimpan Investasi Favorit", ReportStatus.Passed)
 	Device("Device").App("Pembiayaan").MobileLabel("Simpan").Tap
+	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Notifikasi Berhasil Menyimpan", "Berhasil menampilkan Notifikasi Berhasil Menyimpan", ReportStatus.Passed)
 	Device("Device").App("Pembiayaan").MobileLabel("Back").Tap
+	wait 3
 	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "Dashboard", "Berhasil kembali ke halaman dashboard", ReportStatus.Passed)
 	Device("Device").App("Pembiayaan").MobileList("MobileList_3").Swipe "up",184,80
+	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Pembiayaan"), "E-Mas", "Berhasil menampilkan halaman dashboard E-Mas", ReportStatus.Passed)
 	
 	'RESTORE

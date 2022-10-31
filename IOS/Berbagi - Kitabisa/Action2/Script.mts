@@ -14,8 +14,7 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 'Kitabisa.id - Negative
 
 Call react.Addtitle("BSI SuperApps - Kitabisa.id - Negative")
-Call Login()
-Call SetLimitHarian("pembayaran")
+'Call SetLimitHarian("pembayaran")
 Call Kitabisa("negative")
-Call UnSetLimitHarian("pembayaran")
+'Call UnSetLimitHarian("pembayaran")
 Call SaveReact_Merge()	

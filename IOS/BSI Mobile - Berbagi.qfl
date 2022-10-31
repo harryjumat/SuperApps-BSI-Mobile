@@ -1,302 +1,175 @@
-﻿Function Kitabisa(x)
+﻿va_rzi 				= "606012112241035"
+va_dompetdhuafa 	= "7136980" 		'error esb
+va_kitabisa			 = "606600077" 	'error esb
+Function TransaksiLembagaLainnya(param)
+	Call Navigate("Berbagi")
+	Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
+	Do 		
+	wait 1
+	Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)		
+	Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Passed)
+	Select Case param
+			Case "rumahzakat" 		Device("Device").InsightObject("InsightObject Rumah Zakat").Click
+			Case "dompetdhuafa" 		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
+			Case "kitabisa" 			Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
+	End Select
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
+	Select Case param
+			Case "rumahzakat" 		Device("Device").App("Berbagi").MobileEdit("Virtual Account").Set va_rzi
+			Case "dompetdhuafa" 		Device("Device").App("Berbagi").MobileEdit("Virtual Account").Set va_dompetdhuafa
+			Case "kitabisa" 			Device("Device").App("Berbagi").MobileEdit("Virtual Account").Set va_kitabisa
+	End Select
+	wait 1
+	Device("Device").App("Berbagi").MobileButton("Selesai").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
+End Function
+
+Function TransaksiLembagaLainnyaNegative(param)
+	'NO VA SALAH
+	Call Navigate("Berbagi")
+	Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
+	Do 		
+	wait 1
+	Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)		
+	Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Passed)
+	Select Case param
+			Case "rumahzakat" 		Device("Device").App("Berbagi").MobileLabel("Rumah Zakat").Tap
+			Case "dompetdhuafa" 		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
+			Case "kitabisa" 			Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
+	End Select
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
+	Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
+	wait 1
+	Device("Device").Enterkeys typeValue, "00000000"
+	wait 1
+	Device("Device").App("Berbagi").MobileButton("Selesai").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap	
+	wait 10
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Nomor VA Salah", "Berhasil menampilkan notifikasi nomor virtual account salah", ReportStatus.Failed)'masih bypass, keluar data
+	'SALDO TIDAK CUKUP
+	Call Navigate("Berbagi")
+	Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
+	Do 		
+	wait 1
+	Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)		
+	Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Passed)
+	Select Case param
+			Case "rumahzakat" 		Device("Device").App("Berbagi").MobileLabel("Rumah Zakat").Tap
+			Case "dompetdhuafa" 		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
+			Case "kitabisa" 			Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
+	End Select
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
+	Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
+	wait 1
+	Select Case param
+			Case "rumahzakat" 		Device("Device").Enterkeys typeValue, va_rzi
+			Case "dompetdhuafa" 		Device("Device").Enterkeys typeValue, va_dompetdhuafa
+			Case "kitabisa" 			Device("Device").Enterkeys typeValue, va_kitabisa
+	End Select
+	wait 1
+	Device("Device").App("Berbagi").MobileButton("Selesai").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Berbagi").MobileButton("Ubah").Tap
+	wait 1
+	Device("Device").App("Berbagi").MobileLabel("Rp0,00").Tap
+	wait 1
+	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
+	wait 10
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Failed) 'gagal memuat halaman	
+
+End Function
+
+Function Kitabisa(x)
 	If x = "positive" Then
-	
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Paket Berbuka & Sahur").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke halaman Ziswaf", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)
-		Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Warning)'tidak ada logo
-		Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
-		'TULIS NOMOR VA
-		Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
-		wait 1
-		Device("Device").Enterkeys typeValue, "606600077"
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Selesai").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
-		wait 1
-		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
-		'detail transaksinya warning
-		Call KonfirmasiPIN("Berbagi")
-		Call TransaksiNonSwipe("Berbagi", nomorFT)
-	
-	ElseIf x = "negative" Then 
-	
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Paket Berbuka & Sahur").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke halaman Ziswaf", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)
-		Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Warning)'tidak ada logo
-		Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
-		'TULIS NOMOR VA
-		Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
-		wait 1
-		Device("Device").Enterkeys typeValue, "606600077"
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Selesai").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Lembaga Lainnya - Ubah").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Tabungan Sumber", "Berhasil menampilkan list tabungan", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Rp0,00").Tap
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
-		wait 1
-		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
-		'detail transaksinya warning
+		Call TransaksiLembagaLainnya("kitabisa")
 		
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input PIN", "Berhasil menampilkan halaman input PIN", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("1").Tap
-		Device("Device").App("Berbagi").MobileLabel("2").Tap
-		Device("Device").App("Berbagi").MobileLabel("3").Tap
-		Device("Device").App("Berbagi").MobileLabel("4").Tap
-		Device("Device").App("Berbagi").MobileLabel("5").Tap
-		Device("Device").App("Berbagi").MobileLabel("6").Tap
-		wait 3
-		'saldo tidak cukup
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Error Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Failed)
-	
+		'kalo sudah normal hapusdibawah ini
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Failed)
+		
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
+'		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+'		wait 1
+'		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
+'		wait 1
+'		'detail transaksinya warning
+'		Call KonfirmasiPIN("Berbagi")
+'		Call TransaksiNonSwipe("Berbagi", nomorFT, "resi kitabisa")
+	ElseIf x = "negative" Then 
+		Call TransaksiLembagaLainnyaNegative("kitabisa")
 End If
 End Function
 
 Function Dompetdhuafa(x)
 	If x = "positive" Then
 	
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Paket Berbuka & Sahur").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke halaman Ziswaf", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)
-		Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Warning)'tidak ada logo
-		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
-		'TULIS NOMOR VA
-		Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
-		wait 1
-		Device("Device").Enterkeys typeValue, "7136980"
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Selesai").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
-		wait 1
-		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
-		'detail transaksinya warning
-		Call KonfirmasiPIN("Berbagi")
-		Call TransaksiNonSwipe("Berbagi", nomorFT)
+		Call TransaksiLembagaLainnya("dompetdhuafa")
+		
+		'kalo sudah normal hapusdibawah ini
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Failed)
+		
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
+'		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+'		wait 1
+'		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
+'		wait 1
+'		
+'		'detail transaksinya warning
+'		Call KonfirmasiPIN("Berbagi")
+'
+'		'hapus baris jika sudah normal
+'		Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Transaksi berhasil", ReportStatus.Failed)
 	
 	ElseIf x = "negative" Then 
-	
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Paket Berbuka & Sahur").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke halaman Ziswaf", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)
-		Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Warning)'tidak ada logo
-		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
-		'TULIS NOMOR VA
-		Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
-		wait 1
-		Device("Device").Enterkeys typeValue, "7136980"
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Selesai").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Lembaga Lainnya - Ubah").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Tabungan Sumber", "Berhasil menampilkan list tabungan", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Rp0,00").Tap
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
-		wait 1
-		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
-		'detail transaksinya warning
-		
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input PIN", "Berhasil menampilkan halaman input PIN", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("1").Tap
-		Device("Device").App("Berbagi").MobileLabel("2").Tap
-		Device("Device").App("Berbagi").MobileLabel("3").Tap
-		Device("Device").App("Berbagi").MobileLabel("4").Tap
-		Device("Device").App("Berbagi").MobileLabel("5").Tap
-		Device("Device").App("Berbagi").MobileLabel("6").Tap
-		wait 3
-		'saldo tidak cukup
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Error Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Failed)
-	
+		Call TransaksiLembagaLainnyaNegative("dompetdhuafa")	
 End If
 End Function
 
 Function RZI(x)
 	If x = "positive" Then
-	
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Paket Berbuka & Sahur").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke halaman Ziswaf", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)
-		Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Warning)'tidak ada logo
-		Device("Device").App("Berbagi").MobileLabel("Rumah Zakat").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
-		'TULIS NOMOR VA
-		Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
-		wait 1
-		Device("Device").Enterkeys typeValue, "606012112247451"
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Selesai").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
-		wait 1
-		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
-		'detail transaksinya warning
-		Call KonfirmasiPIN("Berbagi")
-		Call TransaksiNonSwipe("Berbagi", nomorFT)
-	
-	ElseIf x = "negative" Then 
-	
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Paket Berbuka & Sahur").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke halaman Ziswaf", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Passed)
-		Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Warning)'tidak ada logo
-		Device("Device").App("Berbagi").MobileLabel("Rumah Zakat").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
-		'TULIS NOMOR VA
-		Device("Device").App("Berbagi").MobileLabel("Masukkan No. VA/ Kode Ba").Tap
-		wait 1
-		Device("Device").Enterkeys typeValue, "606012112247451"
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Selesai").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileButton("Lembaga Lainnya - Ubah").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Tabungan Sumber", "Berhasil menampilkan list tabungan", ReportStatus.Passed)
-		Device("Device").App("Berbagi").MobileLabel("Rp0,00").Tap
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
-		wait 1
-		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
-		'detail transaksinya warning
+		Call TransaksiLembagaLainnya("rzi")
 		
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input PIN", "Berhasil menampilkan halaman input PIN", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Berbagi").MobileLabel("1").Tap
-		Device("Device").App("Berbagi").MobileLabel("2").Tap
-		Device("Device").App("Berbagi").MobileLabel("3").Tap
-		Device("Device").App("Berbagi").MobileLabel("4").Tap
-		Device("Device").App("Berbagi").MobileLabel("5").Tap
-		Device("Device").App("Berbagi").MobileLabel("6").Tap
-		wait 3
-		'saldo tidak cukup
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Error Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Failed)
-	
+		'kalo sudah normal hapusdibawah ini
+		wait 2
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya", ReportStatus.Failed)
+		
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
+'		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+'		wait 1
+'		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
+'		wait 1
+'		'detail transaksinya warning
+'		Call KonfirmasiPIN("Berbagi")
+'		Call TransaksiNonSwipe("Berbagi", nomorFT)
+
+	ElseIf x = "negative" Then 
+		Call TransaksiLembagaLainnyaNegative("rzi")		
 End If
 End Function
