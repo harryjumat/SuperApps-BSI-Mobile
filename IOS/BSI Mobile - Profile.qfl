@@ -173,7 +173,8 @@ ElseIf x = "negative" Then
 		wait 1
 		Device("Device").InsightObject("InsightObject Ubah Email - Simpan").Click
 		wait 3
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Email yang dimasukkan telah digunakan", ReportStatus.Warning) 'tidak ada keterangan error, tapi tidak bisa lanjut
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Email Telah Digunakan", "Email yang dimasukkan telah digunakan", ReportStatus.Passed) 
+		Device("Device").App("Profile").MobileLabel("Coba Lagi").Tap
 		wait 1
 		'Device("Device").InsightObject("InsightObject btn back").Click
 		For i = 1 To 25 Step 1

@@ -1,6 +1,7 @@
 ﻿Dim nomorFT
 Function Login()
 	Device("Device").App("Login").Launch
+	AIUtil.SetContext Device("Device")
 	do 
 	wait 1
 	Loop until Device("Device").InsightObject("InsightObject Sholat").Exist
@@ -46,6 +47,7 @@ End Function
 
 Function LoginLimit()
 	Device("Device").App("Login").Launch
+	AIUtil.SetContext Device("Device")
 	do 
 	wait 1
 	Loop until Device("Device").InsightObject("InsightObject Sholat").Exist
@@ -85,6 +87,7 @@ Function TransaksiNonSwipe(x, nomorFT, resi)
 	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Berhasil menampilkan halaman notifikasi transaksi berhasil", ReportStatus.Passed)
 	wait 1
 	Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430
+	wait 3
 	Do 
 	wait 1
 	Loop until Device("Device").InsightObject("InsightObject Download").Exist
@@ -93,6 +96,9 @@ Function TransaksiNonSwipe(x, nomorFT, resi)
 	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
 	wait 1
 	'CEK T24 MUTASI DAN JURNAL
+	Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430'untuk aqiqah
+	wait 3'untuk aqiqah
+	
 	nomorFT = Device("Device").App("Dev").MobileLabel(resi).GetROProperty("text")
 '	nomorFT = Device("Device").App("Dev").MobileLabel("resi").GetROProperty("text")
 '	nomorFT = Device("Device").App("Dev").MobileLabel("resi pulsa").GetROProperty("text")

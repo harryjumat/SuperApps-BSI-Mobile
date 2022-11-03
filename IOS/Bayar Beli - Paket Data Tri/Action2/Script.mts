@@ -12,6 +12,5 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 'Paket Data Tri - Negative
 
 Call react.Addtitle("BSI SuperApps - Paket Data Tri - Negative")
-Call Login()
 Call PulsaPaketDataTri("paketdatanegative")
 Call SaveReact_Merge()	

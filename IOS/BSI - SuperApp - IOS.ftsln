@@ -9,16 +9,9 @@ Project("") = "tumbal", "tumbal\Test.tsp", "C3B1EDE7-D67D-4931-B40B-FAE644F59509
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "Bayar Beli - BPJS Kesehatan", "Bayar Beli - BPJS Kesehatan\Test.tsp", "D6449892-6C73-425F-ACBE-28A3806126E8"
+Project("") = "Bayar Beli - Paket Data Tri", "Bayar Beli - Paket Data Tri\Test.tsp", "D3D79689-A9BB-4722-9B5A-60BCD8780FBA"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS Kesehatan\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-	EndProjectSection
-EndProject
-Project("") = "Bayar Beli - BPJS BPU", "Bayar Beli - BPJS BPU\Test.tsp", "5FD487B7-1667-4751-87AD-03EBFAE2508D"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS BPU\Test.tsp
+		PathInformation = D:\BSI\IOS\Bayar Beli - Paket Data Tri\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 		BaselineId = 
@@ -34,14 +27,10 @@ Global
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.Build.0 = Release|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.ActiveCfg = Release|Any CPU
-		D6449892-6C73-425F-ACBE-28A3806126E8.Debug|Any CPU.Build.0 = Debug|Any CPU
-		D6449892-6C73-425F-ACBE-28A3806126E8.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		D6449892-6C73-425F-ACBE-28A3806126E8.Release|Any CPU.Build.0 = Release|Any CPU
-		D6449892-6C73-425F-ACBE-28A3806126E8.Release|Any CPU.ActiveCfg = Release|Any CPU
-		5FD487B7-1667-4751-87AD-03EBFAE2508D.Debug|Any CPU.Build.0 = Debug|Any CPU
-		5FD487B7-1667-4751-87AD-03EBFAE2508D.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		5FD487B7-1667-4751-87AD-03EBFAE2508D.Release|Any CPU.Build.0 = Release|Any CPU
-		5FD487B7-1667-4751-87AD-03EBFAE2508D.Release|Any CPU.ActiveCfg = Release|Any CPU
+		D3D79689-A9BB-4722-9B5A-60BCD8780FBA.Debug|Any CPU.Build.0 = Debug|Any CPU
+		D3D79689-A9BB-4722-9B5A-60BCD8780FBA.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		D3D79689-A9BB-4722-9B5A-60BCD8780FBA.Release|Any CPU.Build.0 = Release|Any CPU
+		D3D79689-A9BB-4722-9B5A-60BCD8780FBA.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(Function Libraries) = postProject
 		BSI Mobile = D:\BSI\IOS\BSI Mobile.qfl

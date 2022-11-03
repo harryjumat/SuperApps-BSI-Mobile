@@ -12,8 +12,8 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 'Paket Data XL - Positive
 Call react.Addtitle("BSI SuperApps - Paket Data XL - Positive")
 Call PulsaPaketDataXL("paketdatapositive")
-'Call cekMutasi("Paket Data XL" , nomorFT)
-'Call cekJurnal("Paket Data XL", nomorFT)
+Call cekMutasi("Paket Data XL" , nomorFT)
+Call cekJurnal("Paket Data XL", nomorFT)
 Call SaveReact_Merge()	
 
 
