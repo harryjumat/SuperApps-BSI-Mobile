@@ -7,14 +7,9 @@ LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
 LoadFunctionLibrary("D:\BSI\Napalm\libray\ReactLib.vbs")
 
 Call Path_Folder()
-Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Login.tsr")
-Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Bayar_Beli.tsr")
-
 Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Pulsa & Paket Data Telkomsel")
 
 'Pulsa & Paket Data Telkomsel - Positive
 Call react.Addtitle("BSI SuperApps - Paket Data Telkomsel - Positive")
 Call PulsaPaketDataTelkomsel("paketdatapositive")
-Call cekMutasi("Paket Data Telkomsel" , nomorFT)
-Call cekJurnal("Paket Data Telkomsel", nomorFT)
 Call SaveReact_Merge()	

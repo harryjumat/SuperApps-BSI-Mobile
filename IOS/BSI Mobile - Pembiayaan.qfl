@@ -45,9 +45,4 @@
 	Device("Device").App("Pembiayaan").MobileLabel("Hapus").Tap
 	wait 1
 	Device("Device").App("Pembiayaan").MobileLabel("Simpan").Tap
-
-
-
-
-	
 End Function

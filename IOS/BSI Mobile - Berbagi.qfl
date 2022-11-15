@@ -11,23 +11,21 @@ Function TransaksiLembagaLainnya(param)
 	Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran", ReportStatus.Passed)
+	wait 2
 	Select Case param
-			Case "rumahzakat" 		Device("Device").InsightObject("InsightObject Rumah Zakat").Click
+			Case "rumahzakat" 		Device("Device").App("Berbagi").MobileLabel("Rumah Zakat").Tap
 			Case "dompetdhuafa" 		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
 			Case "kitabisa" 			Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
+			Case "jadiberkah" 		Device("Device").App("Dev").MobileLabel("Jadiberkah").Tap
 	End Select
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
+	wait 1
 	Device("Device").App("Berbagi").MobileEdit("Virtual Account").Tap
 	wait 2
 	Select Case param
 			Case "rumahzakat" 		
-				Device("Device").App("Berbagi").MobileObject("1").Tap
-				Device("Device").App("Berbagi").MobileObject("2").Tap
-				Device("Device").App("Berbagi").MobileObject("3").Tap
-				Device("Device").App("Berbagi").MobileObject("4").Tap
-				Device("Device").App("Berbagi").MobileObject("5").Tap
-				Device("Device").App("Berbagi").MobileObject("6").Tap
+				Device("Device").Enterkeys typeValue, "123456"
 			Case "dompetdhuafa" 		
 				Device("Device").App("Berbagi").MobileObject("1").Tap
 				Device("Device").App("Berbagi").MobileObject("2").Tap
@@ -42,6 +40,13 @@ Function TransaksiLembagaLainnya(param)
 				Device("Device").App("Berbagi").MobileObject("4").Tap
 				Device("Device").App("Berbagi").MobileObject("5").Tap
 				Device("Device").App("Berbagi").MobileObject("6").Tap
+			Case "jadiberkah" 			
+				Device("Device").App("Berbagi").MobileObject("1").Tap
+				Device("Device").App("Berbagi").MobileObject("2").Tap
+				Device("Device").App("Berbagi").MobileObject("3").Tap
+				Device("Device").App("Berbagi").MobileObject("4").Tap
+				Device("Device").App("Berbagi").MobileObject("5").Tap
+				Device("Device").App("Berbagi").MobileObject("6").Tap
 	End Select
 	wait 3
 	Device("Device").App("Berbagi").MobileButton("Selesai").Tap
@@ -49,6 +54,8 @@ Function TransaksiLembagaLainnya(param)
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
 	wait 3
 	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
+	wait 1
+	Call Keluar(Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Tap,"Berbagi")
 End Function
 
 Function TransaksiLembagaLainnyaNegative(param)
@@ -66,6 +73,7 @@ Function TransaksiLembagaLainnyaNegative(param)
 			Case "rumahzakat" 		Device("Device").App("Berbagi").MobileLabel("Rumah Zakat").Tap
 			Case "dompetdhuafa" 		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
 			Case "kitabisa" 			Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
+			Case "jadiberkah" 		Device("Device").App("Dev").MobileLabel("Jadiberkah").Tap	
 	End Select
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
@@ -94,6 +102,7 @@ Function TransaksiLembagaLainnyaNegative(param)
 			Case "rumahzakat" 		Device("Device").App("Berbagi").MobileLabel("Rumah Zakat").Tap
 			Case "dompetdhuafa" 		Device("Device").App("Berbagi").MobileLabel("Dompet Dhuafa").Tap
 			Case "kitabisa" 			Device("Device").App("Berbagi").MobileLabel("Kitabisa").Tap
+			Case "jadiberkah" 		Device("Device").App("Dev").MobileLabel("Jadiberkah").Tap
 	End Select
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Berhasil Pilih Lembaga", "Berhasil memilih lembaga", ReportStatus.Passed)
@@ -121,6 +130,13 @@ Function TransaksiLembagaLainnyaNegative(param)
 				Device("Device").App("Berbagi").MobileObject("4").Tap
 				Device("Device").App("Berbagi").MobileObject("5").Tap
 				Device("Device").App("Berbagi").MobileObject("6").Tap
+			Case "jadiberkah" 			
+				Device("Device").App("Berbagi").MobileObject("1").Tap
+				Device("Device").App("Berbagi").MobileObject("2").Tap
+				Device("Device").App("Berbagi").MobileObject("3").Tap
+				Device("Device").App("Berbagi").MobileObject("4").Tap
+				Device("Device").App("Berbagi").MobileObject("5").Tap
+				Device("Device").App("Berbagi").MobileObject("6").Tap
 	End Select
 	wait 1
 	Device("Device").App("Berbagi").MobileButton("Selesai").Tap
@@ -129,29 +145,31 @@ Function TransaksiLembagaLainnyaNegative(param)
 	wait 1
 	Device("Device").App("Berbagi").MobileButton("Ubah").Tap
 	wait 1
-	Device("Device").App("Berbagi").MobileLabel("Rp0,00").Tap
+	AIUtil("button", "EW").Click
 	wait 1
 	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-	wait 10
-	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Passed) 
-	'LIMIT HARIAN
-	Call SetLimitHarian("pembayaran")
-	Call TransaksiLembagaLainnya(param)
 	wait 3
-	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
-	wait 1
-	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Harian", "Berhasil menampilkan notifikasi limit harian", ReportStatus.Passed)'Limit harian
-	wait 1
-	Call UnSetLimitHarian("pembayaran")
-	'LIMIT TRANSAKSI
-	Call SetLimitTransaksi("pembayaran")
-	Call TransaksiLembagaLainnya(param)
-	wait 1
-	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
-	wait 1
-	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Transaksi", "Berhasil menampilkan notifikasi limit transaksi", ReportStatus.Passed)'Limit transaksi
-	wait 3
-	Call UnSetLimitTransaksi("pembayaran")
+'	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
+'	wait 10
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Failed) 'notifikasi error saldi kurang muncul sebelum konfirmasi transaksi
+'	'LIMIT HARIAN
+'	Call SetLimitHarian("pembayaran")
+'	Call TransaksiLembagaLainnya(param)
+'	wait 3
+'	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
+'	wait 1
+'	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Harian", "Berhasil menampilkan notifikasi limit harian", ReportStatus.Passed)'Limit harian
+'	wait 1
+'	Call UnSetLimitHarian("pembayaran")
+'	'LIMIT TRANSAKSI
+'	Call SetLimitTransaksi("pembayaran")
+'	Call TransaksiLembagaLainnya(param)
+'	wait 1
+'	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
+'	wait 1
+'	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Transaksi", "Berhasil menampilkan notifikasi limit transaksi", ReportStatus.Passed)'Limit transaksi
+'	wait 3
+'	Call UnSetLimitTransaksi("pembayaran")
 End Function
 
 Function Kitabisa(x)
@@ -168,12 +186,11 @@ Function Kitabisa(x)
 		Call TransaksiNonSwipe("Berbagi", nomorFT, "resi kitabisa")
 	ElseIf x = "negative" Then 
 		Call TransaksiLembagaLainnyaNegative("kitabisa")
-End If
+	End If
 End Function
 
 Function Dompetdhuafa(x)
 	If x = "positive" Then
-	
 		Call TransaksiLembagaLainnya("dompetdhuafa")
 		Do 
 		wait 1
@@ -186,7 +203,7 @@ Function Dompetdhuafa(x)
 		Call TransaksiNonSwipe("Berbagi", nomorFT, "resi kitabisa")
 	ElseIf x = "negative" Then 
 		Call TransaksiLembagaLainnyaNegative("dompetdhuafa")	
-End If
+	End If
 End Function
 
 Function RZI(x)
@@ -201,8 +218,29 @@ Function RZI(x)
 		wait 1
 		Call KonfirmasiPIN("Berbagi")
 		Call TransaksiNonSwipe("Berbagi", nomorFT, "resi kitabisa")
-
+		Call cekMutasi("Rumah Zakat Indonesia" , nomorFT)
+		Call cekJurnal("Rumah Zakat Indonesia", nomorFT)
 	ElseIf x = "negative" Then 
 		Call TransaksiLembagaLainnyaNegative("rzi")		
-End If
+	End If
+End Function
+
+Function Jadiberkah(x)
+	If x = "positive" Then
+		Call TransaksiLembagaLainnya("jadiberkah")
+		wait 1
+		Do 
+		wait 1
+		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+		wait 1
+		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
+		wait 1
+		Call KonfirmasiPIN("Berbagi")
+		Call TransaksiNonSwipe("Berbagi", nomorFT, "resi kitabisa")
+		Call cekMutasi("Jadiberkah.id" , nomorFT)
+		Call cekJurnal("Jadiberkah.id", nomorFT)
+	ElseIf x = "negative" Then 
+		Call TransaksiLembagaLainnyaNegative("jadiberkah")
+	End If
 End Function

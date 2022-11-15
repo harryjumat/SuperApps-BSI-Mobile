@@ -13,6 +13,4 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 Call react.Addtitle("BSI SuperApps - Pulsa Indosat - Positive")
 Call PulsaPaketDataIndosat("pulsapositive")
-'Call cekMutasi("Pulsa Indosat" , nomorFT)
-'Call cekJurnal("Pulsa Indosat", nomorFT)
 Call SaveReact_Merge()	

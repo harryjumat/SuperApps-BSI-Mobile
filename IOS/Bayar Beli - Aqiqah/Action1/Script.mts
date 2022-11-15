@@ -45,7 +45,10 @@ Call cekJurnal("Aqiqah", nomorFT)
 Call SaveReact_Merge()
 End Function
 
-Call FastAqiqah("DompetDhuafa","Logo_DompetDhuafa","Hewan_DompetDhuafa_KambingStandar")
+
+Call FastAqiqah("DompetDhuafa","Logo_DompetDhuafa","Kambing")
+
+'Call FastAqiqah("DompetDhuafa","Logo_DompetDhuafa","Hewan_DompetDhuafa_KambingStandar")
 'Call FastAqiqah("DompetDhuafa","Logo_DompetDhuafa","Hewan_DompetDhuafa_KambingMedium")
 'Call FastAqiqah("DompetDhuafa","Logo_DompetDhuafa","Hewan_DompetDhuafa_KambingPremium")
 

@@ -14,6 +14,6 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 'BUTUH BILLER (KARNA KETERANGANNYA ERROR ESB SEDANGKAN YANG LAIN LANCAR)
 Call react.Addtitle("BSI SuperApps - Kitabisa.id - Positive")
 Call Kitabisa("positive")
-Call cekMutasi("Kitabisa.id" , nomorFT)
-Call cekJurnal("Kitabisa.id", nomorFT)
+'Call cekMutasi("Kitabisa.id" , nomorFT)
+'Call cekJurnal("Kitabisa.id", nomorFT)
 Call SaveReact_Merge()	

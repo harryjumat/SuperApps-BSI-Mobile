@@ -74,9 +74,7 @@ Function KonfirmasiPIN(x)
 	Device("Device").App(x).MobileLabel("6").Tap
 	Call CaptureImageUFTV2(Device("Device").App(x), "Loading Konfirmasi PIN", "Berhasil menampilkan loading konfirmasi PIN", ReportStatus.Passed)
 	wait 1
-	Do 
-	wait 1
-	Loop until Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi").Exist
+	Call Keluar(Device("Device").App("Transaksi Berhasil").MobileLabel("Detail Transaksi"),x)
 End Function
 'fungsi transaksi berhasil, detail transaksi, detail resi/share resi
 Function TransaksiNonSwipe(x, nomorFT, resi)
@@ -95,17 +93,12 @@ Function TransaksiNonSwipe(x, nomorFT, resi)
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
 	wait 1
-	'CEK T24 MUTASI DAN JURNAL
-	Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430'untuk aqiqah
-	wait 3'untuk aqiqah
-	
+	If not  Device("Device").App("Transaksi Berhasil").MobileLabel("Nomor Transaksi").Exist Then		'untuk aqiqah | reinquiry mpn
+		Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430		'untuk aqiqah | reinquiry mpn
+		wait 3
+	End If
+	'CEK T24 MUTASI DAN JURNAL																
 	nomorFT = Device("Device").App("Dev").MobileLabel(resi).GetROProperty("text")
-'	nomorFT = Device("Device").App("Dev").MobileLabel("resi").GetROProperty("text")
-'	nomorFT = Device("Device").App("Dev").MobileLabel("resi pulsa").GetROProperty("text")
-'	nomorFT = Device("Device").App("Supplier").MobileLabel("resi tri").GetROProperty("text")
-'	nomorFT = Device("Device").App("Dev").MobileLabel("resi bpjs").GetROProperty("text")
-'	nomorFT = Device("Device").App("Dev").MobileLabel("resi kitabisa").GetROProperty("text")
-'	nomorFT = Device("Device").App("Dev").MobileLabel("resi aqiqah").GetROProperty("text")
 	Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430
 	wait 1
 	Device("Device").App("Transaksi Berhasil").MobileButton("Bagikan Resi").Tap
@@ -348,4 +341,38 @@ Function RekeningZero()
 	wait 1
 	Device("Device").App("Bayar_Beli").MobileLabel("Rp0,00").Tap
 	wait 1
+End Function
+
+Function PerizinanKontak()
+	wait 1
+	Device("Device").InsightObject("InsightObject buletan iphone").Click
+	wait 1
+	Device("Device").InsightObject("InsightObject iphone utama").Click
+	wait 1
+	Device("Device").App("Home").MobileButton("Pengaturan").Tap
+	wait 1
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileLabel("BSIMobile").Tap
+	wait 1
+	Device("Device").InsightObject("InsightObject Izin Kontak").Click
+	wait 1
+End Function
+
+'Example:	Call Keluar(Device("Device").App("Dev").MobileLabel("Konfirmasi Transaksi"),"Bayar_Beli")
+Function Keluar(param,epic)
+	wait 10
+	If not param.exist Then
+		Call CaptureImageUFTV2(Device("Device").App(epic), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+		Call SaveReact_Merge()
+		ExitActionIteration
+	End If
 End Function

@@ -13,6 +13,4 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 Call react.Addtitle("BSI SuperApps - Pulsa Tri - Positive")
 Call PulsaTri("positive")
-'Call cekMutasi("Pulsa Tri" , nomorFT)
-'Call cekJurnal("Pulsa Tri", nomorFT)
 Call SaveReact_Merge()	

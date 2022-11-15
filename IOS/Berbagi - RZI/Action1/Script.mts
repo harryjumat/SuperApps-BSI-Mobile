@@ -14,6 +14,4 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 Call react.Addtitle("BSI SuperApps - Rumah Zakat Indonesia - Positive")
 Call RZI("positive")
-Call cekMutasi("Rumah Zakat Indonesia" , nomorFT)
-Call cekJurnal("Rumah Zakat Indonesia", nomorFT)
 Call SaveReact_Merge()	

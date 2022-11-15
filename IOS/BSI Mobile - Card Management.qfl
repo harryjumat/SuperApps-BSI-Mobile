@@ -1,0 +1,127 @@
+﻿Function RequestKartuDebit(kartu,alamat)
+	Call Login()
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Dev").MobileLabel("HA").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileLabel("Informasi akun").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Dev").MobileLabel("Manajemen Kartu").Tap
+	Do
+	wait 1
+	Loop until Device("Device").App("Dev").MobileLabel("Buat Kartu").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Manajemen Kartu", "Berhasil Menampilkan halaman Manajemen Kartu", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileLabel("Buat Kartu").Tap
+	Do
+	wait 1
+	Loop until Device("Device").App("Dev").MobileLabel("Kartu Debit").Exist
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Status Transaksi BI Fast", "Berhasil Menampilkan halaman Status Transaksi BI Fast", ReportStatus.Passed)
+	Select Case kartu
+			Case "Debit" Device("Device").App("Dev").MobileLabel("Kartu Debit").Tap
+			Case "Virtual_BSI_Pay" Device("Device").App("Dev").MobileLabel("Kartu Virtual BSI Pay").Tap
+			Case "FriPass" Device("Device").App("Dev").MobileLabel("Aktivasi FriPass").Tap
+	End Select
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "List Rekening", "Berhasil Menampilkan List Rekening", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileEdit("Cari Rekening").Set "239"
+	wait 1
+	AIUtil("button", "EM").Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Dev").MobileLabel("SILVER DEBIT CARD").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "List Rekening", "Berhasil Menampilkan List Rekening", ReportStatus.Warning)'semua gambar kartu tidak muncul 
+	Device("Device").App("Dev").MobileLabel("Pilih Kartu").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Pilih Nama Pada Kartu", "Berhasil Menampilkan halaman Pilih Nama Pada Kartu", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileLabel("HARRY SETIAWAN").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Berhasil Pilih Nama", "Berhasil Pilih Nama pada kartu", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileLabel("Lanjutkan").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Metode Pengiriman Kartu Debit", "Berhasil menampilkan halaman Metode Pengiriman Kartu Debit", ReportStatus.Passed)
+	Select Case alamat
+			Case "alamat_domisili" 	Device("Device").App("Dev").MobileLabel("Kirim ke alamat domisili").Tap
+			Case "alamat_baru"		Device("Device").App("Dev").MobileLabel("Kirim ke alamat baru").Tap
+	End Select
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Pilih Alamat", "Berhasil memilih alamat", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileLabel("Lanjutkan").Tap
+	wait 2
+	If Device("Device").App("Dev").MobileLabel("Konfirmasi Data").Exist Then
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Konfirmasi Data", "Berhasil menampilkan halaman Konfirmasi Data", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileLabel("Detail Pengiriman").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Dev").MobileLabel("Konfirmasi").Tap
+		wait 1
+	else
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Alamat Baru", "Berhasil menampilkan halaman Alamat Baru", ReportStatus.Warning)'jarak antara judul dengan form terlalu jauh
+		Device("Device").App("Dev").MobileLabel("Provinsi").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Alamat Domisili", "Berhasil menampilkan halaman Alamat Domisili", ReportStatus.Warning)
+		Device("Device").App("Dev").MobileLabel("Dki Jakarta").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Kota Jakarta Pusat").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Kemayoran").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Sumur Batu").Tap
+		wait 1
+		Device("Device").App("Dev").MobileView("MobileView").Swipe "up",205,430
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Detail Alamat (No.rumah/").Tap
+		wait 1
+		Device("Device").Enterkeys typeValue, "Jalan Sumur Raya"
+		wait 1
+		Device("Device").App("Dev").MobileButton("done").Tap
+		wait 1
+		Device("Device").App("Dev").MobileEdit("RT").Set 03
+		wait 1
+		Device("Device").App("Dev").MobileButton("Selesai").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("RW").Tap
+		wait 1
+		Device("Device").Enterkeys typeValue, "04"
+		wait 1
+		Device("Device").App("Dev").MobileButton("Selesai").Tap
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Kode Pos").Tap
+		wait 1
+		Device("Device").Enterkeys typeValue, "15157"
+		wait 1
+		Device("Device").App("Dev").MobileButton("Selesai").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Input Alamat", "Berhasil Input Alamat", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Dev").MobileLabel("Simpan").Tap
+		wait 3
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Konfirmasi Data", "Berhasil menampilkan halaman Konfirmasi Data", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileLabel("Detail Pengiriman").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Dev").MobileLabel("Konfirmasi").Tap
+		wait 1
+	End If
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Input PIN", "Berhasil menampilkan halaman input PIN", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileLabel("1").Tap
+	Device("Device").App("Dev").MobileLabel("2").Tap
+	Device("Device").App("Dev").MobileLabel("3").Tap
+	Device("Device").App("Dev").MobileLabel("4").Tap
+	Device("Device").App("Dev").MobileLabel("5").Tap
+	Device("Device").App("Dev").MobileLabel("6").Tap
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Loading Konfirmasi PIN", "Berhasil menampilkan loading konfirmasi PIN", ReportStatus.Passed)
+	wait 10
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Permintaan Kartu Berhasil", "Berhasil menampilkan halaman Permintaan Kartu Berhasil", ReportStatus.Failed)
+'	'label selesai.tap
+'	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+'	wait 1
+'	Device("Device").App("Dev").MobileButton("Notifikasi").Tap
+'	wait 5
+'	Device("Device").App("Dev").MobileLabel("Info").Tap
+'	wait 1
+'	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Notifikasi Info", "Berhasil menampilkan Notifikasi Info", ReportStatus.Passed)
+'	'permintaan kartu debit.tap
+'	wait 3
+'	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Notifikasi Permintaan Kartu Debit", "Berhasil menampilkan Notifikasi Permintaan Kartu Debit", ReportStatus.Passed)
+End Function
+

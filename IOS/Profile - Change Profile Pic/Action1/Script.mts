@@ -1,6 +1,5 @@
 ﻿LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile.qfl") 
 LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile - Profile.qfl")
-
 LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
 LoadFunctionLibrary("D:\BSI\Napalm\libray\ReactLib.vbs")
 
