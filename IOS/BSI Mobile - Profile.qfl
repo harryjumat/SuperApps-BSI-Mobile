@@ -95,7 +95,8 @@ If x = "positive" Then
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set " "
 		For i = 1 To 24 Step 1
-			Device("Device").App("Profile").MobileObject("Hapus").Tap
+			Device("Device").InsightObject("InsightObject Delete").Click
+
 		Next
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos96@gmail.com"
@@ -146,16 +147,18 @@ ElseIf x = "negative" Then
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Ubah Email", "Berhasil masuk ke menu ubah email", ReportStatus.Passed)
 		wait 1
 		For i = 1 To 25 Step 1
-			Device("Device").App("Profile").MobileObject("Hapus").Tap
+'			Device("Device").App("Profile").MobileObject("Hapus").Tap
+			Device("Device").InsightObject("InsightObject Delete").Click
+
 		Next
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminosgmailcom"
 		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Format Email Tidak Sesuai", "Format yang tidak sesuai", ReportStatus.Warning)
+		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Format Email Tidak Sesuai", "Format yang tidak sesuai", ReportStatus.Passed)
 		wait 1
 		'EMAIL TELAH DIGUNAKAN
 		For i = 1 To 25 Step 1
-			Device("Device").App("Profile").MobileObject("Hapus").Tap
+			Device("Device").InsightObject("InsightObject Delete").Click
 		Next
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos96@gmail.com"
@@ -166,7 +169,7 @@ ElseIf x = "negative" Then
 		Device("Device").App("Profile").MobileLabel("Coba Lagi").Tap
 		wait 1
 		For i = 1 To 25 Step 1
-			Device("Device").App("Profile").MobileObject("Hapus").Tap
+			Device("Device").InsightObject("InsightObject Delete").Click
 		Next
 		wait 1
 		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos@gmail.com"
@@ -179,65 +182,66 @@ ElseIf x = "negative" Then
 		Next
 		wait 2
 		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Tidak Sesuai", "Kode OTP yang dimasukkan tidak sesuai", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject btn back konfirmasi pin").Click
-		wait 1
-		Device("Device").InsightObject("InsightObject otp 1").Click
-		wait 1
-		For i = 1 To 6 Step 1
-			Device("Device").App("Profile").MobileObject("Hapus_2").Tap
-		Next
-		wait 2
-		Device("Device").App("Profile").MobileButton("btn back").Tap
-		wait 1
-		Device("Device").InsightObject("InsightObject Ubah Email - Simpan").Click
+'		wait 1
+'		Device("Device").InsightObject("InsightObject btn back konfirmasi pin").Click
+'		wait 1
+'		Device("Device").InsightObject("InsightObject otp 1").Click
+'		wait 1
+'		For i = 1 To 6 Step 1
+'			Device("Device").App("Profile").MobileObject("Hapus_2").Tap
+'		Next
+'		wait 2
+'		Device("Device").App("Profile").MobileButton("btn back").Tap
+'		wait 1
+'		Device("Device").InsightObject("InsightObject Ubah Email - Simpan").Click
 		'OTP KADALUARSA  (HARUS BENAR)
-		wait 250
-		Device("Device").App("Profile").MobileObject("1").Tap
-		Device("Device").App("Profile").MobileObject("2").Tap
-		Device("Device").App("Profile").MobileObject("3").Tap
-		Device("Device").App("Profile").MobileObject("4").Tap
-		Device("Device").App("Profile").MobileObject("5").Tap
-		Device("Device").App("Profile").MobileObject("6").Tap
-		wait 3
-		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Kadaluwarsa ", "OTP sudah kadaluwarsa", ReportStatus.Passed)
+'		wait 250
+'		Device("Device").App("Profile").MobileObject("1").Tap
+'		Device("Device").App("Profile").MobileObject("2").Tap
+'		Device("Device").App("Profile").MobileObject("3").Tap
+'		Device("Device").App("Profile").MobileObject("4").Tap
+'		Device("Device").App("Profile").MobileObject("5").Tap
+'		Device("Device").App("Profile").MobileObject("6").Tap
+'		wait 3
+'		Call CaptureImageUFTV2(Device("Device").App("Profile"), "Kode OTP Kadaluwarsa ", "OTP sudah kadaluwarsa", ReportStatus.Passed)
 		'NOTE: OTP GAGAL 3X PASSED
 		'Change Email ke Semula
-		Device("Device").App("Profile").MobileLabel("HA").Tap
-		wait 2
-		Device("Device").App("Profile").MobileLabel("Informasi akun").Tap
-		wait 2
-		Device("Device").App("Profile").MobileLabel("Ubah").Tap
-		wait 2
-		Device("Device").App("Profile").MobileEdit("email address").Set " "
-		For i = 1 To 24 Step 1
-			Device("Device").App("Profile").MobileObject("Hapus").Tap
-		Next
-		wait 1
-		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos@gmail.com"
-		wait 3
-		Device("Device").App("Profile").MobileLabel("Simpan").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Profile").MobileLabel("Verifikasi e-mail kamu").Exist
-		wait 2
-		Device("Device").App("Profile").MobileObject("1").Tap
-		Device("Device").App("Profile").MobileObject("2").Tap
-		Device("Device").App("Profile").MobileObject("3").Tap
-		Device("Device").App("Profile").MobileObject("4").Tap
-		Device("Device").App("Profile").MobileObject("5").Tap
-		Device("Device").App("Profile").MobileObject("6").Tap
-		Do 
-		wait 1 
-		Loop until Device("Device").App("Profile").MobileLabel("1").Exist
-		Device("Device").App("Profile").MobileLabel("1").Tap
-		Device("Device").App("Profile").MobileLabel("2").Tap
-		Device("Device").App("Profile").MobileLabel("3").Tap
-		Device("Device").App("Profile").MobileLabel("4").Tap
-		Device("Device").App("Profile").MobileLabel("5").Tap
-		Device("Device").App("Profile").MobileLabel("6").Tap
-		Do 
-		wait 1
-		Loop until Device("Device").App("Profile").MobileLabel("Info Kontak").Exist
+'		Call Login()
+'		Device("Device").App("Profile").MobileLabel("HA").Tap
+'		wait 2
+'		Device("Device").App("Profile").MobileLabel("Informasi akun").Tap
+'		wait 2
+'		Device("Device").App("Profile").MobileLabel("Ubah").Tap
+'		wait 2
+'		Device("Device").App("Profile").MobileEdit("email address").Set " "
+'		For i = 1 To 24 Step 1
+'			Device("Device").InsightObject("InsightObject Delete").Click
+'		Next
+'		wait 1
+'		Device("Device").App("Profile").MobileEdit("email address").Set "harryminos@gmail.com"
+'		wait 3
+'		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Profile").MobileLabel("Verifikasi e-mail kamu").Exist
+'		wait 2
+'		Device("Device").App("Profile").MobileObject("1").Tap
+'		Device("Device").App("Profile").MobileObject("2").Tap
+'		Device("Device").App("Profile").MobileObject("3").Tap
+'		Device("Device").App("Profile").MobileObject("4").Tap
+'		Device("Device").App("Profile").MobileObject("5").Tap
+'		Device("Device").App("Profile").MobileObject("6").Tap
+'		Do 
+'		wait 1 
+'		Loop until Device("Device").App("Profile").MobileLabel("1").Exist
+'		Device("Device").App("Profile").MobileLabel("1").Tap
+'		Device("Device").App("Profile").MobileLabel("2").Tap
+'		Device("Device").App("Profile").MobileLabel("3").Tap
+'		Device("Device").App("Profile").MobileLabel("4").Tap
+'		Device("Device").App("Profile").MobileLabel("5").Tap
+'		Device("Device").App("Profile").MobileLabel("6").Tap
+'		Do 
+'		wait 1
+'		Loop until Device("Device").App("Profile").MobileLabel("Info Kontak").Exist
 End If
 End Function

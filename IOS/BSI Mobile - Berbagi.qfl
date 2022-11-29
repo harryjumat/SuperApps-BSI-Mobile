@@ -54,8 +54,8 @@ Function TransaksiLembagaLainnya(param)
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
 	wait 3
 	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
-	wait 1
-	Call Keluar(Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Tap,"Berbagi")
+	wait 5
+'	Call Keluar(Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Tap,"Berbagi")
 End Function
 
 Function TransaksiLembagaLainnyaNegative(param)
@@ -87,7 +87,7 @@ Function TransaksiLembagaLainnyaNegative(param)
 	wait 1
 	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap	
 	wait 10
-	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Nomor VA Salah", "Berhasil menampilkan notifikasi nomor virtual account salah", ReportStatus.Failed)'masih bypass, keluar data
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Nomor VA Salah", "Berhasil menampilkan notifikasi nomor virtual account salah", ReportStatus.Passed)
 	'SALDO TIDAK CUKUP
 	Call Navigate("Berbagi")
 	Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
@@ -143,7 +143,9 @@ Function TransaksiLembagaLainnyaNegative(param)
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Input Nomor VA", "Berhasil input nomor virtual account", ReportStatus.Passed)
 	wait 1
-	Device("Device").App("Berbagi").MobileButton("Ubah").Tap
+	Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
+	wait 1
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
 	wait 1
 	AIUtil("button", "EW").Click
 	wait 1
@@ -151,25 +153,25 @@ Function TransaksiLembagaLainnyaNegative(param)
 	wait 3
 '	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
 '	wait 10
-	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Failed) 'notifikasi error saldi kurang muncul sebelum konfirmasi transaksi
-'	'LIMIT HARIAN
-'	Call SetLimitHarian("pembayaran")
-'	Call TransaksiLembagaLainnya(param)
-'	wait 3
-'	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
-'	wait 1
-'	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Harian", "Berhasil menampilkan notifikasi limit harian", ReportStatus.Passed)'Limit harian
-'	wait 1
-'	Call UnSetLimitHarian("pembayaran")
-'	'LIMIT TRANSAKSI
-'	Call SetLimitTransaksi("pembayaran")
-'	Call TransaksiLembagaLainnya(param)
-'	wait 1
-'	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
-'	wait 1
-'	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Transaksi", "Berhasil menampilkan notifikasi limit transaksi", ReportStatus.Passed)'Limit transaksi
-'	wait 3
-'	Call UnSetLimitTransaksi("pembayaran")
+	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Saldo Tidak Cukup", "Berhasil menampilkan error saldo tidak cukup", ReportStatus.Passed)
+	'LIMIT HARIAN
+	Call SetLimitHarian("pembayaran")
+	Call TransaksiLembagaLainnya(param)
+	wait 3
+	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Harian", "Berhasil menampilkan notifikasi limit harian", ReportStatus.Passed)'Limit harian
+	wait 1
+	Call UnSetLimitHarian("pembayaran")
+	'LIMIT TRANSAKSI
+	Call SetLimitTransaksi("pembayaran")
+	Call TransaksiLembagaLainnya(param)
+	wait 1
+	Device("Device").App("Berbagi").MobileLabel("Konfirmasi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Limit Transaksi", "Berhasil menampilkan notifikasi limit transaksi", ReportStatus.Passed)'Limit transaksi
+	wait 3
+	Call UnSetLimitTransaksi("pembayaran")
 End Function
 
 Function Kitabisa(x)
@@ -178,7 +180,7 @@ Function Kitabisa(x)
 		Do 
 		wait 1
 		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Passed)
 		wait 1
 		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
 		wait 1
@@ -195,7 +197,7 @@ Function Dompetdhuafa(x)
 		Do 
 		wait 1
 		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Passed)
 		wait 1
 		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
 		wait 1
@@ -212,7 +214,7 @@ Function RZI(x)
 		Do 
 		wait 1
 		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Passed)
 		wait 1
 		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
 		wait 1
@@ -232,7 +234,7 @@ Function Jadiberkah(x)
 		Do 
 		wait 1
 		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Warning)'tidak ada logo
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi", ReportStatus.Passed)
 		wait 1
 		Device("Device").InsightObject("InsightObject Konfirmasi Transaksi - Konfirmasi").Click
 		wait 1

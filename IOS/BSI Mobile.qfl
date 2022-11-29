@@ -4,7 +4,7 @@ Function Login()
 	AIUtil.SetContext Device("Device")
 	do 
 	wait 1
-	Loop until Device("Device").InsightObject("InsightObject Sholat").Exist
+	Loop until Device("Device").App("Login").MobileLabel("Login").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Login"), "Login", "Berhasil masuk ke menu login", ReportStatus.Passed)
 		Device("Device").App("Login").MobileLabel("Login").Tap
 		wait 1
@@ -12,10 +12,12 @@ Function Login()
 		Device("Device").App("Login").MobileEdit("Password").Set "p@ssw0rd"
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Login"), "Password Valid", "Mengisikan password dengan benar", ReportStatus.Passed)
-		Device("Device").App("Login").MobileButton("Masuk").Tap
+'		Device("Device").App("Login").MobileButton("Masuk").Tap
+		Device("Device").App("Login").MobileButton("Login").Tap
 		Do
 			wait 1
 		Loop until Device("Device").App("Login").MobileLabel("Harry").Exist
+		wait 5
 
 End Function
 
@@ -55,7 +57,8 @@ Function LoginLimit()
 		wait 1
 		Device("Device").App("Login").MobileEdit("Password").Set "p@ssw0rd"
 		wait 1
-		Device("Device").App("Login").MobileButton("Masuk").Tap
+'		Device("Device").App("Login").MobileButton("Masuk").Tap
+		Device("Device").App("Login").MobileButton("Login").Tap
 		Do
 			wait 1
 		Loop until Device("Device").App("Login").MobileLabel("Harry").Exist

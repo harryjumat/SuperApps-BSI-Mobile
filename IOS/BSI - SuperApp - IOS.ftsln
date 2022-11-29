@@ -9,9 +9,44 @@ Project("") = "tumbal", "tumbal\Test.tsp", "C3B1EDE7-D67D-4931-B40B-FAE644F59509
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "Bayar Beli - Reinquiry MPN", "Bayar Beli - Reinquiry MPN\Test.tsp", "FCE0BD2A-E8D4-40C8-A067-0A5A84D371A7"
+Project("") = "Profile - Change Email", "Profile - Change Email\Test.tsp", "7B4A22BF-3577-43CD-9594-58EF0204BDAA"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - Reinquiry MPN\Test.tsp
+		PathInformation = D:\BSI\IOS\Profile - Change Email\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Profile - Change Profile Pic", "Profile - Change Profile Pic\Test.tsp", "B4492293-9C9E-496B-9E21-A9CC4509510A"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Profile - Change Profile Pic\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Bayar Beli - Paket Data XL", "Bayar Beli - Paket Data XL\Test.tsp", "6BD88D43-2A28-4DC2-B044-63735C082DC9"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Bayar Beli - Paket Data XL\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Berbagi - RZI", "Berbagi - RZI\Test.tsp", "44F42B59-4D62-4E48-99AB-97F9211FED60"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Berbagi - RZI\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Berbagi - Dompet Dhuafa", "Berbagi - Dompet Dhuafa\Test.tsp", "2ABCCD41-FA1E-458B-B350-16C22080D833"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Berbagi - Dompet Dhuafa\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Bayar Beli - Pulsa dan Data Telkomsel", "Bayar Beli - Pulsa dan Data Telkomsel\Test.tsp", "2AA4396B-042A-47FF-95AF-A5ADF1FE368D"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Bayar Beli - Pulsa dan Data Telkomsel\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 		BaselineId = 
@@ -27,10 +62,30 @@ Global
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.Build.0 = Release|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.ActiveCfg = Release|Any CPU
-		FCE0BD2A-E8D4-40C8-A067-0A5A84D371A7.Debug|Any CPU.Build.0 = Debug|Any CPU
-		FCE0BD2A-E8D4-40C8-A067-0A5A84D371A7.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		FCE0BD2A-E8D4-40C8-A067-0A5A84D371A7.Release|Any CPU.Build.0 = Release|Any CPU
-		FCE0BD2A-E8D4-40C8-A067-0A5A84D371A7.Release|Any CPU.ActiveCfg = Release|Any CPU
+		7B4A22BF-3577-43CD-9594-58EF0204BDAA.Debug|Any CPU.Build.0 = Debug|Any CPU
+		7B4A22BF-3577-43CD-9594-58EF0204BDAA.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		7B4A22BF-3577-43CD-9594-58EF0204BDAA.Release|Any CPU.Build.0 = Release|Any CPU
+		7B4A22BF-3577-43CD-9594-58EF0204BDAA.Release|Any CPU.ActiveCfg = Release|Any CPU
+		B4492293-9C9E-496B-9E21-A9CC4509510A.Debug|Any CPU.Build.0 = Debug|Any CPU
+		B4492293-9C9E-496B-9E21-A9CC4509510A.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		B4492293-9C9E-496B-9E21-A9CC4509510A.Release|Any CPU.Build.0 = Release|Any CPU
+		B4492293-9C9E-496B-9E21-A9CC4509510A.Release|Any CPU.ActiveCfg = Release|Any CPU
+		6BD88D43-2A28-4DC2-B044-63735C082DC9.Debug|Any CPU.Build.0 = Debug|Any CPU
+		6BD88D43-2A28-4DC2-B044-63735C082DC9.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		6BD88D43-2A28-4DC2-B044-63735C082DC9.Release|Any CPU.Build.0 = Release|Any CPU
+		6BD88D43-2A28-4DC2-B044-63735C082DC9.Release|Any CPU.ActiveCfg = Release|Any CPU
+		44F42B59-4D62-4E48-99AB-97F9211FED60.Debug|Any CPU.Build.0 = Debug|Any CPU
+		44F42B59-4D62-4E48-99AB-97F9211FED60.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		44F42B59-4D62-4E48-99AB-97F9211FED60.Release|Any CPU.Build.0 = Release|Any CPU
+		44F42B59-4D62-4E48-99AB-97F9211FED60.Release|Any CPU.ActiveCfg = Release|Any CPU
+		2ABCCD41-FA1E-458B-B350-16C22080D833.Debug|Any CPU.Build.0 = Debug|Any CPU
+		2ABCCD41-FA1E-458B-B350-16C22080D833.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		2ABCCD41-FA1E-458B-B350-16C22080D833.Release|Any CPU.Build.0 = Release|Any CPU
+		2ABCCD41-FA1E-458B-B350-16C22080D833.Release|Any CPU.ActiveCfg = Release|Any CPU
+		2AA4396B-042A-47FF-95AF-A5ADF1FE368D.Debug|Any CPU.Build.0 = Debug|Any CPU
+		2AA4396B-042A-47FF-95AF-A5ADF1FE368D.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		2AA4396B-042A-47FF-95AF-A5ADF1FE368D.Release|Any CPU.Build.0 = Release|Any CPU
+		2AA4396B-042A-47FF-95AF-A5ADF1FE368D.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(Function Libraries) = postProject
 		BSI Mobile = D:\BSI\IOS\BSI Mobile.qfl

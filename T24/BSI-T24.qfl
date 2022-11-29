@@ -25,7 +25,8 @@ Function cekMutasi(byval fitur, nomorFT)
 	Call OpenBrowser("Chrome.exe", "http://10.0.144.25:8080/ibsmrempoa/servlet/BrowserServlet")
 	
 	Call loginT24()
-	Call Mutasi_Rekening("7420605239", nomorFT)
+'	Call Mutasi_Rekening("7420605239", nomorFT)
+	Call Mutasi_Rekening("7420619337", nomorFT)
 	Call logoutT24()
 End Function
 
