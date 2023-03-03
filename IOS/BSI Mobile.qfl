@@ -2,33 +2,49 @@
 Function Login()
 	Device("Device").App("Login").Launch
 	AIUtil.SetContext Device("Device")
+	Call DurationStart("Splashscreen")
 	do 
+	wait 0.1
+	Loop until Device("Device").InsightObject("InsightObject Sholat").Exist
+	Call DurationEnd("Prelogin","Splashscreen")
+	
+	Call CaptureImageUFTV2(Device("Device").App("Login"), "Login", "Berhasil masuk ke menu login, Klik Login", ReportStatus.Passed)
+	
+	Call DurationStart("Button Login")
+	Device("Device").App("Login").MobileLabel("Login").Tap
+	do
+	wait 0.1
+	Loop until Device("Device").App("Login").MobileEdit("Password").Exist
+	Call DurationEnd("Prelogin","Button Login")
+	
+	Call CaptureImageUFTV2(Device("Device").App("Login"), "Input Password", "Berhasil masuk untuk memasukkan password, Masukkan Password", ReportStatus.Passed)
+	
+	Call DurationStart("Input Password")
+	Device("Device").App("Login").MobileEdit("Password").Set "p@ssw0rd"
+	Call DurationEnd("Prelogin","Input Password")
+	
 	wait 1
-	Loop until Device("Device").App("Login").MobileLabel("Login").Exist
-	Call CaptureImageUFTV2(Device("Device").App("Login"), "Login", "Berhasil masuk ke menu login", ReportStatus.Passed)
-		Device("Device").App("Login").MobileLabel("Login").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Login"), "Input Password", "Berhasil masuk untuk memasukkan password", ReportStatus.Passed)
-		Device("Device").App("Login").MobileEdit("Password").Set "p@ssw0rd"
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Login"), "Password Valid", "Mengisikan password dengan benar", ReportStatus.Passed)
-'		Device("Device").App("Login").MobileButton("Masuk").Tap
-		Device("Device").App("Login").MobileButton("Login").Tap
-		Do
-			wait 1
-		Loop until Device("Device").App("Login").MobileLabel("Harry").Exist
-		wait 5
+	Call CaptureImageUFTV2(Device("Device").App("Login"), "Password Valid", "Mengisikan password dengan benar, Klik Login", ReportStatus.Passed)
+	
+	Call DurationStart("Button Login")
+	Device("Device").App("Login").MobileButton("Login").Tap
+	Do
+	wait 0.1
+	Loop until Device("Device").App("Login").MobileLabel("Harry").Exist
+	Call DurationEnd("Prelogin","Button Login")
+	wait 5
 
 End Function
 
 Function Navigate(x)
 	If x = "Bayar_Beli" Then
 		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Dashboard", "Berhasil masuk ke halaman dashboard, Klik Bayar Beli", ReportStatus.Passed)
 		wait 1
-		Device("Device").InsightObject("InsightObject btn bayar beli").Click
+'		Device("Device").InsightObject("InsightObject btn bayar beli").Click
+		AIUtil("button", "", micFromLeft, 2).Click
 		wait 5
-		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Bayar & Beli", "Berhasil masuk ke halaman bayar/beli, Klik Tampilkan Lebih Banyak", ReportStatus.Passed)
 		wait 3
 		Device("Device").App("Bayar_Beli").MobileLabel("tampilkanlebihbanyak").Tap
 		wait 1
@@ -36,13 +52,23 @@ Function Navigate(x)
 		wait 1
 	ElseIf x = "Berbagi" Then
 		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Dashboard", "Berhasil masuk ke halaman dashboard, Klik Ziswaf", ReportStatus.Passed)
 		wait 1
-		Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
-		Do 
-		wait 1
-		Loop until Device("Device").App("Berbagi").MobileLabel("Paket Berbuka & Sahur").Exist
+		If Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Exist Then
+			Device("Device").InsightObject("InsightObject Dashboard - Ziswaf").Click
+			else
+			AIUtil("button", "", micFromTop, 2).Click
+		End If
+		wait 3
 		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke halaman Ziswaf", ReportStatus.Passed)
+		wait 1
+	ElseIf x = "Cardless Withdrawal" Then
+		Call Login()
+		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil masuk ke halaman dashboard, Klik Ziswaf", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Cardless Withdrawal").MobileLabel("btn_megamenu").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Mega Menu", "Berhasil menampilkan Mega Menu", ReportStatus.Passed)
 		wait 1
 	End If
 End Function
@@ -66,8 +92,8 @@ End Function
 
 'x adalah nama object pada object repository
 Function KonfirmasiPIN(x)
-	wait 1
-	Call CaptureImageUFTV2(Device("Device").App(x), "Input PIN", "Berhasil menampilkan halaman input PIN", ReportStatus.Passed)
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App(x), "Input PIN", "Berhasil menampilkan halaman input PIN, Masukkan PIN", ReportStatus.Passed)
 	wait 1
 	Device("Device").App(x).MobileLabel("1").Tap
 	Device("Device").App(x).MobileLabel("2").Tap
@@ -81,11 +107,11 @@ Function KonfirmasiPIN(x)
 End Function
 'fungsi transaksi berhasil, detail transaksi, detail resi/share resi
 Function TransaksiNonSwipe(x, nomorFT, resi)
-	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Transaksi berhasil", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Transaksi berhasil, Klik Arrow Untuk Menampilkan Detail Transaksi", ReportStatus.Passed)
 	wait 1
 	Device("Device").App("Transaksi Berhasil").MobileButton("Arrow").Tap
 	wait 1
-	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Berhasil menampilkan halaman notifikasi transaksi berhasil", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App(x), "Transaksi Berhasil", "Berhasil menampilkan halaman notifikasi transaksi berhasil, Klik Icon Download", ReportStatus.Passed)
 	wait 1
 	Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430
 	wait 3
@@ -93,8 +119,7 @@ Function TransaksiNonSwipe(x, nomorFT, resi)
 	wait 1
 	Loop until Device("Device").InsightObject("InsightObject Download").Exist
 	Device("Device").InsightObject("InsightObject Download").Click
-	wait 1
-	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload'", ReportStatus.Passed)
+	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload, Klik Bagikan Resi'", ReportStatus.Passed)
 	wait 1
 	If not  Device("Device").App("Transaksi Berhasil").MobileLabel("Nomor Transaksi").Exist Then		'untuk aqiqah | reinquiry mpn
 		Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430		'untuk aqiqah | reinquiry mpn
@@ -153,9 +178,17 @@ Function SetLimitHarian(x)
 	wait 1
 	Device("Device").App("Profile").MobileLabel("HA").Tap
 	wait 1
-	Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+	If Device("Device").App("Profile").MobileLabel("Informasi akun").Exist Then
+		Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+		else
+		Device("Device").App("Profile").MobileButton("MobileButton Informasi Akun").Swipe "up",205,430
+	End If
 	wait 3
-	Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
+	If Device("Device").App("Profile").MobileLabel("Informasi Limit").Exist Then
+		Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
+		else
+		Device("Device").App("Profile").MobileButton("MobileButton Informasi Limit").Tap
+	End If
 	Do 
 	wait 1
 	Loop until Device("Device").App("Profile").MobileLabel("Pembelian").Exist
@@ -193,6 +226,24 @@ Function SetLimitHarian(x)
 		Device("Device").App("Profile").MobileLabel("5").Tap
 		Device("Device").App("Profile").MobileLabel("6").Tap
 		wait 3
+	ElseIf x = "Tarik Tunai Tanpa Kartu" Then
+		Device("Device").App("Profile").MobileLabel("Pembelian").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Profile").MobileLabel("Harian Tarik Tunai - Pencil").Tap
+		wait 1
+		Device("Device").App("Profile").MobileEdit("email address").Set "10000"
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		Do 
+		wait 1
+		Loop until Device("Device").App("Profile").MobileLabel("Konfirmasi PIN").Exist
+		Device("Device").App("Profile").MobileLabel("1").Tap
+		Device("Device").App("Profile").MobileLabel("2").Tap
+		Device("Device").App("Profile").MobileLabel("3").Tap
+		Device("Device").App("Profile").MobileLabel("4").Tap
+		Device("Device").App("Profile").MobileLabel("5").Tap
+		Device("Device").App("Profile").MobileLabel("6").Tap
+		wait 3
 	End If
 End Function
 Function UnSetLimitHarian(x)
@@ -203,9 +254,17 @@ Function UnSetLimitHarian(x)
 	wait 1
 	Device("Device").App("Profile").MobileLabel("HA").Tap
 	wait 1
-	Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+	If Device("Device").App("Profile").MobileLabel("Informasi akun").Exist Then
+		Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+		else
+		Device("Device").App("Profile").MobileButton("MobileButton Informasi Akun").Swipe "up",205,430
+	End If
 	wait 3
-	Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
+	If Device("Device").App("Profile").MobileLabel("Informasi Limit").Exist Then
+		Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
+		else
+		Device("Device").App("Profile").MobileButton("MobileButton Informasi Limit").Tap
+	End If
 	Do 
 	wait 1
 	Loop until Device("Device").App("Profile").MobileLabel("Pembelian").Exist
@@ -243,19 +302,46 @@ Function UnSetLimitHarian(x)
 		Device("Device").App("Profile").MobileLabel("5").Tap
 		Device("Device").App("Profile").MobileLabel("6").Tap
 		wait 3
+	ElseIf x = "Tarik Tunai Tanpa Kartu" Then
+		Device("Device").App("Profile").MobileLabel("Pembelian").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Profile").MobileLabel("Harian Tarik Tunai - Pencil").Tap
+		wait 1
+		Device("Device").App("Profile").MobileEdit("email address").Set "10000000"
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		Do 
+		wait 1
+		Loop until Device("Device").App("Profile").MobileLabel("Konfirmasi PIN").Exist
+		Device("Device").App("Profile").MobileLabel("1").Tap
+		Device("Device").App("Profile").MobileLabel("2").Tap
+		Device("Device").App("Profile").MobileLabel("3").Tap
+		Device("Device").App("Profile").MobileLabel("4").Tap
+		Device("Device").App("Profile").MobileLabel("5").Tap
+		Device("Device").App("Profile").MobileLabel("6").Tap
+		wait 3
 	End If
 End Function
 Function SetLimitTransaksi(x)
-	Call LoginLimit()
-	wait 1
-	Device("Device").App("Profile").MobileLabel("HA").Tap
-	wait 1
-	Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+'	Call LoginLimit()
+'	wait 1
+'	Device("Device").App("Profile").MobileLabel("HA").Tap
+'	wait 1
+'	If Device("Device").App("Profile").MobileLabel("Informasi akun").Exist Then
+'		Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+'		else
+'		Device("Device").App("Profile").MobileButton("MobileButton Informasi Akun").Swipe "up",205,430
+'	End If
+'	wait 3
+'	If Device("Device").App("Profile").MobileLabel("Informasi Limit").Exist Then
+'		Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
+'		else
+'		Device("Device").App("Profile").MobileButton("MobileButton Informasi Limit").Tap
+'	End If
+'	Do 
+'	wait 1
+'	Loop until Device("Device").App("Profile").MobileLabel("Pembelian").Exist
 	wait 3
-	Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
-	Do 
-	wait 1
-	Loop until Device("Device").App("Profile").MobileLabel("Pembelian").Exist
 	Device("Device").App("Profile").MobileLabel("Per Transaksi").Tap
 	If x = "pembelian" Then
 		Device("Device").App("Profile").MobileLabel("Transaksi Pembelian - Pencil").Tap
@@ -289,6 +375,22 @@ Function SetLimitTransaksi(x)
 		Device("Device").App("Profile").MobileLabel("5").Tap
 		Device("Device").App("Profile").MobileLabel("6").Tap
 		wait 3
+	ElseIf x = "Tarik Tunai Tanpa Kartu" Then
+		Device("Device").App("Profile").MobileLabel("Transaksi Tarik Tunai - Pencil").Tap
+		wait 2
+		Device("Device").App("Profile").MobileEdit("email address").Set "10000"
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		Do 
+		wait 1
+		Loop until Device("Device").App("Profile").MobileLabel("Konfirmasi PIN").Exist
+		Device("Device").App("Profile").MobileLabel("1").Tap
+		Device("Device").App("Profile").MobileLabel("2").Tap
+		Device("Device").App("Profile").MobileLabel("3").Tap
+		Device("Device").App("Profile").MobileLabel("4").Tap
+		Device("Device").App("Profile").MobileLabel("5").Tap
+		Device("Device").App("Profile").MobileLabel("6").Tap
+		wait 3
 	End If
 End Function
 Function UnSetLimitTransaksi(x)
@@ -296,9 +398,17 @@ Function UnSetLimitTransaksi(x)
 	wait 1
 	Device("Device").App("Profile").MobileLabel("HA").Tap
 	wait 1
-	Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+	If Device("Device").App("Profile").MobileLabel("Informasi akun").Exist Then
+		Device("Device").App("Profile").MobileLabel("Informasi akun").Swipe "up",205,430
+		else
+		Device("Device").App("Profile").MobileButton("MobileButton Informasi Akun").Swipe "up",205,430
+	End If
 	wait 3
-	Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
+	If Device("Device").App("Profile").MobileLabel("Informasi Limit").Exist Then
+		Device("Device").App("Profile").MobileLabel("Informasi Limit").Tap
+		else
+		Device("Device").App("Profile").MobileButton("MobileButton Informasi Limit").Tap
+	End If
 	Do 
 	wait 1
 	Loop until Device("Device").App("Profile").MobileLabel("Pembelian").Exist
@@ -335,6 +445,22 @@ Function UnSetLimitTransaksi(x)
 		Device("Device").App("Profile").MobileLabel("5").Tap
 		Device("Device").App("Profile").MobileLabel("6").Tap
 		wait 3
+	ElseIf x = "Tarik Tunai Tanpa Kartu" Then
+		Device("Device").App("Profile").MobileLabel("Transaksi Tarik Tunai - Pencil").Tap
+		wait 2
+		Device("Device").App("Profile").MobileEdit("email address").Set "1000000"
+		wait 1
+		Device("Device").App("Profile").MobileLabel("Simpan").Tap
+		Do 
+		wait 1
+		Loop until Device("Device").App("Profile").MobileLabel("Konfirmasi PIN").Exist
+		Device("Device").App("Profile").MobileLabel("1").Tap
+		Device("Device").App("Profile").MobileLabel("2").Tap
+		Device("Device").App("Profile").MobileLabel("3").Tap
+		Device("Device").App("Profile").MobileLabel("4").Tap
+		Device("Device").App("Profile").MobileLabel("5").Tap
+		Device("Device").App("Profile").MobileLabel("6").Tap
+		wait 3
 	End If
 End Function
 
@@ -346,36 +472,110 @@ Function RekeningZero()
 	wait 1
 End Function
 
-Function PerizinanKontak()
+Function RekeningDormant()
+	Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 	wait 1
-	Device("Device").InsightObject("InsightObject buletan iphone").Click
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "917"
+	wait 1
+	AIUtil("button", "EM").Click
+End Function
+
+Function PerizinanKontak()
+	wait 5
+	If Device("Device").InsightObject("InsightObject buletan iphone").Exist Then
+		Device("Device").InsightObject("InsightObject buletan iphone").Click
+		else
+		Device("Device").InsightObject("InsightObject buletan iphone malam").Click
+	End If
 	wait 1
 	Device("Device").InsightObject("InsightObject iphone utama").Click
 	wait 1
 	Device("Device").App("Home").MobileButton("Pengaturan").Tap
 	wait 1
-	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
-	wait 2
-	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
-	wait 2
-	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
-	wait 2
-	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
-	wait 2
-	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
-	wait 2
-	Device("Device").App("Settings").MobileLabel("BSIMobile").Tap
+	If Device("Device").App("Settings").MobileLabel("Kontak").Exist Then
+		Device("Device").InsightObject("InsightObject Izin Kontak").Click
+	else
+		wait 1
+		Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+		wait 2
+'		If Device("Device").App("Settings").MobileLabel("BSIMobile").Exist Then
+'			Device("Device").App("Settings").MobileLabel("BSIMobile").Tap
+'		else
+'			Device("Device").App("Settings").MobileLabel("BSIMobile_2").Tap
+'		End If
+		Device("Device").InsightObject("InsightObject").Click
+		wait 1
+		Device("Device").InsightObject("InsightObject Izin Kontak").Click
+		wait 1
+	End If
+End Function
+
+Function PerizinanKamera(param)
 	wait 1
-	Device("Device").InsightObject("InsightObject Izin Kontak").Click
+	Device("Device").InsightObject("InsightObject buletan iphone").Click
+	wait 1
+	Device("Device").InsightObject("InsightObject iphone utama").Click
+	wait 1
+	If Device("Device").App("Home").MobileButton("Pengaturan").Exist Then
+		Device("Device").App("Home").MobileButton("Pengaturan").Tap
+	End If
+	wait 1
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Settings").MobileList("MobileList Pengaturan").Swipe "up",205,430
+	wait 2
+	If Device("Device").App("Settings").MobileLabel("BSIMobile").Exist Then
+		Device("Device").App("Settings").MobileLabel("BSIMobile").Tap
+	End If
+	wait 1
+	Select Case param
+	case "on"	Device("Device").InsightObject("InsightObject Kamera").Click
+	case "off"	Device("Device").InsightObject("InsightObject Kamera Off").Click
+	End Select
 	wait 1
 End Function
 
 'Example:	Call Keluar(Device("Device").App("Dev").MobileLabel("Konfirmasi Transaksi"),"Bayar_Beli")
 Function Keluar(param,epic)
-	wait 10
+	wait 15
 	If not param.exist Then
 		Call CaptureImageUFTV2(Device("Device").App(epic), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
 		Call SaveReact_Merge()
 		ExitActionIteration
 	End If
 End Function
+'=======================================================================================================================================================================================
+
+
+Function DurationStart(ObjectName)
+    MercuryTimers(ObjectName).Start
+End Function  
+
+Function DurationEnd(FiturName,ObjectName)
+MercuryTimers(ObjectName).Stop
+Reporter.ReportEvent micPass, ObjectName, "Execution Time: " & (MercuryTimers(ObjectName).ElapsedTime/1000) &"sec"	
+''''' Print  '''''
+print FiturName & ", " & ObjectName & ", " & "Duration : " & (MercuryTimers(ObjectName).ElapsedTime/1000) & " Sec" 
+End Function
+
+
+'Contoh :
+'Call DurationStart("Button Login")
+'	Device("Device").App("Page Login").MobileObject("btnLogin_Awal").Tap
+'	Do
+'	Loop Until Device("Device").App("Page Login").MobileObject("btn_Login_Password").Exist(0)
+'Call DurationEnd("Klik","Button Login")

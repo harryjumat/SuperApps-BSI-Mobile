@@ -14,5 +14,4 @@ Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Au
 
 'Paket Data XL - Positive
 Call react.Addtitle("BSI SuperApps - Paket Data XL - Positive")
-Device("Device").App("Login").MobileLabel("Detail Alamat (No.rumah/").Set "Jalan Bonge Raya"
-'Call SaveReact_Merge()	
+		

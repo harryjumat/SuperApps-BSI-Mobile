@@ -23,13 +23,6 @@ Project("") = "Emas - Jual Emas", "Emas - Jual Emas\Test.tsp", "4D28A6CA-99B2-42
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "Bayar Beli - Korlantas Signal", "Bayar Beli - Korlantas Signal\Test.tsp", "D29A511F-F92F-4F87-9EB2-E16B75CF8C33"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\Bayar Beli - Korlantas Signal\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-	EndProjectSection
-EndProject
 Project("") = "Berbagi - THR Yatim", "Berbagi - THR Yatim\Test.tsp", "6A05F1C6-00EC-4540-9335-5C55C4068BE6"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
 		PathInformation = D:\BSI\Berbagi - THR Yatim\Test.tsp
@@ -49,15 +42,6 @@ Project("") = "Bayar Beli - CAR Premi Reguler", "Bayar Beli - CAR Premi Reguler\
 		PathInformation = D:\BSI\Bayar Beli - CAR Premi Reguler\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
-	EndProjectSection
-EndProject
-Project("") = "Bayar Beli - CAR Tagihan Lainnya", "Bayar Beli - CAR Tagihan Lainnya\Test.tsp", "CF03838C-9F68-41FD-9472-FA71CB5EB1ED"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\Bayar Beli - CAR Tagihan Lainnya\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Global
@@ -78,10 +62,6 @@ Global
 		4D28A6CA-99B2-42A7-8571-97366E02029E.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		4D28A6CA-99B2-42A7-8571-97366E02029E.Release|Any CPU.Build.0 = Release|Any CPU
 		4D28A6CA-99B2-42A7-8571-97366E02029E.Release|Any CPU.ActiveCfg = Release|Any CPU
-		D29A511F-F92F-4F87-9EB2-E16B75CF8C33.Debug|Any CPU.Build.0 = Debug|Any CPU
-		D29A511F-F92F-4F87-9EB2-E16B75CF8C33.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		D29A511F-F92F-4F87-9EB2-E16B75CF8C33.Release|Any CPU.Build.0 = Release|Any CPU
-		D29A511F-F92F-4F87-9EB2-E16B75CF8C33.Release|Any CPU.ActiveCfg = Release|Any CPU
 		6A05F1C6-00EC-4540-9335-5C55C4068BE6.Debug|Any CPU.Build.0 = Debug|Any CPU
 		6A05F1C6-00EC-4540-9335-5C55C4068BE6.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		6A05F1C6-00EC-4540-9335-5C55C4068BE6.Release|Any CPU.Build.0 = Release|Any CPU
@@ -94,10 +74,6 @@ Global
 		F14E5A62-DB51-4EF7-A366-A7882CE45565.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		F14E5A62-DB51-4EF7-A366-A7882CE45565.Release|Any CPU.Build.0 = Release|Any CPU
 		F14E5A62-DB51-4EF7-A366-A7882CE45565.Release|Any CPU.ActiveCfg = Release|Any CPU
-		CF03838C-9F68-41FD-9472-FA71CB5EB1ED.Debug|Any CPU.Build.0 = Debug|Any CPU
-		CF03838C-9F68-41FD-9472-FA71CB5EB1ED.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		CF03838C-9F68-41FD-9472-FA71CB5EB1ED.Release|Any CPU.Build.0 = Release|Any CPU
-		CF03838C-9F68-41FD-9472-FA71CB5EB1ED.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(Function Libraries) = postProject
 		BSI Mobile = D:\BSI\BSI Mobile.qfl

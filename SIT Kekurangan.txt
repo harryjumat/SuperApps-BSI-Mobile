@@ -1,0 +1,19 @@
+SIT
+pulsa&paket data telkomsel
+- TCID-001-17	Sukses menampilkan pop up permission
+- TCID-001-18	Berhasil memberikan permission untuk menyimpan hasil download ke internal memory
+- TCID-002	Melakukan pengecekan flow pembelian dari menu riwayat
+- TCID-003	Melakukan pengecekan flow pembelian dari menu favorit
+- TCID-004	Pengecekan semua prefix NO Handphone Telkomsel
+- TCID-005	Melakukan pengecekan flow pembelian dari fitur search
+- TCID-006	Pengecekan flow BACK kembali ke dashboard/gagal transaksi
+- TCID-013 	Reinput No Handphone Telkomsel lainnya
+- TCID-016	Ubah nominal pembelian
+- TCID-007	Failed load ke halaman input nomor hp, pembelian nominal dan SOF
+- TCID-008	Failed load ke halaman bayar dan  beli
+- TCID-014	Failed load ke halaman konfirmasi transaksi
+- TCID-018	Menampilkan pop-up pemberitahuan PIN salah 1x
+- TCID-019	Menampilkan pop-up pemberitahuan PIN salah 2x(Coba Lagi)
+- TCID-020	Menampilkan pop-up pemberitahuan PIN salah 2x(Lupa PIN)
+- TCID-021	Menampilkan pop-up pemberitahuan PIN terblokir (transaksi otomatis di cancel)
+- TCID-022	Failed load transaksi pembelian

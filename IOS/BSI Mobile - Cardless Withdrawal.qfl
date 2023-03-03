@@ -1,45 +1,201 @@
-﻿Function RiwayatHapusToken(x)
-	If x = "positive" Then
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Cardless Withdrawal").MobileButton("Mega Menu").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Mega Menu", "Berhasil menampilkan Mega Menu", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Tarik Tunai").Click
-'		Do 
-'		wait 1
-'		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
-		wait 2
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Berhasil masuk ke halaman Tarik Tunai", ReportStatus.Failed)
-	ElseIf x = "negative" Then
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Cardless Withdrawal").MobileButton("Mega Menu").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Mega Menu", "Berhasil menampilkan Mega Menu", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Tarik Tunai").Click
-		wait 2
-'		Do 
-'		wait 1
-'		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Berhasil masuk ke halaman Tarik Tunai", ReportStatus.Failed)
-	ElseIf x = "hapustoken" Then
-		Call Login()
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-		wait 1
-		Device("Device").App("Cardless Withdrawal").MobileButton("Mega Menu").Tap
-		wait 1
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Mega Menu", "Berhasil menampilkan Mega Menu", ReportStatus.Passed)
-		wait 1
-		Device("Device").InsightObject("InsightObject Tarik Tunai").Click
-		wait 2
-'		Do 
-'		wait 1
-'		Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Exist
-		Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Berhasil masuk ke halaman Tarik Tunai", ReportStatus.Failed)
-	End If
+﻿Function TarikTunaiTanpaKartu(x, param)
+If x = "Positive" Then
+	Call Navigate("Cardless Withdrawal")
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Pilih menu Tarik Tunai", ReportStatus.Passed)
+	AIUtil("button", "", micFromTop, 4).Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Lokasi Penarikan").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Lokasi Penarikan", "Berhasil menampilkan Lokasi Penarikan, pilih lokasi penarikan", ReportStatus.Passed)
+	Select Case param
+			Case "ATM BSI" 			Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Tap
+			Case "Gerai Indomaret" 	Device("Device").App("Cardless Withdrawal").MobileLabel("Gerai Indomaret").Tap
+	End Select
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Buat Token Baru").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Buat Token Baru", "Berhasil menampilkan Lokasi Penarikan, pilih nominal yang akan ditarik", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Rp100.000").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Pilih Nominal", "Berhasil memilih nominal yang akan ditarik, pilih sumber tabungan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileButton("btn_ubah").Tap
+ 	wait 1
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	wait 1
+	AIUtil("button", "EM").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Sumber Tabungan", "Berhasil memilih sumber tabungan, pilih Lanjutkan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Lanjutkan").Tap
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Konfirmasi Transaksi").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Konfirmasi Transaksi", "Berhasil menampilkan konfirmasi transaksi, pilih Konfirmasi", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Konfirmasi").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Input PIN", "Berhasil menampilkan halaman input PIN, Masukkan PIN", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Cardless Withdrawal").MobileLabel("1").Tap
+	Device("Device").App("Cardless Withdrawal").MobileLabel("2").Tap
+	Device("Device").App("Cardless Withdrawal").MobileLabel("3").Tap
+	Device("Device").App("Cardless Withdrawal").MobileLabel("4").Tap
+	Device("Device").App("Cardless Withdrawal").MobileLabel("5").Tap
+	Device("Device").App("Cardless Withdrawal").MobileLabel("6").Tap
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Loading Konfirmasi PIN", "Berhasil menampilkan loading konfirmasi PIN", ReportStatus.Passed)
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Kode siap digunakan!").Exist
+	Select Case param
+			Case "ATM BSI" 			Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Kode Siap Digunakan", "Berhasil menampilkan Kode Tarik Tunai, Pilih Lihat ATM Terdekat", ReportStatus.Passed)
+									Device("Device").App("Cardless Withdrawal").MobileLabel("Lihat ATM Terdekat").Tap
+									Do 
+									wait 1
+									Loop until Device("Device").InsightObject("InsightObject Lokasi ATM Cabang").Exist
+									Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Lihat ATM Cabang", "Berhasil menampilkan list lokasi cabang terdekat, kembali ke menu sebelumnya", ReportStatus.Passed)
+									Device("Device").App("Cardless Withdrawal").MobileLabel("btn_back").Tap									
+			Case "Gerai Indomaret" 	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Kode Siap Digunakan", "Berhasil menampilkan Kode Tarik Tunai", ReportStatus.Passed)
+	End Select
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Kembali ke Dashboard", "Berhasil ke halaman sebelumnya, swipe kebawah lalu pilih Ke Dashboard", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Cardless Withdrawal").MobileObject("MobileObject_Kode siap digunakan").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Ke Dashboard").Tap
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Harry").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Dashboard", "Berhasil menampilkan halaman dashboard, pilih icon notifikasi", ReportStatus.Passed)
+	Device("Device").InsightObject("InsightObject_bell").Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Notifikasi").Exist
+	Select Case param
+			Case "ATM BSI" 			Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Notifikasi", "Berhasil menampilkan halaman notifikasi, pilih notifikasi 'Tarik Tunai via ATM BSI kamu berhasil!'", ReportStatus.Passed)
+			Case "Gerai Indomaret" 	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Notifikasi", "Berhasil menampilkan halaman notifikasi, pilih notifikasi 'Tarik Tunai via Gerai Indomaret kamu berhasil!'", ReportStatus.Passed)
+	End Select
+	Device("Device").InsightObject("InsightObject notifikasi tarik tunai berhasil").Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Kode siap digunakan!").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Kode Siap Digunakan", "Berhasil menampilkan Kode Tarik Tunai, Pilih Download", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("btn Download").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload, Klik Bagikan Resi'", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileButton("btn_bagikanresi").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Bagikan Resi", "Berhasil menampilkan pop up bagikan resi", ReportStatus.Passed)
+End If
+
+If x = "Negative" Then
+	'Saldo Kurang
+	Call react.Addtitle("Saldo Kurang")
+	Call Navigate("Cardless Withdrawal")
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Pilih menu Tarik Tunai", ReportStatus.Passed)
+	AIUtil("button", "", micFromTop, 4).Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Lokasi Penarikan").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Lokasi Penarikan", "Berhasil menampilkan Lokasi Penarikan, pilih lokasi penarikan", ReportStatus.Passed)
+	Select Case param
+			Case "ATM BSI" 			Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Tap
+			Case "Gerai Indomaret" 	Device("Device").App("Cardless Withdrawal").MobileLabel("Gerai Indomaret").Tap
+	End Select
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Buat Token Baru").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Buat Token Baru", "Berhasil menampilkan Lokasi Penarikan, pilih nominal yang akan ditarik", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Rp100.000").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Pilih Nominal", "Berhasil memilih nominal yang akan ditarik, pilih sumber tabungan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileButton("btn_ubah").Tap
+ 	wait 1
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	wait 1
+	AIUtil("button", "EW").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Sumber Tabungan", "Berhasil memilih sumber tabungan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Lanjutkan").Tap
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Yah.. saldo kamu tidak m").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Saldo Kurang", "Berhasil menampilkan notifikasi Saldo Kurang", ReportStatus.Passed)
+
+	'LIMIT HARIAN
+	Call react.Addtitle("Limit Harian")
+	Call SetLimitHarian("pembelian")
+	Call Navigate("Cardless Withdrawal")
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Pilih menu Tarik Tunai", ReportStatus.Passed)
+	AIUtil("button", "", micFromTop, 4).Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Lokasi Penarikan").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Lokasi Penarikan", "Berhasil menampilkan Lokasi Penarikan, pilih lokasi penarikan", ReportStatus.Passed)
+	Select Case param
+			Case "ATM BSI" 			Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Tap
+			Case "Gerai Indomaret" 	Device("Device").App("Cardless Withdrawal").MobileLabel("Gerai Indomaret").Tap
+	End Select
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Buat Token Baru").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Buat Token Baru", "Berhasil menampilkan Lokasi Penarikan, pilih nominal yang akan ditarik", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Rp100.000").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Pilih Nominal", "Berhasil memilih nominal yang akan ditarik, pilih sumber tabungan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileButton("btn_ubah").Tap
+ 	wait 1
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	wait 1
+	AIUtil("button", "EM").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Sumber Tabungan", "Berhasil memilih sumber tabungan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Lanjutkan").Tap
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Konfirmasi Transaksi").Exist
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Konfirmasi").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Limit Harian", "Berhasil menampilkan notifikasi limit harian", ReportStatus.Passed)'Limit harian
+	wait 1
+	Call UnSetLimitHarian("pembelian")
+	'LIMIT TRANSAKSI
+	Call react.Addtitle("Limit Transaksi")
+	Call SetLimitTransaksi("pembelian")
+	Call Navigate("Cardless Withdrawal")
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Tarik Tunai", "Pilih menu Tarik Tunai", ReportStatus.Passed)
+	AIUtil("button", "", micFromTop, 4).Click
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Lokasi Penarikan").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Lokasi Penarikan", "Berhasil menampilkan Lokasi Penarikan, pilih lokasi penarikan", ReportStatus.Passed)
+	Select Case param
+			Case "ATM BSI" 			Device("Device").App("Cardless Withdrawal").MobileLabel("ATM BSI").Tap
+			Case "Gerai Indomaret" 	Device("Device").App("Cardless Withdrawal").MobileLabel("Gerai Indomaret").Tap
+	End Select
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Buat Token Baru").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Buat Token Baru", "Berhasil menampilkan Lokasi Penarikan, pilih nominal yang akan ditarik", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Rp100.000").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Pilih Nominal", "Berhasil memilih nominal yang akan ditarik, pilih sumber tabungan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileButton("btn_ubah").Tap
+ 	wait 1
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	wait 1
+	AIUtil("button", "EM").Click
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Sumber Tabungan", "Berhasil memilih sumber tabungan", ReportStatus.Passed)
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Lanjutkan").Tap
+	Do 
+	wait 1
+	Loop until Device("Device").App("Cardless Withdrawal").MobileLabel("Konfirmasi Transaksi").Exist
+	Device("Device").App("Cardless Withdrawal").MobileLabel("Konfirmasi").Tap
+	wait 2
+	Call CaptureImageUFTV2(Device("Device").App("Cardless Withdrawal"), "Limit Transaksi", "Berhasil menampilkan notifikasi limit transaksi", ReportStatus.Passed)'Limit transaksi
+	wait 3
+	Call UnSetLimitTransaksi("pembelian")
+End If
 End Function

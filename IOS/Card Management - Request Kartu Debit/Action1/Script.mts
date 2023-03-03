@@ -13,8 +13,10 @@ Call react.Addtitle("BSI SuperApps - Request Kartu Debit")
 
 Call RequestKartuDebit("Debit","alamat_domisili")
 'Call RequestKartuDebit("Debit","alamat_baru")
+
 'Call RequestKartuDebit("Virtual_BSI_Pay","alamat_domisili")
 'Call RequestKartuDebit("Virtual_BSI_Pay","alamat_baru")
+
 'Call RequestKartuDebit("FriPass","alamat_domisili")
 'Call RequestKartuDebit("FriPass","alamat_baru")
 Call SaveReact_Merge()

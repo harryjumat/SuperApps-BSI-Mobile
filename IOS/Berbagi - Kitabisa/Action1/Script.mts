@@ -1,4 +1,5 @@
-﻿Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Login.tsr")
+﻿datatable.ImportSheet "D:\Mentahan\PlugIn UFT\Excel Untuk Report.xlsx",1,"Global"
+Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Login.tsr")
 Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Berbagi.tsr")
 Call RepositoriesCollection.Add("D:\BSI\IOS\Repository\Repository_Bayar_Beli.tsr")
 LoadFunctionLibrary("D:\BSI\IOS\BSI Mobile.qfl") 
@@ -8,12 +9,12 @@ LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
 LoadFunctionLibrary("D:\BSI\Napalm\libray\ReactLib.vbs")
 
 Call Path_Folder()
-Call InitiateReact_V2_1(CoverTitle, CoverSubTitle, CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Kitabisa.id")
+Call InitiateReact_V2_1(CoverTitle, "Berbagi - Kitabisa", CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Kitabisa")
 
-'Kitabisa.id - Positive
-'BUTUH BILLER (KARNA KETERANGANNYA ERROR ESB SEDANGKAN YANG LAIN LANCAR)
-Call react.Addtitle("BSI SuperApps - Kitabisa.id - Positive")
+'Kitabisa - Positive
+
+Call react.Addtitle("BSI SuperApps - Kitabisa - Positive")
 Call Kitabisa("positive")
-'Call cekMutasi("Kitabisa.id" , nomorFT)
-'Call cekJurnal("Kitabisa.id", nomorFT)
+Call cekMutasi("Kitabisa" , nomorFT)
+Call cekJurnal("Kitabisa", nomorFT)
 Call SaveReact_Merge()	

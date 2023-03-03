@@ -36,6 +36,7 @@ ProductName=Micro Focus UFT One
 Version=2021
 
 [TulipAddins]
+ActiveX=
 AgGrid=
 AI=
 Database=
@@ -45,6 +46,7 @@ Mobile=
 Windows Applications=
 TEA=
 UIGrid=
+Visual Basic=
 Web=
 XML=
 
