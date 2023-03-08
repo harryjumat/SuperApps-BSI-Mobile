@@ -9,44 +9,32 @@ Project("") = "tumbal", "tumbal\Test.tsp", "C3B1EDE7-D67D-4931-B40B-FAE644F59509
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "Bayar Beli - BPJS BPU", "Bayar Beli - BPJS BPU\Test.tsp", "910B2ED7-F659-4CA0-B071-6D9ADF39BFD9"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS BPU\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-	EndProjectSection
-EndProject
-Project("") = "Berbagi - Kitabisa", "Berbagi - Kitabisa\Test.tsp", "B18455B8-C742-4B60-B2DD-1B1814ECFC19"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Berbagi - Kitabisa\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-	EndProjectSection
-EndProject
-Project("") = "Berbagi - Jadiberkah", "Berbagi - Jadiberkah\Test.tsp", "CD8C3A1D-DCB6-41E9-AB41-209761EE8486"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Berbagi - Jadiberkah\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-	EndProjectSection
-EndProject
-Project("") = "Bayar Beli - Paket Data XL", "Bayar Beli - Paket Data XL\Test.tsp", "8E5316C6-D764-43F3-B4EB-FB09937FEADD"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Bayar Beli - Paket Data XL\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-	EndProjectSection
-EndProject
-Project("") = "Card Management - Request Kartu Debit", "Card Management - Request Kartu Debit\Test.tsp", "158E162A-BB89-4FF4-91F4-977163B6EE04"
+Project("") = "Card Management - Request Kartu Debit", "Card Management - Request Kartu Debit\Test.tsp", "9C2EB3E7-5C4F-4386-A5AD-28E34A9113EE"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
 		PathInformation = D:\BSI\IOS\Card Management - Request Kartu Debit\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "Berbagi - Kalkulator Zakat", "Berbagi - Kalkulator Zakat\Test.tsp", "48D02287-3C25-4BA6-81AC-6B3A13043F51"
+Project("") = "Bayar Beli - BPJS BPU", "Bayar Beli - BPJS BPU\Test.tsp", "8C9E1187-5BE3-4B5F-A9A2-0521BD1BC11F"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = D:\BSI\IOS\Berbagi - Kalkulator Zakat\Test.tsp
+		PathInformation = D:\BSI\IOS\Bayar Beli - BPJS BPU\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "Berbagi - Jadiberkah", "Berbagi - Jadiberkah\Test.tsp", "FB418F25-78DB-4051-ABB2-9FBFB047E6C6"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Berbagi - Jadiberkah\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "Berbagi - Kitabisa", "Berbagi - Kitabisa\Test.tsp", "DDD0B8FA-2D0C-4F91-915F-720AB9B5D8C0"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = D:\BSI\IOS\Berbagi - Kitabisa\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 		BaselineId = 
@@ -62,30 +50,22 @@ Global
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.Build.0 = Release|Any CPU
 		C3B1EDE7-D67D-4931-B40B-FAE644F59509.Release|Any CPU.ActiveCfg = Release|Any CPU
-		910B2ED7-F659-4CA0-B071-6D9ADF39BFD9.Debug|Any CPU.Build.0 = Debug|Any CPU
-		910B2ED7-F659-4CA0-B071-6D9ADF39BFD9.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		910B2ED7-F659-4CA0-B071-6D9ADF39BFD9.Release|Any CPU.Build.0 = Release|Any CPU
-		910B2ED7-F659-4CA0-B071-6D9ADF39BFD9.Release|Any CPU.ActiveCfg = Release|Any CPU
-		B18455B8-C742-4B60-B2DD-1B1814ECFC19.Debug|Any CPU.Build.0 = Debug|Any CPU
-		B18455B8-C742-4B60-B2DD-1B1814ECFC19.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		B18455B8-C742-4B60-B2DD-1B1814ECFC19.Release|Any CPU.Build.0 = Release|Any CPU
-		B18455B8-C742-4B60-B2DD-1B1814ECFC19.Release|Any CPU.ActiveCfg = Release|Any CPU
-		CD8C3A1D-DCB6-41E9-AB41-209761EE8486.Debug|Any CPU.Build.0 = Debug|Any CPU
-		CD8C3A1D-DCB6-41E9-AB41-209761EE8486.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		CD8C3A1D-DCB6-41E9-AB41-209761EE8486.Release|Any CPU.Build.0 = Release|Any CPU
-		CD8C3A1D-DCB6-41E9-AB41-209761EE8486.Release|Any CPU.ActiveCfg = Release|Any CPU
-		8E5316C6-D764-43F3-B4EB-FB09937FEADD.Debug|Any CPU.Build.0 = Debug|Any CPU
-		8E5316C6-D764-43F3-B4EB-FB09937FEADD.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		8E5316C6-D764-43F3-B4EB-FB09937FEADD.Release|Any CPU.Build.0 = Release|Any CPU
-		8E5316C6-D764-43F3-B4EB-FB09937FEADD.Release|Any CPU.ActiveCfg = Release|Any CPU
-		158E162A-BB89-4FF4-91F4-977163B6EE04.Debug|Any CPU.Build.0 = Debug|Any CPU
-		158E162A-BB89-4FF4-91F4-977163B6EE04.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		158E162A-BB89-4FF4-91F4-977163B6EE04.Release|Any CPU.Build.0 = Release|Any CPU
-		158E162A-BB89-4FF4-91F4-977163B6EE04.Release|Any CPU.ActiveCfg = Release|Any CPU
-		48D02287-3C25-4BA6-81AC-6B3A13043F51.Debug|Any CPU.Build.0 = Debug|Any CPU
-		48D02287-3C25-4BA6-81AC-6B3A13043F51.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		48D02287-3C25-4BA6-81AC-6B3A13043F51.Release|Any CPU.Build.0 = Release|Any CPU
-		48D02287-3C25-4BA6-81AC-6B3A13043F51.Release|Any CPU.ActiveCfg = Release|Any CPU
+		9C2EB3E7-5C4F-4386-A5AD-28E34A9113EE.Debug|Any CPU.Build.0 = Debug|Any CPU
+		9C2EB3E7-5C4F-4386-A5AD-28E34A9113EE.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		9C2EB3E7-5C4F-4386-A5AD-28E34A9113EE.Release|Any CPU.Build.0 = Release|Any CPU
+		9C2EB3E7-5C4F-4386-A5AD-28E34A9113EE.Release|Any CPU.ActiveCfg = Release|Any CPU
+		8C9E1187-5BE3-4B5F-A9A2-0521BD1BC11F.Debug|Any CPU.Build.0 = Debug|Any CPU
+		8C9E1187-5BE3-4B5F-A9A2-0521BD1BC11F.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		8C9E1187-5BE3-4B5F-A9A2-0521BD1BC11F.Release|Any CPU.Build.0 = Release|Any CPU
+		8C9E1187-5BE3-4B5F-A9A2-0521BD1BC11F.Release|Any CPU.ActiveCfg = Release|Any CPU
+		FB418F25-78DB-4051-ABB2-9FBFB047E6C6.Debug|Any CPU.Build.0 = Debug|Any CPU
+		FB418F25-78DB-4051-ABB2-9FBFB047E6C6.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		FB418F25-78DB-4051-ABB2-9FBFB047E6C6.Release|Any CPU.Build.0 = Release|Any CPU
+		FB418F25-78DB-4051-ABB2-9FBFB047E6C6.Release|Any CPU.ActiveCfg = Release|Any CPU
+		DDD0B8FA-2D0C-4F91-915F-720AB9B5D8C0.Debug|Any CPU.Build.0 = Debug|Any CPU
+		DDD0B8FA-2D0C-4F91-915F-720AB9B5D8C0.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		DDD0B8FA-2D0C-4F91-915F-720AB9B5D8C0.Release|Any CPU.Build.0 = Release|Any CPU
+		DDD0B8FA-2D0C-4F91-915F-720AB9B5D8C0.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(Function Libraries) = postProject
 		BSI Mobile = D:\BSI\IOS\BSI Mobile.qfl

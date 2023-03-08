@@ -4,3 +4,5 @@ RunAction "AkademikCP - Positive", oneIteration
 RunAction "AkademikCP - Negative", oneIteration
 RunAction "Andalas - Positive", oneIteration
 RunAction "Andalas - Negative", oneIteration
+RunAction "Ahmad - Positive", oneIteration
+RunAction "Ahmad - Negative", oneIteration

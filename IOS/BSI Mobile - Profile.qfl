@@ -70,10 +70,13 @@ ElseIf y = "ChangePicGallery" Then
 	wait 1
 	Device("Device").App("Profile").MobileLabel("Pilih dari galeri").Tap
 	wait 3
+	Device("Device").InsightObject("InsightObject album").Click
+	wait 1
+	Device("Device").InsightObject("InsightObject favorit").Click
+	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Gallery", "Mengambil foto dari galeri, Pilih Foto", ReportStatus.Passed)
 	wait 1
-'	Device("Device").App("Profile").MobileObject("Foto, 12 September, 11.4").Tap
-	Device("Device").App("Profile").MobileObject("Foto, 12 September 2022,").Tap
+	Device("Device").InsightObject("InsightObject saitama").Click
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Profile"), "Dashboard", "Berhasil mengambil foto dan melakukan edit foto, Pilih", ReportStatus.Passed)
 	wait 1

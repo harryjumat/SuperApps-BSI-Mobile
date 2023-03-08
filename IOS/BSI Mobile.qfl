@@ -120,6 +120,7 @@ Function TransaksiNonSwipe(x, nomorFT, resi)
 	Loop until Device("Device").InsightObject("InsightObject Download").Exist
 	Device("Device").InsightObject("InsightObject Download").Click
 	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Berhasil download resi dan muncul notifikasi 'Resi berhasil didownload, Klik Bagikan Resi'", ReportStatus.Passed)
+'	Call CaptureImageUFTV2(Device("Device").App(x), "Download Resi", "Nomor FT Kosong, Klik Bagikan Resi'", ReportStatus.Failed)
 	wait 1
 	If not  Device("Device").App("Transaksi Berhasil").MobileLabel("Nomor Transaksi").Exist Then		'untuk aqiqah | reinquiry mpn
 		Device("Device").App("Transaksi Berhasil").MobileList("MobileList").Swipe "up",205,430		'untuk aqiqah | reinquiry mpn
@@ -475,7 +476,7 @@ End Function
 Function RekeningDormant()
 	Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 	wait 1
-	AIUtil("text_box", "Pilih Tabungan Sumber").Type "917"
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "027"
 	wait 1
 	AIUtil("button", "EM").Click
 End Function

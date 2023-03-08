@@ -18,6 +18,8 @@ AkademikCP - Positive=Action3\Script.mts
 AkademikCP - Negative=Action4\Script.mts
 Andalas - Positive=Action5\Script.mts
 Andalas - Negative=Action6\Script.mts
+Ahmad - Positive=Action7\Script.mts
+Ahmad - Negative=Action8\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -49,6 +51,7 @@ Insight=
 Mobile=
 Windows Applications=
 TEA=
+UI Automation=
 UIGrid=
 Visual Basic=
 Web=
@@ -80,3 +83,9 @@ Action5\ObjectRepository.bdb=
 Action6\Script.mts=
 Action6\Resource.mtr=
 Action6\ObjectRepository.bdb=
+Action7\Script.mts=
+Action7\Resource.mtr=
+Action7\ObjectRepository.bdb=
+Action8\Script.mts=
+Action8\Resource.mtr=
+Action8\ObjectRepository.bdb=

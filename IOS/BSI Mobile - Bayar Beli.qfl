@@ -401,7 +401,7 @@ nopel = "220900005974"
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan PU", "Berhasil masuk ke halaman BPJS Kesehatan PU", ReportStatus.Passed)
 		do
 		wait 1
-		loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set nopel
 		wait 1
 		Device("Device").App("Dev").MobileButton("Selesai").Tap
@@ -503,7 +503,7 @@ nopel = "220900005974"
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan PU", "Berhasil masuk ke halaman BPJS Kesehatan PU", ReportStatus.Warning) 'di figma nomor tagihan, di app nomor va
 		do
 		wait 1
-		loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set nopel
 		wait 1
 		Device("Device").App("Dev").MobileButton("Selesai").Tap
@@ -533,7 +533,7 @@ nopel = "220900005974"
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan PU", "Berhasil masuk ke halaman BPJS Kesehatan PU", ReportStatus.Warning) 'di figma nomor tagihan, di app nomor va
 		do
 		wait 1
-		loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Device("Device").App("Bayar_Beli").MobileEdit("nomorva").Set nopel
 		wait 1
 		Device("Device").App("Dev").MobileButton("Selesai").Tap
@@ -556,10 +556,15 @@ End Function
 Function Pulsa(param)
 	Call Navigate("Bayar_Beli")
 	AIUtil("chat", micAnyText, micFromTop, 1).Click
-	wait 1
+	wait 5
+	If Device("Device").App("Dev").MobileLabel("Ke Dashboard").Exist Then
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+		Call SaveReact_Merge()
+		ExitActionIteration
+	End If
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan menu pulsa & paket data, Klik Icon Kontak", ReportStatus.Passed)
 	Device("Device").InsightObject("InsightObject contact").Click
@@ -585,7 +590,7 @@ Function Pulsa(param)
 	End Select	
 	Do 
 	wait 3
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data, Pilih Denom", ReportStatus.Passed)
 	Select Case param
 			Case "telkomsel" 	Device("Device").App("Dev").MobileLabel("15.000").Tap
@@ -599,7 +604,7 @@ Function Pulsa(param)
  	wait 1
  	Device("Device").App("Dev").MobileLabel("Ubah").Tap
  	wait 1
- 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 	wait 1
 	AIUtil("button", "EM").Click
  	wait 1
@@ -675,7 +680,7 @@ Function PulsaLimit(param)
 	wait 1
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan menu pulsa & paket data", ReportStatus.Passed)
 	Device("Device").InsightObject("InsightObject contact").Click
@@ -701,7 +706,7 @@ Function PulsaLimit(param)
 	End Select	
 	Do 
 	wait 3
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Passed)
 	Select Case param
 			Case "telkomsel" 	Device("Device").App("Dev").MobileLabel("15.000").Tap
@@ -715,7 +720,7 @@ Function PulsaLimit(param)
  	wait 1
  	Device("Device").App("Dev").MobileLabel("Ubah").Tap
  	wait 1
- 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 	wait 1
 	AIUtil("button", "EM").Click
  	wait 1
@@ -737,10 +742,15 @@ Function PaketData(param)
 	Call Navigate("Bayar_Beli")
 	wait 1
 	AIUtil("chat", micAnyText, micFromTop, 1).Click
-	wait 1
+	wait 3
+	If Device("Device").App("Dev").MobileLabel("Ke Dashboard").Exist Then
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+		Call SaveReact_Merge()
+		ExitActionIteration
+	End If
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data, Klik Icon Kontak", ReportStatus.Passed)
 	wait 1
@@ -767,7 +777,7 @@ Function PaketData(param)
 	End Select
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist	
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist	
 	wait 1
 	Device("Device").App("Dev").MobileLabel("Paket Data").Tap	
 	wait 1
@@ -814,7 +824,7 @@ Function PaketData(param)
 	wait 1
 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
  	wait 1
- 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 	wait 1
 	AIUtil("button", "EM").Click
 	wait 1
@@ -890,7 +900,7 @@ Function PaketDataLimit(param)
 	wait 1
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data", ReportStatus.Passed)
 	wait 1
@@ -917,7 +927,7 @@ Function PaketDataLimit(param)
 	End Select
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist	
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist	
 	wait 1
 	Device("Device").App("Dev").MobileLabel("Paket Data").Tap	
 	wait 1
@@ -968,7 +978,7 @@ Function PaketDataLimit(param)
 	wait 1
 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
  	wait 1
- 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 	wait 1
 	AIUtil("button", "EM").Click
 	wait 1
@@ -986,7 +996,7 @@ End Function
 
 Function PulsaNegative(param)	
 	'menghilangkan perizinan kontak
-	Call PerizinanKontak()
+'	Call PerizinanKontak()
 	'Hmm.. nomor telepon yang dimasukkan kayaknya salah deh [OK]
 	Call react.Addtitle("Perizinan Kontak")
 	wait 1
@@ -995,9 +1005,14 @@ Function PulsaNegative(param)
 	wait 1
 	AIUtil("chat", micAnyText, micFromTop, 1).Click	
 	wait 5
+	If Device("Device").App("Dev").MobileLabel("Ke Dashboard").Exist Then
+		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+		Call SaveReact_Merge()
+		ExitActionIteration
+	End If
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Menu Pulsa & Paket Data", "Berhasil menampilkan menu Pulsa & Paket Data, Pilih Icon Kontak", ReportStatus.Passed)
 	wait 1
@@ -1021,7 +1036,7 @@ Function PulsaNegative(param)
 	wait 5
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan pulsa & paket data, Pilih Icon Kontak", ReportStatus.Passed)
 	Device("Device").InsightObject("InsightObject contact").Click
@@ -1048,7 +1063,7 @@ Function PulsaNegative(param)
 	wait 5
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data, Pilih Denom", ReportStatus.Passed)
 	Select Case param
 		Case "telkomsel" 	Device("Device").App("Dev").MobileLabel("15.000").Tap
@@ -1153,11 +1168,11 @@ Function PulsaNegative(param)
 	wait 2
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 	wait 1
-	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 	wait 1
 	AIUtil("button", "EW").Click
 	wait 1
@@ -1241,7 +1256,7 @@ Function PulsaNegative(param)
 	wait 1
 	do
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan menu pulsa & paket data, Klik Icon Kontak", ReportStatus.Passed)
 	Device("Device").InsightObject("InsightObject contact").Click
@@ -1267,7 +1282,7 @@ Function PulsaNegative(param)
 	End Select	
 	Do 
 	wait 3
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data, Pilih Denom", ReportStatus.Passed)
 	Select Case param
 			Case "telkomsel" 	Device("Device").App("Dev").MobileLabel("15.000").Tap
@@ -1329,7 +1344,7 @@ End Function
 
 Function PaketDataNegative(param)
 		'menghilangkan perizinan kontak
-		Call PerizinanKontak()
+'		Call PerizinanKontak()
 		wait 1
 		'Hmm.. nomor telepon yang dimasukkan kayaknya salah deh [OK]
 		Call react.Addtitle("Perizinan Kontak")
@@ -1339,9 +1354,14 @@ Function PaketDataNegative(param)
 		wait 1
 		AIUtil("chat", micAnyText, micFromTop, 1).Click
 		wait 5
+		If Device("Device").App("Dev").MobileLabel("Ke Dashboard").Exist Then
+			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+			Call SaveReact_Merge()
+			ExitActionIteration
+		End If
 		do
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Menu Pulsa & Paket Data", "Berhasil menampilkan Menu Pulsa & Paket Data, Klik Icon Kontak", ReportStatus.Passed)
 		wait 1
@@ -1366,7 +1386,7 @@ Function PaketDataNegative(param)
 		wait 3
 		do
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Menu Pulsa & Paket Data", "Berhasil menampilkan Menu Pulsa & Paket Data, Klik Icon Kontak", ReportStatus.Passed)
 		wait 1
@@ -1394,7 +1414,7 @@ Function PaketDataNegative(param)
 		wait 2		
 		do
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Device("Device").App("Dev").MobileLabel("Paket Data").Tap
 		wait 1
 		Device("Device").App("Dev").MobileEdit("nomor hp").Set "1"
@@ -1466,11 +1486,11 @@ Function PaketDataNegative(param)
 		wait 2		
 		do
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		wait 1
 		Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 		wait 1
-		AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+		AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 		wait 1
 		AIUtil("button", "EW").Click
 		wait 1
@@ -1533,7 +1553,7 @@ Function PaketDataNegative(param)
 		wait 1
 		Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 		wait 1
-		AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+		AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 		wait 1
 		Call react.Addtitle("Saldo Kurang")
 		wait 1
@@ -1598,7 +1618,7 @@ Function PaketDataNegative(param)
 		wait 5
 		do
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Icon Kontak", "memilih icon kontak, Klik Icon Kontak", ReportStatus.Passed)
 		Device("Device").InsightObject("InsightObject contact").Click
@@ -1622,7 +1642,7 @@ Function PaketDataNegative(param)
 		wait 1
 		do
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pulsa & Paket Data", "Berhasil menampilkan halaman pulsa & paket data, Klik Icon Kontak", ReportStatus.Passed)
 		wait 1
@@ -1649,7 +1669,7 @@ Function PaketDataNegative(param)
 		End Select
 		do
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist	
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist	
 		wait 1
 		Device("Device").App("Dev").MobileLabel("Paket Data").Tap	
 		wait 1
@@ -1821,7 +1841,7 @@ Function Aqiqah(x, gender, toogle)
 		Device("Device").App("Dev").MobileLabel("Pilih").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Form Aqiqah", "Berhasil masuk ke halaman pengisian form aqiqah, Pilih jenis kelamin anak", ReportStatus.Passed)
 		'GENDER
 		Select Case gender
@@ -1858,7 +1878,7 @@ Function Aqiqah(x, gender, toogle)
 		wait 2
 	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -1897,7 +1917,7 @@ Function Aqiqah(x, gender, toogle)
 		Device("Device").App("Dev").MobileLabel("Pilih").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Form Aqiqah", "Berhasil masuk ke halaman pengisian form aqiqah, Pilih jenis kelamin anak", ReportStatus.Passed)
 		'GENDER
 		Select Case gender
@@ -1930,7 +1950,7 @@ Function Aqiqah(x, gender, toogle)
 		wait 2
 	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 		wait 1
 		AIUtil("button", "EW").Click
 		wait 1
@@ -1967,7 +1987,7 @@ Function Aqiqah(x, gender, toogle)
 		Device("Device").App("Dev").MobileLabel("Pilih").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Form Aqiqah", "Berhasil masuk ke halaman pengisian form aqiqah, Pilih jenis kelamin anak", ReportStatus.Passed)
 		'GENDER
 		Select Case gender
@@ -2022,7 +2042,7 @@ Function Aqiqah(x, gender, toogle)
 		Device("Device").App("Dev").MobileLabel("Pilih").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Form Aqiqah", "Berhasil masuk ke halaman pengisian form aqiqah, Pilih jenis kelamin anak", ReportStatus.Passed)
 		'GENDER
 		Select Case gender
@@ -2059,9 +2079,9 @@ Function Aqiqah(x, gender, toogle)
 		wait 2
 	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "917"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "027"
 		wait 1
-		AIUtil("button", "EM").Click
+		AIUtil("button", "EW").Click
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Berhasil Menginput Form Aqiqah", "Berhasil Menginput Form Aqiqah, klik Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileObject("MobileObject_4").Swipe "up",45,87
@@ -2104,7 +2124,7 @@ Function Aqiqah(x, gender, toogle)
 '		Device("Device").App("Dev").MobileLabel("Pilih").Tap
 '		Do 
 '		wait 1
-'		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Form Aqiqah", "Berhasil masuk ke halaman pengisian form aqiqah, Pilih jenis kelamin anak", ReportStatus.Passed)
 '		'GENDER
 '		Select Case gender
@@ -2141,7 +2161,7 @@ Function Aqiqah(x, gender, toogle)
 '		wait 2
 '	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 '	 	wait 1
-'	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+'	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 '		wait 1
 '		AIUtil("button", "EM").Click
 '		wait 1
@@ -2178,7 +2198,7 @@ Function Aqiqah(x, gender, toogle)
 '		Device("Device").App("Dev").MobileLabel("Pilih").Tap
 '		Do 
 '		wait 1
-'		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Form Aqiqah", "Berhasil masuk ke halaman pengisian form aqiqah, Pilih jenis kelamin anak", ReportStatus.Passed)
 '		'GENDER
 '		Select Case gender
@@ -2215,7 +2235,7 @@ Function Aqiqah(x, gender, toogle)
 '		wait 2
 '	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 '	 	wait 1
-'	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+'	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 '		wait 1
 '		AIUtil("button", "EM").Click
 '		wait 1
@@ -2347,7 +2367,7 @@ Function BPJSBPU(x)
 		wait 1
 		Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 		wait 1
-		AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+		AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 		wait 1
 		AIUtil("button", "EW").Click
 		wait 1
@@ -2387,7 +2407,7 @@ End Function
 '	Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 '	do
 '	wait 1
-'	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Akademik", "Berhasil menampilkan halaman Akademik", ReportStatus.Warning)'belum ada logo
 '	Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 '	Device("Device").App("Supplier").MobileObject("9").Tap
@@ -2440,7 +2460,7 @@ End Function
 '	Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 '	do
 '	wait 1
-'	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Akademik", "Berhasil menampilkan halaman Akademik", ReportStatus.Warning)'belum ada logo
 '	Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 '	Device("Device").App("Supplier").MobileObject("9").Tap
@@ -2475,7 +2495,7 @@ End Function
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil Input Nominal", ReportStatus.Passed)
 '	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 '	wait 1
-'	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+'	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 '	wait 1
 '	AIUtil("button", "EW").Click
 '	wait 1
@@ -2504,7 +2524,7 @@ End Function
 '	Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 '	do
 '	wait 1
-'	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Akademik", "Berhasil menampilkan halaman Akademik", ReportStatus.Warning)'belum ada logo
 '	Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 '	Device("Device").App("Supplier").MobileObject("0").Tap
@@ -2556,7 +2576,7 @@ End Function
 '	End Select	
 '	do
 '	wait 1
-'	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Akademik", "Berhasil menampilkan halaman Akademik", ReportStatus.Warning)'belum ada logo
 '	Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 '	'(Univ. Kaltim)  : 9999996 ||  9999991 
@@ -2592,7 +2612,7 @@ End Function
 '	Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 '	do
 '	wait 1
-'	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Akademik", "Berhasil menampilkan halaman Akademik", ReportStatus.Warning)'belum ada logo
 '	Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 '	'(Univ. Kaltim)  : 9999996 ||  9999991 
@@ -2610,7 +2630,7 @@ End Function
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil Input Nominal", ReportStatus.Passed)
 '	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 '	wait 1
-'	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+'	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 '	wait 1
 '	AIUtil("button", "EW").Click
 '	wait 1
@@ -2640,7 +2660,7 @@ End Function
 '	Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 '	do
 '	wait 1
-'	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Akademik", "Berhasil menampilkan halaman Akademik", ReportStatus.Warning)'belum ada logo
 '	Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 '	'(Univ. Kaltim)  : 9999996 ||  9999991 
@@ -2678,7 +2698,7 @@ End Function
 '	Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 '	do
 '	wait 1
-'	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+'	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 '	Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Akademik", "Berhasil menampilkan halaman Akademik", ReportStatus.Warning)'belum ada logo
 '	Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 '	Device("Device").App("Supplier").MobileObject("0").Tap
@@ -2755,7 +2775,7 @@ Function AkademikAndalas(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -2777,7 +2797,7 @@ Function AkademikAndalas(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil memasukkan Nominal Bayar, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -2804,7 +2824,7 @@ Function AkademikAndalas(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -2826,7 +2846,7 @@ Function AkademikAndalas(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil memasukkan Nominal Bayar, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 		wait 1
 		AIUtil("button", "EW").Click
 		wait 2
@@ -2843,7 +2863,7 @@ Function AkademikAndalas(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -2864,7 +2884,7 @@ Function AkademikAndalas(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil memasukkan Nominal Bayar, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -2885,7 +2905,7 @@ Function AkademikAndalas(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -2907,9 +2927,9 @@ Function AkademikAndalas(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil memasukkan Nominal Bayar, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "917"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "027"
 		wait 1
-		AIUtil("button", "EM").Click
+		AIUtil("button", "EW").Click
 		wait 1
 		Device("Device").App("Supplier").MobileLabel("Lanjutkan").Tap
 		Do 
@@ -2943,7 +2963,7 @@ Function AkademikAndalas(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -2965,7 +2985,7 @@ Function AkademikAndalas(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil memasukkan Nominal Bayar, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -2993,7 +3013,7 @@ Function AkademikAndalas(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -3015,7 +3035,7 @@ Function AkademikAndalas(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input Nominal", "Berhasil memasukkan Nominal Bayar, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -3044,7 +3064,7 @@ Function AkademikAhmad(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -3067,11 +3087,11 @@ Function AkademikAhmad(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil memasukkan ID Pelanggan, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
-		Device("Device").App("Supplier").MobileLabel("Lanjutkan").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("Cek Tagihan").Tap
 		Do 
 		wait 1
 		Loop until Device("Device").App("Supplier").MobileLabel("Konfirmasi Transaksi").Exist
@@ -3094,7 +3114,7 @@ Function AkademikAhmad(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -3117,7 +3137,7 @@ Function AkademikAhmad(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil memasukkan ID Pelanggan, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 		wait 1
 		AIUtil("button", "EW").Click
 		wait 2
@@ -3144,7 +3164,7 @@ Function AkademikAhmad(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -3160,18 +3180,16 @@ Function AkademikAhmad(x)
 		Device("Device").App("Supplier").MobileObject("9").Tap
 		Device("Device").App("Supplier").MobileObject("2").Tap
 		Device("Device").App("Supplier").MobileObject("0").Tap
-		Device("Device").App("Supplier").MobileObject("1").Tap
-		Device("Device").App("Supplier").MobileObject("1").Tap
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		wait 1
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil memasukkan ID Pelanggan, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
-		Device("Device").App("Supplier").MobileLabel("Lanjutkan").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("Cek Tagihan").Tap
 		Do 
 		wait 1
 		Loop until Device("Device").App("Dev").MobileLabel("Kembali").Exist
@@ -3188,7 +3206,7 @@ Function AkademikAhmad(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -3211,11 +3229,11 @@ Function AkademikAhmad(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil memasukkan ID Pelanggan, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "917"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "027"
 		wait 1
-		AIUtil("button", "EM").Click
+		AIUtil("button", "EW").Click
 		wait 1
-		Device("Device").App("Supplier").MobileLabel("Lanjutkan").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("Cek Tagihan").Tap
 		Do 
 		wait 1
 		Loop until Device("Device").App("Supplier").MobileLabel("Konfirmasi Transaksi").Exist
@@ -3247,7 +3265,7 @@ Function AkademikAhmad(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -3270,11 +3288,11 @@ Function AkademikAhmad(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil memasukkan ID Pelanggan, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
-		Device("Device").App("Supplier").MobileLabel("Lanjutkan").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("Cek Tagihan").Tap
 		Do 
 		wait 1
 		Loop until Device("Device").App("Supplier").MobileLabel("Konfirmasi Transaksi").Exist
@@ -3298,7 +3316,7 @@ Function AkademikAhmad(x)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		Loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil menampilkan form pembayaran Akademik, masukkan ID Pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileLabel("ID Pelanggan/ Kode Bayar").Tap
 		wait 1
@@ -3321,11 +3339,11 @@ Function AkademikAhmad(x)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Input ID Pelanggan", "Berhasil memasukkan ID Pelanggan, Pilih asal tabungan lalu pilih Lanjutkan", ReportStatus.Passed)
 		Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
-		Device("Device").App("Supplier").MobileLabel("Lanjutkan").Tap
+		Device("Device").App("Bayar_Beli").MobileLabel("Cek Tagihan").Tap
 		Do 
 		wait 1
 		Loop until Device("Device").App("Supplier").MobileLabel("Konfirmasi Transaksi").Exist
@@ -3460,7 +3478,7 @@ Function InstitusiOPNegative(param)
 	wait 1
 	Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 	wait 1
-	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 	wait 1
 	AIUtil("button", "EW").Click
 	wait 1
@@ -3545,7 +3563,7 @@ Function InstitusiCPNegative(param)
 	wait 1
 	Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 	wait 1
-	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 	wait 1
 	AIUtil("button", "EW").Click
 	wait 1
@@ -3616,7 +3634,7 @@ Function Lembaga(x,kodebayar,param)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "ID Pelanggan", "Berhasil menampilkan halaman Lembaga, masukkan id pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileEdit("MobileEdit").Set "9999996"
 		wait 1
@@ -3632,7 +3650,7 @@ Function Lembaga(x,kodebayar,param)
 			'UNTUK CLOSE PAYMENT
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Sumber Rekening", "Berhasil memasukkan id pelanggan, Pilih sumber rekening lalu pilih Lanjutkan", ReportStatus.Passed)
 		End If
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -3665,7 +3683,7 @@ Function Lembaga(x,kodebayar,param)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "ID Pelanggan", "Berhasil menampilkan halaman Lembaga, masukkan id pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileEdit("MobileEdit").Set "9999996"
 		wait 1
@@ -3681,7 +3699,7 @@ Function Lembaga(x,kodebayar,param)
 			'UNTUK CLOSE PAYMENT
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Sumber Rekening", "Berhasil memasukkan id pelanggan, Pilih sumber rekening lalu pilih Lanjutkan", ReportStatus.Passed)
 		End If
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -3712,7 +3730,7 @@ Function Lembaga(x,kodebayar,param)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "ID Pelanggan", "Berhasil menampilkan halaman Lembaga, masukkan id pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileEdit("MobileEdit").Set "9999996"
 		wait 1
@@ -3728,7 +3746,7 @@ Function Lembaga(x,kodebayar,param)
 			'UNTUK CLOSE PAYMENT
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Sumber Rekening", "Berhasil memasukkan id pelanggan, Pilih sumber rekening lalu pilih Lanjutkan", ReportStatus.Passed)
 		End If
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -3754,7 +3772,7 @@ Function Lembaga(x,kodebayar,param)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "ID Pelanggan", "Berhasil menampilkan halaman Lembaga, masukkan id pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileEdit("MobileEdit").Set "9999996"
 		wait 1
@@ -3770,9 +3788,9 @@ Function Lembaga(x,kodebayar,param)
 			'UNTUK CLOSE PAYMENT
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Sumber Rekening", "Berhasil memasukkan id pelanggan, Pilih sumber rekening lalu pilih Lanjutkan", ReportStatus.Passed)
 		End If
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "917"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "027"
 		wait 1
-		AIUtil("button", "EM").Click
+		AIUtil("button", "EW").Click
 		wait 1
 		Device("Device").App("Supplier").MobileLabel("Lanjutkan").Tap
 		Do 
@@ -3811,7 +3829,7 @@ Function Lembaga(x,kodebayar,param)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "ID Pelanggan", "Berhasil menampilkan halaman Lembaga, masukkan id pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileEdit("MobileEdit").Set "9999996"
 		wait 1
@@ -3827,7 +3845,7 @@ Function Lembaga(x,kodebayar,param)
 			'UNTUK CLOSE PAYMENT
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Sumber Rekening", "Berhasil memasukkan id pelanggan, Pilih sumber rekening lalu pilih Lanjutkan", ReportStatus.Passed)
 		End If
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -3858,7 +3876,7 @@ Function Lembaga(x,kodebayar,param)
 		Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		Do 
 		wait 1
-		loop until Device("Device").App("Supplier").MobileLabel("7420605239").Exist
+		loop until Device("Device").App("Supplier").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "ID Pelanggan", "Berhasil menampilkan halaman Lembaga, masukkan id pelanggan", ReportStatus.Passed)
 		Device("Device").App("Supplier").MobileEdit("MobileEdit").Set "9999996"
 		wait 1
@@ -3874,7 +3892,7 @@ Function Lembaga(x,kodebayar,param)
 			'UNTUK CLOSE PAYMENT
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Sumber Rekening", "Berhasil memasukkan id pelanggan, Pilih sumber rekening lalu pilih Lanjutkan", ReportStatus.Passed)
 		End If
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 		wait 1
@@ -3912,7 +3930,7 @@ Function MPN(x,param,biller)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Cek Tagihan", "Berhasil memasukkan nomor pembayaran, pilih cek tagihan", ReportStatus.Passed)
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Penerimaan Negara (MPN)", "Berhasil menampilkan halaman Penerimaan Negara (MPN), pilih button panah detail pelanggan", ReportStatus.Passed)
 		AIUtil("down_triangle").Click
 		wait 1
@@ -3922,7 +3940,7 @@ Function MPN(x,param,biller)
 		wait 1
 	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 	 	wait 1
@@ -3966,7 +3984,7 @@ Function MPN(x,param,biller)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Cek Tagihan", "Berhasil memasukkan nomor pembayaran, pilih cek tagihan", ReportStatus.Passed)
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Penerimaan Negara (MPN)", "Berhasil menampilkan halaman Penerimaan Negara (MPN), pilih button panah detail pelanggan", ReportStatus.Passed)
 		AIUtil("down_triangle").Click
 		wait 1
@@ -3976,7 +3994,7 @@ Function MPN(x,param,biller)
 		wait 1
 	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 	 	wait 1
@@ -4008,7 +4026,7 @@ Function MPN(x,param,biller)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Cek Tagihan", "Berhasil memasukkan nomor pembayaran, pilih cek tagihan", ReportStatus.Passed)
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Penerimaan Negara (MPN)", "Berhasil menampilkan halaman Penerimaan Negara (MPN), pilih button panah detail pelanggan", ReportStatus.Passed)
 		AIUtil("down_triangle").Click
 		wait 1
@@ -4018,7 +4036,7 @@ Function MPN(x,param,biller)
 		wait 1
 	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 		wait 1
 		AIUtil("button", "EW").Click
 	 	wait 1
@@ -4050,7 +4068,7 @@ Function MPN(x,param,biller)
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Cek Tagihan", "Berhasil memasukkan nomor pembayaran, pilih cek tagihan", ReportStatus.Passed)
 		Do 
 		wait 1
-		Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+		Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Penerimaan Negara (MPN)", "Berhasil menampilkan halaman Penerimaan Negara (MPN), pilih button panah detail pelanggan", ReportStatus.Passed)
 		AIUtil("down_triangle").Click
 		wait 1
@@ -4060,7 +4078,7 @@ Function MPN(x,param,biller)
 		wait 1
 	 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	 	wait 1
-	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+	 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 		wait 1
 		AIUtil("button", "EM").Click
 	 	wait 1
@@ -4106,7 +4124,7 @@ Function BPJS(x, param, biller)
 		else
 			Do 
 			wait 1
-			Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+			Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 		End  If
 		Select Case param
 			Case "BPJS Kesehatan"				Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Kesehatan", "Berhasil menampilkan halaman BPJS Kesehatan, masukkan nomor virtual account", ReportStatus.Passed)
@@ -4139,7 +4157,7 @@ Function BPJS(x, param, biller)
 		if param = "BPJS Ketenagakerjaan PU" or param = "BPJS Ketenagakerjaan BPU" then
 '		 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 '		 	wait 1
-'		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+'		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 '			wait 1
 '			AIUtil("button", "EM").Click
 '		 	wait 1
@@ -4157,7 +4175,7 @@ Function BPJS(x, param, biller)
 			wait 1
 			Device("Device").App("Dev").MobileLabel("Ubah").Tap
 		 	wait 1
-		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 			wait 1
 			AIUtil("button", "EM").Click
 			wait 1
@@ -4169,7 +4187,7 @@ Function BPJS(x, param, biller)
 		If param = "BPJS Kesehatan" Then
 			Do 
 			wait 1
-			Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+			Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Pilih Jumlah Bulan", "Berhasil menampilkan form jumlah bulan, pilih jumlah bulan", ReportStatus.Passed)
 			wait 1
 			Device("Device").App("Supplier").MobileLabel("Jumlah bulan").Tap
@@ -4184,7 +4202,7 @@ Function BPJS(x, param, biller)
 			wait 1
 			Device("Device").App("Dev").MobileLabel("Ubah").Tap
 		 	wait 1
-		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 			wait 1
 			AIUtil("button", "EM").Click
 		 	wait 1
@@ -4265,7 +4283,7 @@ Function BPJS(x, param, biller)
 			Device("Device").App("Supplier").MobileLabel("BPJS Ketenagakerjaan BPU").Tap
 			Do 
 			wait 1
-			Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+			Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Ketenagakerjaan BPU", "Berhasil menampilkan list program BPJS, masukkan nomor tagihan", ReportStatus.Passed)
 			Device("Device").App("Supplier").MobileEdit("MobileEdit_2").Set biller
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor Tagihan", "Berhasil memasukkan nomor tagihan, pilih jumlah bulan", ReportStatus.Passed)
@@ -4282,7 +4300,7 @@ Function BPJS(x, param, biller)
 			wait 1
 			Device("Device").App("Dev").MobileLabel("Ubah").Tap
 		 	wait 1
-		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 			wait 1
 			AIUtil("button", "EW").Click
 		 	wait 1
@@ -4310,7 +4328,7 @@ Function BPJS(x, param, biller)
 			Device("Device").App("Supplier").MobileLabel("BPJS Ketenagakerjaan BPU").Tap
 			Do 
 			wait 1
-			Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+			Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Ketenagakerjaan BPU", "Berhasil menampilkan list program BPJS, masukkan nomor tagihan", ReportStatus.Passed)
 			Device("Device").App("Supplier").MobileEdit("MobileEdit_2").Set "123456789"
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor Tagihan", "Berhasil memasukkan nomor tagihan, pilih jumlah bulan", ReportStatus.Passed)
@@ -4327,7 +4345,7 @@ Function BPJS(x, param, biller)
 			wait 1
 			Device("Device").App("Dev").MobileLabel("Ubah").Tap
 		 	wait 1
-		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 			wait 1
 			AIUtil("button", "EW").Click
 		 	wait 1
@@ -4348,7 +4366,7 @@ Function BPJS(x, param, biller)
 			Device("Device").App("Supplier").MobileLabel("BPJS Ketenagakerjaan BPU").Tap
 			Do 
 			wait 1
-			Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+			Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "BPJS Ketenagakerjaan BPU", "Berhasil menampilkan list program BPJS, masukkan nomor tagihan", ReportStatus.Passed)
 			Device("Device").App("Supplier").MobileEdit("MobileEdit_2").Set biller
 			Call CaptureImageUFTV2(Device("Device").App("Bayar_Beli"), "Nomor Tagihan", "Berhasil memasukkan nomor tagihan, pilih jumlah bulan", ReportStatus.Passed)
@@ -4365,9 +4383,9 @@ Function BPJS(x, param, biller)
 			wait 1
 			Device("Device").App("Dev").MobileLabel("Ubah").Tap
 		 	wait 1
-		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "917"
+		 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "027"
 			wait 1
-			AIUtil("button", "EM").Click
+			AIUtil("button", "EW").Click
 		 	wait 1
 		 	Device("Device").App("Supplier").MobileButton("Selesai_2").Tap
 		 	wait 1

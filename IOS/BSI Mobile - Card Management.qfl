@@ -6,9 +6,9 @@
 	Device("Device").App("Dev").MobileLabel("HA").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
-	Device("Device").App("Dev").MobileLabel("Informasi akun").Swipe "up",205,430
+	Device("Device").App("Dev").MobileButton("MobileButton informasi akun").Swipe "up",205,430
 	wait 2
-	Device("Device").App("Dev").MobileLabel("Manajemen Kartu").Tap
+	Device("Device").App("Dev").MobileButton("MobileButton manajemen kartu").Tap
 	Do
 	wait 1
 	Loop until Device("Device").App("Dev").MobileLabel("Buat Kartu").Exist
@@ -24,18 +24,19 @@
 			Case "Virtual_BSI_Pay" Device("Device").App("Dev").MobileLabel("Kartu Virtual BSI Pay").Tap
 			Case "FriPass" Device("Device").App("Dev").MobileLabel("Aktivasi FriPass").Tap
 	End Select
+	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Dev"), "List Rekening", "Berhasil Menampilkan List Rekening", ReportStatus.Passed)
-	Device("Device").App("Dev").MobileEdit("Cari Rekening").Set "239"
+	Device("Device").App("Dev").MobileEdit("Cari Rekening").Set "592"
 	wait 1
 	AIUtil("button", "EM").Click
 	Do 
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("SILVER DEBIT CARD").Exist
-	Call CaptureImageUFTV2(Device("Device").App("Dev"), "List Rekening", "Berhasil Menampilkan List Rekening", ReportStatus.Warning)'semua gambar kartu tidak muncul 
+	Loop until Device("Device").App("Dev").MobileLabel("Pilih Jenis Kartu Debit").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Pilih Jenis Kartu Debit", "Berhasil Menampilkan pilihan kartu debit", ReportStatus.Passed)
 	Device("Device").App("Dev").MobileLabel("Pilih Kartu").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Pilih Nama Pada Kartu", "Berhasil Menampilkan halaman Pilih Nama Pada Kartu", ReportStatus.Passed)
-	Device("Device").App("Dev").MobileLabel("HARRY SETIAWAN").Tap
+	Device("Device").App("Dev").MobileLabel("ELISABETH").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Berhasil Pilih Nama", "Berhasil Pilih Nama pada kartu", ReportStatus.Passed)
 	Device("Device").App("Dev").MobileLabel("Lanjutkan").Tap
@@ -111,17 +112,89 @@
 	Device("Device").App("Dev").MobileLabel("6").Tap
 	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Loading Konfirmasi PIN", "Berhasil menampilkan loading konfirmasi PIN", ReportStatus.Passed)
 	wait 10
-	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Permintaan Kartu Berhasil", "Berhasil menampilkan halaman Permintaan Kartu Berhasil", ReportStatus.Failed)
-'	'label selesai.tap
-'	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
-'	wait 1
-'	Device("Device").App("Dev").MobileButton("Notifikasi").Tap
-'	wait 5
-'	Device("Device").App("Dev").MobileLabel("Info").Tap
-'	wait 1
-'	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Notifikasi Info", "Berhasil menampilkan Notifikasi Info", ReportStatus.Passed)
-'	'permintaan kartu debit.tap
-'	wait 3
-'	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Notifikasi Permintaan Kartu Debit", "Berhasil menampilkan Notifikasi Permintaan Kartu Debit", ReportStatus.Passed)
+	If Device("Device").App("Dev").MobileLabel("Ke Dashboard").Exist Then
+		'HAPUS KALO SUDAH NORMAL
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+		Call SaveReact_Merge()
+		ExitActionIteration
+	End If
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Permintaan Kartu Berhasil", "Berhasil menampilkan halaman Permintaan Kartu Berhasil", ReportStatus.Passed)
+	
+	Call Login()
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Dev").MobileButton("Notifikasi").Tap
+	Do 
+	wait 0.1
+	Loop until Device("Device").InsightObject("InsightObject notifikasi 2023").Exist
+	Device("Device").App("Dev").MobileLabel("Info").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Notifikasi Info", "Berhasil menampilkan Notifikasi Info", ReportStatus.Passed)
+	'permintaan kartu debit.tap
+	wait 10
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Notifikasi Permintaan Kartu Debit", "Berhasil menampilkan Notifikasi Permintaan Kartu Debit", ReportStatus.Passed)
 End Function
 
+Function UbahPinKartuDebit(x)
+	If x = "Positive" Then
+		Call Login()
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Dev").MobileLabel("HA").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileButton("MobileButton informasi akun").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Dev").MobileButton("MobileButton manajemen kartu").Tap
+		Do
+		wait 1
+		Loop until Device("Device").App("Dev").MobileButton("MobileButton tambah kartu").Exist
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Manajemen Kartu", "Berhasil Menampilkan halaman Manajemen Kartu", ReportStatus.Passed)
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Gagal Ubah Pin", "Kartu Debit Belum Diaktivasi", ReportStatus.Failed)
+	End If
+	If x = "Negative" Then
+		Call Login()
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+		wait 1
+		Device("Device").App("Dev").MobileLabel("HA").Tap
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
+		Device("Device").App("Dev").MobileButton("MobileButton informasi akun").Swipe "up",205,430
+		wait 2
+		Device("Device").App("Dev").MobileButton("MobileButton manajemen kartu").Tap
+		Do
+		wait 1
+		Loop until Device("Device").App("Dev").MobileButton("MobileButton tambah kartu").Exist
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Manajemen Kartu", "Berhasil Menampilkan halaman Manajemen Kartu", ReportStatus.Passed)
+		wait 1
+		Call CaptureImageUFTV2(Device("Device").App("Dev"), "Gagal Ubah Pin", "Kartu Debit Belum Diaktivasi", ReportStatus.Failed)
+	End If
+End Function
+
+Function AktivasiKartuDebit(x)
+If x = "positive"  Then
+	Call Login()
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Dashboard", "Berhasil masuk ke halaman dashboard", ReportStatus.Passed)
+	wait 1
+	Device("Device").App("Dev").MobileLabel("HA").Tap
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Profile", "Berhasil Menampilkan halaman Profil nasabah/user", ReportStatus.Passed)
+	Device("Device").App("Dev").MobileButton("MobileButton informasi akun").Swipe "up",205,430
+	wait 2
+	Device("Device").App("Dev").MobileButton("MobileButton manajemen kartu").Tap
+	Do
+	wait 1
+	Loop until Device("Device").App("Dev").MobileLabel("Buat Kartu").Exist
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Manajemen Kartu", "Berhasil Menampilkan halaman Manajemen Kartu", ReportStatus.Passed)
+	wait 1
+	Call CaptureImageUFTV2(Device("Device").App("Dev"), "Aktivasi Kartu Debit", "Kartu Debit gagal Diaktivasi", ReportStatus.Failed)
+End If
+If x = "negative" Then
+	
+End If
+	
+End Function

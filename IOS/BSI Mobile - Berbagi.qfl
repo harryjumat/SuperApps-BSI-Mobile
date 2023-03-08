@@ -6,14 +6,14 @@ Function TransaksiLembagaLainnya(param)
 	Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
 	Do 		
 	wait 1
-	Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Berbagi").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya, Tap Pilih Lembaga", ReportStatus.Passed) 	
 	Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran, Klik Lembaga Amil", ReportStatus.Passed)
 	wait 3
 	Select Case param
-			Case "rumahzakat" 		Device("Device").App("Dev").MobileLabel("Rumah Zakat_2").Tap
+			Case "rumahzakat" 		Device("Device").InsightObject("InsightObject rumah zakat").Click
 			Case "dompetdhuafa" 		Device("Device").App("Dev").MobileLabel("Dompet Dhuafa").Tap
 			Case "kitabisa" 			Device("Device").App("Dev").MobileLabel("Kitabisa").Tap
 			Case "jadiberkah" 		Device("Device").App("Dev").MobileLabel("Jadiberkah").Tap
@@ -39,12 +39,19 @@ Function TransaksiLembagaLainnya(param)
 	wait 3
 	Device("Device").App("Berbagi").MobileButton("Ubah").Tap
  	wait 1
- 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "337"
+ 	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 	wait 1
-	Device("Device").InsightObject("InsightObject EM").Click
+	AIUtil("button", "EW").Click
 	wait 3
 	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
 	wait 5
+	If Device("Device").App("Dev").MobileLabel("Oke").Exist Then
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+		Call SaveReact_Merge()
+		ExitActionIteration
+	End If
+'	'HAPUS KALAU SUDAH NORMAL 1 baris
+'	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Konfirmasi Transaksi", "Gagal menampilkan Konfirmasi Transaksi", ReportStatus.Passed) 
 End Function
 
 Function TransaksiLembagaLainnyaNegative(param)
@@ -55,13 +62,13 @@ Function TransaksiLembagaLainnyaNegative(param)
 	Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
 	Do 		
 	wait 1
-	Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Berbagi").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya, Klik Pilih Lembaga", ReportStatus.Passed)		
 	Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran, Klik Lembaga Amil", ReportStatus.Passed)
 	Select Case param
-			Case "rumahzakat" 		Device("Device").App("Dev").MobileLabel("Rumah Zakat_2").Tap
+			Case "rumahzakat" 		Device("Device").InsightObject("InsightObject rumah zakat").Click
 			Case "dompetdhuafa" 		Device("Device").App("Dev").MobileLabel("Dompet Dhuafa").Tap
 			Case "kitabisa" 			Device("Device").App("Dev").MobileLabel("Kitabisa").Tap
 			Case "jadiberkah" 		Device("Device").App("Dev").MobileLabel("Jadiberkah").Tap
@@ -83,13 +90,21 @@ Function TransaksiLembagaLainnyaNegative(param)
 	wait 1
 	Device("Device").App("Bayar_Beli").MobileLabel("Ubah").Tap
 	wait 1
-	AIUtil("text_box", "Pilih Tabungan Sumber").Type "909"
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "035"
 	wait 1
 	Device("Device").App("Berbagi").MobileLabel("Easy Wadiah").Tap
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ubah ke Rekening Kosong", "Berhasil merubah ke rekening kosong", ReportStatus.Passed)
 	wait 1
 	Device("Device").App("Berbagi").MobileLabel("Cek Pembayaran").Tap
+	
+	'kalau gagal memuat halaman
+	If Device("Device").App("Dev").MobileLabel("Oke").Exist Then
+		Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Notifikasi Gagal", "Gagal Menampilkan Halaman Tujuan", ReportStatus.Failed)
+		Call SaveReact_Merge()
+		ExitActionIteration
+	End If
+	
 	Do 
 	wait 1
 	Loop until Device("Device").App("Dev").MobileLabel("Konfirmasi Transaksi").Exist
@@ -107,14 +122,14 @@ Function TransaksiLembagaLainnyaNegative(param)
 	Device("Device").App("Berbagi").MobileLabel("Bayar").Tap
 	Do 		
 	wait 1
-	Loop until Device("Device").App("Berbagi").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Berbagi").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Ziswaf", "Berhasil masuk ke pembayaran lainnya, Klik Pilih Lembaga", ReportStatus.Passed) 	
 	Device("Device").InsightObject("InsightObject Lembaga Lainnya - Pilih Lembaga Arrow").Click
 	wait 1
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Pilih Lembaga", "Berhasil menampilkan list lembaga pembayaran, Klik Lembaga Amil", ReportStatus.Passed)
 	wait 2
 	Select Case param
-			Case "rumahzakat" 		Device("Device").App("Dev").MobileLabel("Rumah Zakat_2").Tap
+			Case "rumahzakat" 		Device("Device").InsightObject("InsightObject rumah zakat").Click
 			Case "dompetdhuafa" 		Device("Device").App("Dev").MobileLabel("Dompet Dhuafa").Tap
 			Case "kitabisa" 			Device("Device").App("Dev").MobileLabel("Kitabisa").Tap
 			Case "jadiberkah" 		Device("Device").App("Dev").MobileLabel("Jadiberkah").Tap
@@ -227,7 +242,7 @@ End Function
 
 Function RZI(x)
 	If x = "positive" Then
-		Call TransaksiLembagaLainnya("rzi")
+		Call TransaksiLembagaLainnya("rumahzakat")
 		Do 
 		wait 1
 		Loop until Device("Device").App("Berbagi").MobileLabel("Konfirmasi Transaksi").Exist
@@ -240,7 +255,7 @@ Function RZI(x)
 		Call cekMutasi("Rumah Zakat Indonesia" , nomorFT)
 		Call cekJurnal("Rumah Zakat Indonesia", nomorFT)
 	ElseIf x = "negative" Then 
-		Call TransaksiLembagaLainnyaNegative("rzi")		
+		Call TransaksiLembagaLainnyaNegative("rumahzakat")		
 	End If
 End Function
 
@@ -310,13 +325,13 @@ Function ZakatProfesi(periode)
 	Device("Device").App("Dev").MobileLabel("Bayar Sekarang").Tap
 	Do 
 	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("7420605239").Exist
+	Loop until Device("Device").App("Dev").MobileLabel("7420659592").Exist
 	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Nominal Zakat", "Berhasil menampilkan nominal zakat yang harus dibayarkan, pilih sumber tabungan lalu pilih bayar zakat", ReportStatus.Passed)
 	Device("Device").App("Dev").MobileLabel("Ubah").Tap
 	wait 1
-	Device("Device").App("Dev").MobileEdit("MobileEdit_2").Set 337
+	AIUtil("text_box", "Pilih Tabungan Sumber").Type "592"
 	wait 1
-	Device("Device").App("Dev").MobileLabel("Easy Mudharabah").Tap
+	AIUtil("button", "EM").Click
 	wait 1
 	Device("Device").App("Dev").MobileLabel("Bayar Zakat").Tap
 	Do 
@@ -356,24 +371,4 @@ Function ZakatProfesi(periode)
 	'T24
 	Call cekMutasi("Zakat Profesi" , nomorFT)
 	Call cekJurnal("Zakat Profesi", nomorFT)
-End Function
-
-Function ZakatPerdagangan()
-	Call Navigate("Berbagi")
-	Device("Device").InsightObject("InsightObject zakat").Click
-	Do 
-	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("List Zakatmu").Exist
-	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "List Zakat", "Berhasil menampilkan List Zakat, pilih hitung zakat", ReportStatus.Passed)
-	Device("Device").App("Dev").MobileLabel("Hitung Zakat").Tap
-	Do 
-	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("Zakat Profesi").Exist
-	Call CaptureImageUFTV2(Device("Device").App("Berbagi"), "Kalkulator Zakat", "Berhasil menampilkan Kalkulator Zakat, pilih hitung zakat", ReportStatus.Passed)
-	Device("Device").InsightObject("InsightObject zakat perdagangan").Click
-	Do 
-	wait 1
-	Loop until Device("Device").App("Dev").MobileLabel("Zakat Perdagangan").Exist
-
-
 End Function

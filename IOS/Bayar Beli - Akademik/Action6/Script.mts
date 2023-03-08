@@ -9,7 +9,7 @@ LoadFunctionLibrary("D:\BSI\Napalm\libray\GlobalFunction.qfl")
 LoadFunctionLibrary("D:\BSI\Napalm\libray\ReactLib.vbs")
 
 Call Path_Folder()
-Call InitiateReact_V2_1(CoverTitle, "Bayar/Beli - Akademik Univ Andalas", CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Akademik")
+Call InitiateReact_V2_1(CoverTitle, "Bayar/Beli - Akademik Univ Andalas", CompanyLogo, projectName, "Automation Testing", "BSI SuperApps Univ Andalas")
 
 'Akademik Open Payment Andalas - Negative
 Call react.Addtitle("BSI SuperApps - Akademik Univ Andalas - Negative")
